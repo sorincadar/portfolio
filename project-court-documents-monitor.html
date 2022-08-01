@@ -1,0 +1,501 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Mon Aug 01 2022 18:55:01 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="627c1d23a85eccf2876d2d0b" data-wf-site="5f901fa1b69b7d676e97f088" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project - Court Documents Monitor | Sorin Cadar</title>
+  <meta content="Giving attorneys the means of organizing their court documents as well as getting notified about updates" name="description">
+  <meta content="Project - Court Documents Monitor | Sorin Cadar" property="og:title">
+  <meta content="Giving attorneys the means of organizing their court documents as well as getting notified about updates" property="og:description">
+  <meta content="Project - Court Documents Monitor | Sorin Cadar" property="twitter:title">
+  <meta content="Giving attorneys the means of organizing their court documents as well as getting notified about updates" property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/portfolio-200e20.webflow.css" rel="stylesheet" type="text/css">
+  <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8a2"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4a7"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="8a350d88-428b-3144-4b65-41cab38b5f47"] {opacity:0;display:none;-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8b2"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4b7"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8a2"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4a7"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8b2"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4b7"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8a2"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4a7"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8b2"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4b7"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8a2"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4a7"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8b2"] {-webkit-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-moz-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-ms-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);opacity:0;}html.w-mod-js:not(.w-mod-ix) [data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4b7"] {-webkit-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-moz-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-ms-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);opacity:0;}}</style>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.jpg" rel="apple-touch-icon">
+</head>
+<body class="body">
+  <div class="project-intro-css w-embed">
+    <style>
+  @media screen and (max-width: 991px) and (orientation: landscape) {
+    .header {
+      height: 4rem;
+    }
+    .container-2.is--nav {
+      height: 4rem;
+    }
+    .intro_wrapper.project {
+  	min-height: 50vw;
+  	}
+    .container.project-intro {
+      height: auto;
+      min-height: 38vw;
+      padding-top: 3.5vw;
+      padding-bottom: 3.5vw;
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-direction: initial;
+      -webkit-flex-direction: initial;
+      -ms-flex-direction: initial;
+      flex-direction: initial;
+    }
+    .project-image.project-intro {
+      width: 50%;
+      height: 100%;
+    }
+    .background-video-2.project-intro {
+      width: 65%;
+      height: 100%;
+    }
+    .project-details.project-intro {
+      width: 50%;
+      height: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding-bottom: 0;
+    }
+    .project-details-top {
+      height: 50%;
+    }
+   .title-l.project-intro {
+  		font-size: 7.5vw;
+  		line-height: 7vw;
+      letter-spacing: -0.375vw;
+		}
+    .paragraph-m.project-intro {
+    	font-size: 1rem;
+      line-height: 1.3rem;
+      width: 20rem;
+      height: auto;
+    }
+    .arrow.project-intro {
+      display: block;
+      width: 18%;
+      height: auto;
+      max-width: none;
+    }
+    .project-presentation {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    }
+  }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+  .container-2.is--nav {
+  	height: 3rem;
+  }
+}
+	@media screen and (max-width: 767px) and (orientation: landscape) {
+      .header {
+        height: 3rem;
+      }
+      .title-xl.project-intro {
+        margin-top: 0;
+        line-height: 6.2vw;
+         letter-spacing: -0.12vw;
+      }
+   }
+</style>
+  </div>
+  <div class="contact-circle-css w-embed">
+    <style>
+	.Cursor_Area {
+		pointer-events:none;
+  	}
+  @media (max-width: 1024px) {
+    #contact-circle-mobile-show {display: flex;}
+    #contact-cta-1 {display: none;}
+		#contact-cta-2 {display: block;}
+   }
+   @media (min-width: 1025px) {
+    #contact-cta-1 {display: block;}
+		#contact-cta-2 {display: none;}
+   }
+</style>
+  </div>
+  <div class="cursor_area">
+    <div data-w-id="8a350d88-428b-3144-4b65-41cab38b5f47" class="contact-circle">
+      <p class="contact-circle-text">Go to<br>Contact<br>Details</p>
+    </div>
+  </div>
+  <div id="luxy" class="smooth-wrapper">
+    <div class="intro_wrapper project">
+      <div class="header wf-section">
+        <div class="container header">
+          <div class="logo-area _50">
+            <a href="index.html" class="logo-link w-inline-block"><img src="images/logo-Sorin-cadar.svg" loading="lazy" alt="" class="logo"></a>
+          </div>
+          <div class="navigation _50">
+            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bb7" href="index.html" class="header-nav-link">Work</a>
+            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bb9" href="profile.html" class="header-nav-link">Profile</a>
+            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bbb" href="contact.html" class="header-nav-link">Get in Touch</a>
+            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bbd" href="documents/CV-Sorin-Cadar-2022.pdf" target="_blank" class="button white header-button w-inline-block">
+              <div class="button-contain">
+                <p class="button-text">Download My CV</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <nav class="section is--nav">
+          <div fs-scrolldisable-element="when-visible" class="menu">
+            <div class="menu-css w-embed">
+              <style>
+  .menu {
+    height: calc(var(--vh, 1vh) * 100);
+    touch-action: none;
+  }
+ </style>
+            </div>
+            <div class="background">
+              <div class="background__fill"></div>
+              <div data-is-ix2-target="1" class="background__lottie" data-w-id="75d87ef5-1026-a220-e8d3-0a64b359c0d8" data-animation-type="lottie" data-src="documents/menu-animation.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.5666666666666667" data-duration="0" data-ix2-initial-state="0"></div>
+            </div>
+            <div class="container-2 is--menu">
+              <div class="menu__contain">
+                <div class="menu-nav">
+                  <a href="index.html" class="nav-link-2 is--1 w-inline-block">
+                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
+                      <p class="nav-link__text">Work</p>
+                    </div>
+                  </a>
+                  <a href="profile.html" class="nav-link-2 w-inline-block">
+                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
+                      <p class="nav-link__text">Profile</p>
+                    </div>
+                  </a>
+                  <a href="contact.html" class="nav-link-2 is--3 w-inline-block">
+                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
+                      <p class="nav-link__text">Get in touch</p>
+                    </div>
+                  </a>
+                </div>
+                <div class="menu-sublinks">
+                  <div class="sublinks">
+                    <a href="https://www.notion.so/timothyricks/9c289f61652d457797b1251cdf9beb61?v=873f669610044b2b9e9d46d043dfa380" target="_blank" class="button mobile-menu w-inline-block">
+                      <div class="button-contain">
+                        <p class="button-text">Download My CV</p>
+                      </div>
+                    </a>
+                    <a href="https://www.timothyricks.com/" target="_blank" class="sublink w-inline-block">
+                      <div class="sublink__contain">
+                        <p class="sublink__text">Anytime at <span class="underline-text">contact@sorincadar.com</span></p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-2 is--nav">
+            <a href="#" class="trigger w-inline-block">
+              <div class="trigger__line is--1"></div>
+              <div class="trigger__line is--2"></div>
+            </a>
+          </div>
+        </nav>
+      </div>
+      <div class="project-intro-css w-embed">
+        <style>
+	@media screen and (max-width: 767px) {
+    .project_intro {
+      height: calc(100% - 3rem);
+    }
+	}
+  @media screen and (min-width: 768px) and (max-width: 1919px) {
+    .project_intro {
+      height: calc(100% - 5rem);
+    }
+  }
+  @media screen and (min-width: 1920px) {
+    .project_intro {
+      height: calc(100% - 6rem);
+    }
+	}
+</style>
+      </div>
+      <div class="project_intro wf-section">
+        <div class="container project-intro">
+          <div class="project-image project-intro">
+            <div style="width:100%;height:100%" class="filling-2"></div>
+            <div class="background-video-2 project-intro w-background-video w-background-video-atom" data-autoplay="true" data-loop="true" data-beta-bgvideo-upgrade="false" data-wf-ignore="true" style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" data-poster-url="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -poster-00001.jpg" data-w-id="e186fc7d-9812-e120-91a1-01e1c03da61b" data-video-urls="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.mp4,https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.webm"><video id="e186fc7d-9812-e120-91a1-01e1c03da61b-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.mp4" data-wf-ignore="true">
+                <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.webm" data-wf-ignore="true">
+              </video></div>
+          </div>
+          <div class="project-details project-intro">
+            <div class="project-details-top">
+              <div style="width:100%;height:100%" class="filling-2"></div>
+              <h1 style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="title-l project-intro">Court<br>Documents <br>Monitor</h1>
+            </div>
+            <div class="project-details-bottom">
+              <div style="width:100%;height:100%" class="filling-2"></div>
+              <p style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph-m project-intro">Giving attorneys the means of organizing their court documents as well as getting notified about updates</p><img src="images/arrow-see-more.svg" loading="lazy" style="-webkit-transform:translate3d(-50px, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50px, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50px, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50px, 0, 0) scale3d(0.5, 0.5, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow project-intro">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-presentation wf-section">
+      <div class="big-and-small-paragraph-2">
+        <p data-w-id="be5768de-0d13-f046-5c24-be559fd77a2c" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph-xxl big-and-small-paragraph">Advocatus is a company that helps law firms and attorneys from Romania by offering them digital solutions to manage their work. Their platform contains an advanced CRM (Customer Relationship Management) application, a tool for legal files monitoring, as well as a company insolvency monitoring app.</p>
+        <div data-w-id="be5768de-0d13-f046-5c24-be559fd77a2e" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="small-paragraphs">
+          <div class="first-paragraph">
+            <p class="paragraph-s big-and-small-paragraph-2">In Romania the majority of legal files as well as dates and details about hearings or appeals are posted on a public online portal. Attorneys could use the public portal to monitor legal files, but Advocatus wanted to make this task easier.<br><br>So we created “Monitor Dosare” app which offers a more user friendly solution to monitoring legal files as well as additional functionalities to help attorneys organize them.</p>
+          </div>
+          <div class="second-paragraph">
+            <p class="paragraph-s big-and-small-paragraph-2 second">My responsability was giving a visual form to the product owner’s vision with whom I collaborated closely. His expertise on the needs, goals and the work process of attorneys guided me throughout the project.<br><br>Using an iterative design process based on constant feedback I managed to create a simple and friendly interface that supports the mental model of attorneys and empowers them to organize their legal files in a smart way.</p>
+          </div>
+        </div>
+      </div>
+      <div data-w-id="5b15dd06-916f-3e44-c7e9-5876790018e1" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-details-table">
+        <div class="empty-half"></div>
+        <div class="details-table">
+          <div class="label---details-table">
+            <div class="label-row">
+              <p class="paragraph-s details-table-label">Client</p>
+            </div>
+            <div class="label-row">
+              <p class="paragraph-s details-table-label">Year</p>
+            </div>
+            <div class="label-row">
+              <p class="paragraph-s details-table-label">Scope</p>
+            </div>
+            <div class="label-row last">
+              <p class="paragraph-s details-table-label">Made at</p>
+            </div>
+          </div>
+          <div class="values---details-table">
+            <div class="value-row">
+              <p class="paragraph-s details-table-value">Advocatus</p>
+            </div>
+            <div class="value-row">
+              <p class="paragraph-s details-table-value">2020</p>
+            </div>
+            <div class="value-row">
+              <p class="paragraph-s details-table-value">Wireframe, UI Design</p>
+            </div>
+            <div class="value-row last">
+              <p class="paragraph-s details-table-value">Redouble Agency</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-w-id="113d6daf-d853-b717-3bfa-bb435694be78" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
+        <div class="pres-img-one-contained-description"><img src="images/Pres_User-Flow_Monitor-Dosare.png" loading="lazy" alt="">
+          <p class="paragraph-s pres-img">Some bumps in the road will always occur throughout a project but keeping them at a minimum rate is a goal that matters a lot to me. What always helped was creating a user flow which is the most basic visualization of what is needed to be built. By creating it, me and my colleagues managed to get on the same page early on. </p>
+        </div>
+      </div>
+      <div data-w-id="002b17b8-eb2e-9809-3656-691236f30368" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
+        <div data-w-id="31d9d630-de7f-740a-184d-15de2266d1e4" class="pres-img-one-full-width"><img src="images/Pres_Wireframe_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, 96vw" srcset="images/Pres_Wireframe_Monitor-Dosare-p-500.png 500w, images/Pres_Wireframe_Monitor-Dosare-p-800.png 800w, images/Pres_Wireframe_Monitor-Dosare-p-1080.png 1080w, images/Pres_Wireframe_Monitor-Dosare-p-1600.png 1600w, images/Pres_Wireframe_Monitor-Dosare-p-2000.png 2000w, images/Pres_Wireframe_Monitor-Dosare.png 4098w" class="image"></div>
+      </div>
+      <div data-w-id="79fdf6b0-ce1e-db85-d639-d91fad1c42b8" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
+        <div class="pres-img-one-contained"><img src="images/Pres_Typography_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_Typography_Monitor-Dosare-p-500.png 500w, images/Pres_Typography_Monitor-Dosare-p-800.png 800w, images/Pres_Typography_Monitor-Dosare-p-1080.png 1080w, images/Pres_Typography_Monitor-Dosare.png 3543w" class="image-2"></div>
+      </div>
+      <div data-w-id="4e677053-c642-d29d-2a79-95640736dcbc" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xs">
+        <div class="pres-img-one-contained-description"><img src="images/Pres_Colors_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Colors_Monitor-Dosare-p-500.png 500w, images/Pres_Colors_Monitor-Dosare-p-800.png 800w, images/Pres_Colors_Monitor-Dosare-p-1080.png 1080w, images/Pres_Colors_Monitor-Dosare-p-1600.png 1600w, images/Pres_Colors_Monitor-Dosare.png 3546w">
+          <p class="paragraph-s pres-img">Building an initial set of typography styles, brand colors, shadows, spacing values and interface elements is an essential first step in the design proccess. This ensures a visualy balanced and consistent result. Having these predefined visual design tools keeps me focused on the desired style and gives me space to think on other issues. The style guide could get altered during the process but the final result eliminates the confusion during the developer handoff.</p>
+        </div>
+      </div>
+      <div data-w-id="a5785a22-8597-90a7-407a-dd062a79fd55" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
+        <div class="pres-img-one-contained"><img src="images/Pres_LogIn_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 3854px) 92vw, 3546px" srcset="images/Pres_LogIn_Monitor-Dosare-p-500.png 500w, images/Pres_LogIn_Monitor-Dosare-p-800.png 800w, images/Pres_LogIn_Monitor-Dosare-p-1080.png 1080w, images/Pres_LogIn_Monitor-Dosare-p-1600.png 1600w, images/Pres_LogIn_Monitor-Dosare-p-2000.png 2000w, images/Pres_LogIn_Monitor-Dosare.png 3546w" class="image-2"></div>
+      </div>
+      <div data-w-id="3dbe014c-1248-f439-4060-6d2d43884d82" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xxl">
+        <div class="just-paragraph">
+          <p class="paragraph-xxl just-paragraph">The main way that the app helps attorneys to organize the ir legal files is by saving them into projects dedicated to each court case. </p>
+        </div>
+      </div>
+      <div data-w-id="2e0d37cf-1577-4056-4ef4-cbe357df9317" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
+        <div class="pres-img-one-contained-description"><img src="images/Pres_Add-Project_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Add-Project_Monitor-Dosare-p-500.png 500w, images/Pres_Add-Project_Monitor-Dosare-p-800.png 800w, images/Pres_Add-Project_Monitor-Dosare-p-1080.png 1080w, images/Pres_Add-Project_Monitor-Dosare-p-1600.png 1600w, images/Pres_Add-Project_Monitor-Dosare-p-2000.png 2000w, images/Pres_Add-Project_Monitor-Dosare.png 3546w">
+          <p class="paragraph-s pres-img">To create a project they must complete a form divided into steps. Firstly they name the project, then they input details about the desired files and at the end they save the relevant files from a list of results. The goal of reducing user’s cognitive load and effort was achieved by grouping related elements in the most efficent way, placing the process details at the top and the form at the bottom.</p>
+        </div>
+      </div>
+      <div data-w-id="1bda60d4-9eb3-5d9f-3f17-32b91063198a" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
+        <div class="pres-img-two-offset">
+          <div class="press-img-two">
+            <div class="press-img-two-left-container"><img src="images/Pres_Projects-Empty_Monitor-Dosare.png" loading="lazy" alt="" sizes="45vw" srcset="images/Pres_Projects-Empty_Monitor-Dosare-p-500.png 500w, images/Pres_Projects-Empty_Monitor-Dosare.png 1144w" class="pres-img-half left">
+              <p class="paragraph-s pres-img two-offset">The list of projects was designed with ease of browsing in mind. The project card contains the most relevant details that help identifying them. Clarity and ease of scanning were achieved through hierarchy and highlighting what matters the most. </p>
+            </div><img src="images/Pres_Projects_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 75vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" srcset="images/Pres_Projects_Monitor-Dosare-p-500.png 500w, images/Pres_Projects_Monitor-Dosare.png 1144w" class="pres-img-half right">
+          </div>
+        </div>
+      </div>
+      <div data-w-id="f149dd7e-2947-fdf7-2107-627bc077a6af" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xxl">
+        <div data-w-id="30a5c261-cecb-a7ef-806d-914b82ab1548" class="big-and-small-paragraph">
+          <p class="paragraph-xxl big-and-small-paragraph">Browsing the details of a project is done through a tabs navigator. This solution promotes an efortless navigation with minimal taps needed from the user. </p>
+          <p class="paragraph-s big-and-small-paragraph">The tabs reflect the main structure of a legal file which is cromprised of: the parties involved in the trail, the appeals and the court decisions. The project is managed on a dedicated tab called “Info”. Here the user has the options to rename or archive the project and to add more legal files and notified clients. </p>
+        </div>
+      </div>
+      <div data-w-id="d1acd0f0-857c-0a6b-bbaf-69f96d5788ba" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-m">
+        <div data-w-id="31d9d630-de7f-740a-184d-15de2266d1e4" class="pres-img-one-full-width"><img src="images/Pres_Project-Details_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, 96vw" srcset="images/Pres_Project-Details_Monitor-Dosare-p-500.png 500w, images/Pres_Project-Details_Monitor-Dosare-p-800.png 800w, images/Pres_Project-Details_Monitor-Dosare-p-1080.png 1080w, images/Pres_Project-Details_Monitor-Dosare-p-1600.png 1600w, images/Pres_Project-Details_Monitor-Dosare-p-2000.png 2000w, images/Pres_Project-Details_Monitor-Dosare.png 4098w" class="image"></div>
+      </div>
+      <div data-w-id="df906159-62f5-0456-1696-c6a9cac16c06" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-l">
+        <div class="pres-img-one-contained-description"><img src="images/Pres_Notifications_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Notifications_Monitor-Dosare-p-500.png 500w, images/Pres_Notifications_Monitor-Dosare-p-800.png 800w, images/Pres_Notifications_Monitor-Dosare-p-1080.png 1080w, images/Pres_Notifications_Monitor-Dosare-p-1600.png 1600w, images/Pres_Notifications_Monitor-Dosare-p-2000.png 2000w, images/Pres_Notifications_Monitor-Dosare.png 3546w">
+          <p class="paragraph-s pres-img">Besides organizing the legal files in an intuitive way, the app also helps attorneys to keep up to date with all the changes in the legal files that they are following. For each update the user recieves a notification that is stored on a dedicated screen. I was careful to create a great contrast ratio between the unread and read notifications. Each notification could be opened to read all the details of that update.</p>
+        </div>
+      </div>
+      <div data-w-id="ca53ee36-8da7-b91c-450a-27a04fb0e0f5" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
+        <div class="just-paragraph">
+          <p class="paragraph-xxl just-paragraph">Options that allow users to customize their experience is something indispensable in an application. We made sure of structuring the categories of options in a simple menu to avoid overwhelming the user. </p>
+        </div>
+      </div>
+      <div data-w-id="a233b4eb-6a59-f782-a69e-146c14ae0f6a" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
+        <div class="pres-img-one-contained"><img src="images/Pres_Settings_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_Settings_Monitor-Dosare-p-500.png 500w, images/Pres_Settings_Monitor-Dosare-p-800.png 800w, images/Pres_Settings_Monitor-Dosare-p-1080.png 1080w, images/Pres_Settings_Monitor-Dosare-p-1600.png 1600w, images/Pres_Settings_Monitor-Dosare.png 3546w" class="image-2"></div>
+      </div>
+      <div data-w-id="67c7d212-a17c-dca9-ae52-b2c68ef88453" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xs">
+        <div class="pres-img-one-contained-description"><img src="images/Pres_Subscription_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Subscription_Monitor-Dosare-p-500.png 500w, images/Pres_Subscription_Monitor-Dosare-p-800.png 800w, images/Pres_Subscription_Monitor-Dosare-p-1080.png 1080w, images/Pres_Subscription_Monitor-Dosare-p-1600.png 1600w, images/Pres_Subscription_Monitor-Dosare.png 3546w">
+          <p class="paragraph-s pres-img">Creating the app was possible because of the monetization plan that also helps maintaining and improving it. Because of this it was important for us to create a frictionless experience when upgrading or downgrading the premium plan. Clear details and no hidden information were the goals that we wanted to achieve. </p>
+        </div>
+      </div>
+      <div data-w-id="ff559b67-a109-d3f6-33a4-886d67e3bbd2" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
+        <div class="just-paragraph">
+          <p class="paragraph-xxl just-paragraph">After we approved the final design my task was to extend it for the desktop screens.</p>
+        </div>
+      </div>
+      <div data-w-id="50baa812-f768-b3f0-113f-6472dc69bacf" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
+        <div class="pres-img-one-contained"><img src="images/Pres_LogIn-Desktop_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_LogIn-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-2600.png 2600w, images/Pres_LogIn-Desktop_Monitor-Dosare.png 3549w" class="image-2"></div>
+      </div>
+      <div data-w-id="75b065bc-d383-0ad5-a6f1-275fefab3d72" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xs">
+        <div class="pres-img-one-contained"><img src="images/Pres_Projects-Empty-Desktop_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare.png 3549w" class="image-2"></div>
+      </div>
+      <div data-w-id="b3725961-f9c8-b537-3680-1feac19c7249" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-l">
+        <div data-w-id="31d9d630-de7f-740a-184d-15de2266d1e4" class="pres-img-one-full-width"><img src="images/Pres_Project-Desktop_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, 96vw" srcset="images/Pres_Project-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_Project-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_Project-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_Project-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_Project-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_Project-Desktop_Monitor-Dosare.png 4098w" class="image"></div>
+      </div>
+    </div>
+    <div class="projects-nav">
+      <a data-w-id="74c9da55-f86a-79f8-465b-a31a430a1ec5" href="project-high-end-beauty-online-store.html" class="previous-project w-inline-block">
+        <div class="filling projects-nav"></div>
+        <div class="projects-nav-container">
+          <div style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="projects-nav-title">
+            <p class="project-nav-type">Previous Project</p>
+            <h1 class="title-m projects-nav-left">Porters <br>Activity <br>Manager</h1>
+          </div><img src="images/arrow-see-more.svg" loading="lazy" style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow projects-nav">
+        </div>
+        <div data-poster-url="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.mp4,https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-beta-bgvideo-upgrade="false" class="background-video-2 projects-nav w-background-video w-background-video-atom"><video id="b0f062b3-9d90-8c07-ccc5-e91735cd809d-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.mp4" data-wf-ignore="true">
+            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.webm" data-wf-ignore="true">
+          </video></div>
+      </a>
+      <a data-w-id="74c9da55-f86a-79f8-465b-a31a430a1ed3" href="project-court-documents-monitor.html" aria-current="page" class="next-project w-inline-block w--current">
+        <div class="filling projects-nav right"></div>
+        <div class="projects-nav-container right">
+          <div style="-webkit-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="projects-nav-title">
+            <p class="project-nav-type next">Next Project</p>
+            <h1 class="title-m projects-nav-right">Space<br>Awareness<br>Tool</h1>
+          </div><img src="images/arrow-seemore-invert.svg" loading="lazy" style="-webkit-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow projects-nav">
+        </div>
+        <div data-poster-url="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.mp4,https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-beta-bgvideo-upgrade="false" class="background-video-2 projects-nav w-background-video w-background-video-atom"><video id="156c78c9-1983-8be6-05c4-025cd0d89bf4-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.mp4" data-wf-ignore="true">
+            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.webm" data-wf-ignore="true">
+          </video></div>
+      </a>
+    </div>
+    <div class="contact-cta-wrapper">
+      <a id="contact-cta-1" data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8a0" href="contact.html" class="contact-cta w-inline-block">
+        <div class="loop-text-outer">
+          <div data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8a2" class="loop-text-inner">
+            <h1 class="title-full">Get in touch /</h1>
+            <h1 class="title-full">Get in touch /</h1>
+            <h1 class="title-full">Get in touch /</h1>
+          </div>
+        </div>
+        <div class="contact-text">
+          <div data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8aa" style="-webkit-transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="container contact-cta">
+            <div class="content-wrapper">
+              <div class="main-text contact-cta">
+                <p class="paragraph-xl contact-text">Fell free to hit me up, either for a chat about design, an opportunity or even a travel recommendation. </p>
+              </div>
+              <div class="secondary-text contact-cta">
+                <p class="paragraph-s contact-cta">The best way to get in touch is through my email adress. Check the contact page for all my contact details.</p>
+              </div>
+              <div id="contact-circle-mobile-show" data-w-id="d70901a5-d7e7-b33c-7948-b2e59de8f8b2" class="contact-circle-mobile">
+                <div class="contact-circle-content">
+                  <p class="contact-circle-text mobile">View<br>My Contact<br>Details</p><img src="images/arrow-right-grey.svg" loading="lazy" width="82" alt="" class="arrow-contact">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <div id="contact-cta-2" data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4a5" class="contact-cta">
+        <div class="loop-text-outer">
+          <div data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4a7" class="loop-text-inner">
+            <h1 class="title-full">Get in touch /</h1>
+            <h1 class="title-full">Get in touch /</h1>
+            <h1 class="title-full">Get in touch /</h1>
+          </div>
+        </div>
+        <div class="contact-text">
+          <div data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4af" style="-webkit-transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 120px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="container contact-cta">
+            <div class="content-wrapper">
+              <div class="main-text contact-cta">
+                <p class="paragraph-xl contact-text">Fell free to hit me up, either for a chat about design, an opportunity or even a travel recommendation. </p>
+              </div>
+              <div class="secondary-text contact-cta">
+                <p class="paragraph-s contact-cta">The best way to get in touch is through my email adress. Check the contact page for all my contact details.</p>
+              </div>
+              <a id="contact-circle-mobile-show" data-w-id="2e97a493-9002-0ad8-0796-7a1accddc4b7" href="contact.html" class="contact-circle-mobile w-inline-block">
+                <div class="contact-circle-content">
+                  <p class="contact-circle-text mobile">View<br>My Contact<br>Details</p><img src="images/arrow-right-grey.svg" loading="lazy" width="82" alt="" class="arrow-contact">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container footer">
+        <div class="copyright footer">
+          <p class="footer-text mobile-hidden">Sorin Cadar<br>©  Copyright 2022</p>
+          <p class="footer-text copyright-mobile-2">Sorin Cadar © Copyright 2022</p>
+        </div>
+        <div class="details footer">
+          <p class="footer-text copyright-mobile">Sorin Cadar<br>©  Copyright 2022</p>
+          <p class="footer-text">UI Designer keen on<br>solving real-life problems</p>
+          <p class="footer-text">Anytime at<br>hello@sorincadar.com<br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f901fa1b69b7d676e97f088" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script>
+  <script charset="utf-8">
+ var isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
+ if (!isMobile) {
+      luxy.init({
+        wrapper: '#luxy',
+        wrapperSpeed: 0.065,
+    });
+ }
+ </script>
+  <script>
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+// We listen to the resize event
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+</script>
+</body>
+</html>
