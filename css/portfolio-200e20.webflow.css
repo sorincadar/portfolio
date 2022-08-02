@@ -2251,6 +2251,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 80%;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -2262,14 +2263,24 @@ a {
 
 .about-img-left {
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden;
   width: 52%;
+  height: 85%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .about-img-right {
   position: relative;
   overflow: visible;
   width: 45%;
+  height: 100%;
 }
 
 .about-intro-description {
@@ -2500,7 +2511,6 @@ a {
 
 .about-img-1 {
   width: 100%;
-  height: 62vw;
   mix-blend-mode: normal;
   -o-object-fit: cover;
   object-fit: cover;
@@ -2510,7 +2520,6 @@ a {
   display: block;
   overflow: hidden;
   width: 100%;
-  height: 60vw;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -2555,6 +2564,7 @@ a {
 .img-wrapper {
   overflow: hidden;
   width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 1440px) {
