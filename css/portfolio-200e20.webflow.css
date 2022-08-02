@@ -5165,10 +5165,6 @@ a {
     padding-bottom: 12vw;
   }
 
-  .container.about-intro {
-    min-height: 188vw;
-  }
-
   .nav-link {
     display: inline;
     font-size: 2.6vw;
@@ -6012,8 +6008,8 @@ a {
   }
 
   .about-intro {
-    max-height: 190vw;
-    min-height: 120vw;
+    max-height: none;
+    min-height: 0%;
     margin-bottom: 20vw;
   }
 
@@ -6095,7 +6091,7 @@ a {
   }
 
   .about-img-1 {
-    height: 80vw;
+    height: 100%;
   }
 
   .process-img-mobile {
