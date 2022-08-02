@@ -1694,10 +1694,6 @@ a {
   padding: 6% 4%;
 }
 
-.project-card-details-2.last {
-  border-bottom: 1px solid #767a83;
-}
-
 .project-card-img-2 {
   position: relative;
   left: auto;
@@ -1708,10 +1704,6 @@ a {
   overflow: hidden;
   width: 45%;
   height: 100%;
-}
-
-.project-card-img-2.last {
-  border-bottom: 1px solid #767a83;
 }
 
 .project-card-title-2 {
@@ -2567,6 +2559,73 @@ a {
   height: auto;
 }
 
+.button-talk {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: -5vw;
+  bottom: -5vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 13vw;
+  height: 13vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #7300ff;
+}
+
+.link.nav {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+}
+
+.transition {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 3;
+  display: none;
+  width: 100%;
+  background-color: #5d6067;
+  -webkit-perspective-origin: 0% 50%;
+  perspective-origin: 0% 50%;
+  -webkit-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+}
+
+.loader {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 3;
+  display: none;
+  background-color: #7300ff;
+  -webkit-perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
+  -webkit-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+.text-white {
+  color: #fff;
+}
+
 @media screen and (min-width: 1440px) {
   .container.contact-cta {
     padding-bottom: 7rem;
@@ -3153,6 +3212,26 @@ a {
     font-size: 1.125rem;
     line-height: 1.625rem;
   }
+
+  .button-talk {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .link.nav {
+    font-size: 1.188rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -3671,6 +3750,7 @@ a {
   }
 
   .sublink__text {
+    font-family: Manrope, sans-serif;
     font-size: 1rem;
     line-height: 1.5rem;
     font-weight: 400;
@@ -3728,18 +3808,8 @@ a {
     width: 50%;
   }
 
-  .project-card-details-2.last {
-    border-bottom-style: none;
-    border-bottom-width: 0px;
-  }
-
   .project-card-img-2 {
     width: 50%;
-  }
-
-  .project-card-img-2.last {
-    border-bottom-style: none;
-    border-bottom-width: 0px;
   }
 
   .contact-cta {
@@ -4014,6 +4084,7 @@ a {
   }
 
   .underline-text {
+    font-size: 1rem;
     text-decoration: underline;
   }
 
@@ -4071,6 +4142,10 @@ a {
     font-size: 4.5vw;
     line-height: 4.5vw;
     letter-spacing: -0.225vw;
+  }
+
+  .link.nav-mob {
+    color: #5d6067;
   }
 }
 
@@ -4624,6 +4699,10 @@ a {
     font-size: 7px;
   }
 
+  .sublink.email {
+    font-size: 0.875rem;
+  }
+
   .trigger__line.is--1 {
     width: 100%;
     height: 0.2em;
@@ -5009,8 +5088,6 @@ a {
   .about-intro {
     position: relative;
     height: 100%;
-    max-height: 150vw;
-    min-height: 135vw;
   }
 
   .about-img {
@@ -5766,10 +5843,6 @@ a {
     align-items: flex-end;
   }
 
-  .project-card-details-2.last {
-    border-bottom-width: 0px;
-  }
-
   .project-card-img-2 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5784,14 +5857,6 @@ a {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
-  }
-
-  .project-card-img-2.last {
-    display: block;
-    width: 100%;
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
   }
 
   .project-image-2 {
@@ -6004,6 +6069,7 @@ a {
   }
 
   .underline-text {
+    font-size: 0.875rem;
     text-decoration: underline;
   }
 
@@ -6014,6 +6080,7 @@ a {
   }
 
   .about-img {
+    overflow: hidden;
     height: 60%;
   }
 
@@ -6115,6 +6182,10 @@ a {
 
   .footer-text.mobile-hidden {
     display: none;
+  }
+
+  .link.footer-text.copyright {
+    font-size: 0.875rem;
   }
 }
 

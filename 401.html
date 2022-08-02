@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Mon Aug 01 2022 18:55:01 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Tue Aug 02 2022 21:44:56 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5f901fa1738029b000091acf" data-wf-site="5f901fa1b69b7d676e97f088" lang="en">
 <head>
   <meta charset="utf-8">
@@ -49,16 +49,21 @@
  }
  </script>
   <script>
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
-// We listen to the resize event
 window.addEventListener('resize', () => {
-  // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+</script>
+  <script>
+  $('a.link').click(function (e) {
+    e.preventDefault();                   // prevent default anchor behavior
+    var goTo = this.getAttribute("href"); // store anchor href
+    setTimeout(function(){
+         window.location = goTo;
+    },600);       
+}); 
 </script>
 </body>
 </html>
