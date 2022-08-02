@@ -10,6 +10,7 @@ a {
   background-color: #5d6067;
   font-family: 'Swiss 721 bt', sans-serif;
   color: #fff;
+  overflow: hidden;
 }
 
 .container {
