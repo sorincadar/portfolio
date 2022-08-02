@@ -8,7 +8,7 @@ a {
 
 .body {
   background-color: #5d6067;
-  font-family: Manrope, sans-serif;
+  font-family: 'Swiss 721 bt', sans-serif;
   color: #fff;
 }
 
@@ -1279,6 +1279,7 @@ a {
   overflow: hidden;
   width: 100%;
   height: 100%;
+  max-width: none;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1667,7 +1668,8 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
+  height: 96vh;
+  min-height: 36vw;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -1679,14 +1681,17 @@ a {
   -webkit-align-items: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
+  border-top: 1px solid #767a83;
+}
+
+.project-card-2.last {
+  border-bottom: 1px solid #767a83;
 }
 
 .project-card-details-2 {
   width: 55%;
-  height: 96vh;
-  min-height: 36vw;
+  height: 100%;
   padding: 6% 4%;
-  border-top: 1px solid #767a83;
 }
 
 .project-card-details-2.last {
@@ -1702,9 +1707,7 @@ a {
   display: block;
   overflow: hidden;
   width: 45%;
-  height: 96vh;
-  min-height: 36vw;
-  border-top: 1px solid #767a83;
+  height: 100%;
 }
 
 .project-card-img-2.last {
@@ -3706,16 +3709,27 @@ a {
     font-weight: 400;
   }
 
-  .project-card-details-2 {
-    width: 50%;
+  .project-card-2 {
     height: 50vh;
     min-height: 38vw;
   }
 
+  .project-card-details-2 {
+    width: 50%;
+  }
+
+  .project-card-details-2.last {
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+  }
+
   .project-card-img-2 {
     width: 50%;
-    height: 50vh;
-    min-height: 38vw;
+  }
+
+  .project-card-img-2.last {
+    border-bottom-style: none;
+    border-bottom-width: 0px;
   }
 
   .contact-cta {
@@ -4647,16 +4661,17 @@ a {
     font-weight: 500;
   }
 
-  .project-card-details-2 {
-    width: 55%;
+  .project-card-2 {
     height: 100vh;
     max-height: 70vw;
   }
 
+  .project-card-details-2 {
+    width: 55%;
+  }
+
   .project-card-img-2 {
     width: 45%;
-    height: 100vh;
-    max-height: 70vw;
   }
 
   .contact-cta {
@@ -5484,10 +5499,6 @@ a {
     width: 94%;
   }
 
-  .project-cover-image {
-    width: 96%;
-  }
-
   .paragraph-xs.contact-page {
     width: 34%;
     max-width: none;
@@ -5712,6 +5723,9 @@ a {
   }
 
   .project-card-2 {
+    height: 80vh;
+    max-height: 140vw;
+    min-height: 0vw;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -5725,8 +5739,7 @@ a {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    height: 45vh;
-    min-height: 56vw;
+    height: 60%;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
@@ -5738,17 +5751,19 @@ a {
   }
 
   .project-card-img-2 {
-    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
-    height: 35vh;
+    height: 40%;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    border-top-width: 0px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
   }
 
   .project-card-img-2.last {
@@ -5760,11 +5775,9 @@ a {
   }
 
   .project-image-2 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
+    position: relative;
+    display: block;
+    width: 96%;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
