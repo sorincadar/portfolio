@@ -1602,7 +1602,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 96vh;
+  height: 80vh;
   min-height: 36vw;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
