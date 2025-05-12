@@ -1832,3 +1832,8 @@ textarea.w-select {
 .wf-layout-cell {
   display: flex !important;
 }
+.w-layout-vflex {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}

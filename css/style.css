@@ -504,7 +504,7 @@ a {
 }
 
 .title-l.about {
-  width: 86%;
+  width: 92%;
 }
 
 .title-l.about.secondary {
@@ -546,7 +546,7 @@ a {
 }
 
 .paragraph-m.about-intro {
-  width: 68%;
+  width: 100%;
   margin-bottom: 0vw;
 }
 
@@ -1480,6 +1480,8 @@ a {
   color: #e9c6dd;
 }
 
+
+
 .sublink {
   overflow: hidden;
   margin-top: 1.5em;
@@ -2185,18 +2187,13 @@ a {
 }
 
 .about-img-left {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 52%;
   height: 85%;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
 }
 
 .about-img-right {
@@ -2236,13 +2233,18 @@ a {
 
 .big-paragraph.about-description {
   width: 100%;
-  margin-bottom: 4vw;
+  margin-bottom: 6vw;
   padding-bottom: 3vw;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
   border-bottom: 1px solid #fff;
+}
+
+.big-paragraph.about-description.noborder {
+  border-bottom-width: 0;
+  padding-bottom: 0;
 }
 
 .about-what {
@@ -2455,6 +2457,14 @@ a {
   display: none;
 }
 
+.title-xs {
+  margin-top: 0;
+  font-family: Manrope, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
 .title-s {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -2463,6 +2473,10 @@ a {
   line-height: 3vw;
   font-weight: 500;
   letter-spacing: -0.15vw;
+}
+
+.title-s.secondary {
+  color: #acd647;
 }
 
 .footer-text {
@@ -2508,6 +2522,82 @@ a {
   -ms-transform-origin: 0% 50%;
   transform-origin: 0% 50%;
 }
+
+.profile-intro-text-wrapper {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-flow: column;
+  width: 68%;
+  display: flex;
+}
+
+.descriptions {
+  grid-column-gap: 56px;
+  grid-row-gap: 56px;
+  flex-flow: column;
+  width: 100%;
+  display: flex;
+}
+
+.description {
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 16%;
+  padding-right: 16%;
+  display: flex;
+}
+
+.description.nopadding {
+  padding-left: 0%;
+  padding-right: 0%;
+}
+
+.descriptionwithtitle {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  padding-left: 16%;
+  padding-right: 16%;
+}
+
+.container-3v {
+  grid-column-gap: 2vw;
+  grid-row-gap: 2vw;
+  flex-flow: column;
+  width: 68%;
+  display: flex;
+}
+
+.container-3h {
+  grid-column-gap: 4vw;
+  grid-row-gap: 4vw;
+  width: 72%;
+  display: flex;
+}
+
+.column {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-flow: column;
+  width: 100%;
+  display: flex;
+}
+
+.divider {
+  width: 100%;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+}
+
+.dividerline {
+  border-bottom: 1px solid #fff;
+  width: 100%;
+}
+
 
 @media screen and (min-width: 1440px) {
   .container.contact-cta {
@@ -2666,6 +2756,15 @@ a {
     line-height: 2.75vw;
     letter-spacing: -0.125vw;
   }
+
+  .profile-intro-text-wrapper {
+    width: 54%;
+  }
+
+  .descriptions {
+    align-items: center;
+    max-width: 1440px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
@@ -2766,7 +2865,6 @@ a {
   }
 
   .paragraph-m.about-intro {
-    width: 58%;
     max-width: 34rem;
   }
 
@@ -3226,9 +3324,9 @@ a {
   }
 
   .title-l {
-    font-size: 12vw;
-    line-height: 10.5vw;
-    letter-spacing: -0.6vw;
+    font-size: 9vw;
+    line-height: 9vw;
+    letter-spacing: -0.45vw;
   }
 
   .title-l.pres-section-heading-2 {
@@ -3245,11 +3343,12 @@ a {
   }
 
   .title-l.about {
-    display: none;
+    display: block;
+    width: 100%;
   }
 
   .title-l.about.secondary {
-    display: block;
+    display: none;
     width: 94%;
   }
 
@@ -3352,7 +3451,7 @@ a {
 
   .intro-message {
     width: 100%;
-    height: 50%;
+    margin-bottom: 4vw;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
@@ -3957,6 +4056,35 @@ a {
   .link.nav-mob {
     color: #5d6067;
   }
+
+  .descriptionwithtitle {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    align-items: flex-start;
+    padding-left: 0%;
+    padding-right: 12%;
+  }
+
+  .description {
+    padding-left: 0%;
+    padding-right: 12%;
+  }
+
+  .title-l.about {
+    display: block;
+  }
+
+  .container.about-intro {
+    height: auto;
+    padding-top: 5vw;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+
+
 }
 
 @media screen and (max-width: 767px) {
@@ -4874,12 +5002,12 @@ a {
   }
 
   .about-img-left {
-    width: 44%;
+    width: 48%;
     height: 70%;
   }
 
   .about-img-right {
-    width: 52%;
+    width: 48%;
     height: auto;
   }
 
@@ -4973,6 +5101,46 @@ a {
 
   .footer-text.copyright-mobile {
     display: block;
+  }
+
+  .description {
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    padding-right: 0%;
+  }
+
+  .title-l.about {
+    letter-spacing: -.4vw;
+    width: 100%;
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+
+  .title-l.about.secondary {
+    display: none;
+  }
+
+  .container.about-intro {
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .profile-intro-text-wrapper {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    width: 100%;
+    max-width: 288px;
+  }
+
+  .descriptionwithtitle {
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    padding-right: 0%;
+  }
+
+  .about-title {
+    position: relative;
+    margin-bottom: 12vw;
   }
 }
 
@@ -5097,6 +5265,12 @@ a {
   .title-l.project-card:hover {
     font-size: 9.2vw;
     line-height: 8.7vw;
+  }
+
+  .title-l.about {
+    letter-spacing: -.55vw;
+    font-size: 12vw;
+    line-height: 11vw;
   }
 
   .title-l.about.secondary {
@@ -5942,6 +6116,22 @@ a {
 
   .link.footer-text.copyright {
     font-size: 0.875rem;
+  }
+
+  .paragraph-m.about-intro.hide478 {
+    display: none;
+  }
+
+  .description {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    flex-flow: column;
+  }
+
+  .paragraph-s {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: block;
   }
 }
 
