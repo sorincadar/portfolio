@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topcon CIAM — Case Study</title>
+<style>
+
+/* ============================================================ 
+   RESET & TOKENS 
+   ============================================================ */ 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } 
+
+:root { 
+  --ink:     #0C0C0C; 
+  --ink-2:   #383838; 
+  --ink-3:   #606060; 
+  --ink-4:   #989898; 
+  --rule:    #E0E0E0; 
+  --surface: #F6F6F6; 
+  --white:   #FFFFFF; 
+  --f: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif; 
+  --wrap: 960px; 
+} 
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; } 
+
+body { 
+  font-family: var(--f); 
+  background: var(--white); 
+  color: var(--ink); 
+  line-height: 1.65; 
+} 
+
+/* ============================================================ 
+   LAYOUT 
+   ============================================================ */ 
+.wrap { 
+  max-width: var(--wrap); 
+  margin: 0 auto; 
+  padding: 0 40px; 
+} 
+
+.chapter { 
+  padding: 80px 0; 
+} 
+
+.chapter + .chapter { 
+  border-top: 1px solid var(--rule); 
+} 
+
+/* ============================================================ 
+   STICKY NAV 
+   ============================================================ */ 
+.top-nav { 
+  position: sticky; 
+  top: 0; 
+  z-index: 50; 
+  background: rgba(255,255,255,0.95); 
+  backdrop-filter: blur(6px); 
+  border-bottom: 1px solid var(--rule); 
+} 
+
+.top-nav-inner { 
+  max-width: var(--wrap); 
+  margin: 0 auto; 
+  padding: 0 40px; 
+  height: 44px; 
+  display: flex; 
+  align-items: center; 
+} 
+
+.top-nav a { 
+  font-size: 11px; 
+  font-weight: 600; 
+  letter-spacing: 0.04em; 
+  color: var(--ink-4); 
+  text-decoration: none; 
+  padding: 0 14px; 
+  height: 44px; 
+  display: flex; 
+  align-items: center; 
+  border-bottom: 2px solid transparent; 
+  transition: color 0.15s; 
+} 
+
+.top-nav a:hover { color: var(--ink); } 
+.top-nav a.active { color: var(--ink); border-bottom-color: var(--ink); } 
+
+/* ============================================================ 
+   CHAPTER FLAG 
+   ============================================================ */ 
+.chapter-flag { 
+  display: flex; 
+  align-items: center; 
+  gap: 16px; 
+  margin-bottom: 56px; 
+} 
+
+.chapter-flag-label { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.16em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  white-space: nowrap; 
+} 
+
+.chapter-flag-line { 
+  flex: 1; 
+  height: 1px; 
+  background: var(--rule); 
+} 
+
+/* ============================================================ 
+   TYPOGRAPHY 
+   ============================================================ */ 
+.eyebrow { 
+  display: block; 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.14em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 12px; 
+} 
+
+h1 { 
+  font-size: clamp(32px, 5vw, 52px); 
+  font-weight: 800; 
+  line-height: 1.08; 
+  letter-spacing: -0.025em; 
+  color: var(--ink); 
+  margin-bottom: 20px; 
+} 
+
+h2 { 
+  font-size: clamp(20px, 3vw, 28px); 
+  font-weight: 700; 
+  line-height: 1.2; 
+  letter-spacing: -0.015em; 
+  color: var(--ink); 
+  margin-bottom: 14px; 
+} 
+
+h3 { 
+  font-size: 15px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  margin-bottom: 6px; 
+  line-height: 1.3; 
+} 
+
+.lede { 
+  font-size: 17px; 
+  line-height: 1.65; 
+  color: var(--ink-2); 
+  max-width: 660px; 
+} 
+
+p { 
+  font-size: 14px; 
+  color: var(--ink-3); 
+  line-height: 1.7; 
+  max-width: 660px; 
+  margin-bottom: 12px; 
+} 
+
+p:last-child { margin-bottom: 0; } 
+p strong { color: var(--ink-2); font-weight: 600; } 
+
+.section-head { margin-bottom: 32px; } 
+
+.sep { 
+  height: 1px; 
+  background: var(--rule); 
+  margin: 56px 0; 
+} 
+
+/* ============================================================ 
+   META STRIP 
+   ============================================================ */ 
+.meta-strip { 
+  display: flex; 
+  gap: 40px; 
+  flex-wrap: wrap; 
+  margin: 32px 0 52px; 
+} 
+
+.meta-item-label { 
+  font-size: 10px; 
+  font-weight: 600; 
+  letter-spacing: 0.1em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  display: block; 
+  margin-bottom: 3px; 
+} 
+
+.meta-item-value { 
+  font-size: 14px; 
+  font-weight: 600; 
+  color: var(--ink); 
+  display: block; 
+} 
+
+/* ============================================================ 
+   EVIDENCE ROW 
+   ============================================================ */ 
+.evidence-row { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  border: 1px solid var(--rule); 
+  margin-bottom: 64px; 
+} 
+
+.ev-cell { 
+  padding: 24px 22px; 
+  border-right: 1px solid var(--rule); 
+} 
+
+.ev-cell:last-child { border-right: none; } 
+
+.ev-num { 
+  display: block; 
+  font-size: clamp(28px, 4vw, 46px); 
+  font-weight: 800; 
+  letter-spacing: -0.04em; 
+  color: var(--ink); 
+  line-height: 1; 
+  margin-bottom: 6px; 
+} 
+
+.ev-label { 
+  font-size: 11px; 
+  font-weight: 500; 
+  color: var(--ink-4); 
+  line-height: 1.45; 
+} 
+
+.ev-sub { 
+  display: block; 
+  font-size: 10px; 
+  color: var(--ink-4); 
+  margin-top: 2px; 
+} 
+
+/* ============================================================ 
+   PROBLEM GRID (2-col) 
+   ============================================================ */ 
+.problem-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.pgrid-header { 
+  padding: 13px 22px; 
+  background: var(--surface); 
+  border-bottom: 1px solid var(--rule); 
+} 
+
+.pgrid-header-label { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+} 
+
+.pgrid-cell { 
+  padding: 20px 22px; 
+  background: var(--white); 
+} 
+
+.pgrid-cell h3 { font-size: 14px; } 
+
+.pgrid-cell p { 
+  font-size: 13px; 
+  color: var(--ink-3); 
+  max-width: none; 
+  margin-bottom: 0; 
+  line-height: 1.55; 
+} 
+
+/* ============================================================ 
+   ARCH CONCEPT 
+   ============================================================ */ 
+.arch-concept { 
+  display: grid; 
+  grid-template-columns: 1fr 90px 1fr; 
+  border: 1px solid var(--rule); 
+  margin: 24px 0; 
+} 
+
+.arch-space { 
+  padding: 28px; 
+  background: var(--white); 
+} 
+
+.arch-space-tag { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 8px; 
+} 
+
+.arch-space-name { 
+  font-size: 18px; 
+  font-weight: 800; 
+  color: var(--ink); 
+  margin-bottom: 16px; 
+  letter-spacing: -0.01em; 
+} 
+
+.arch-list { 
+  list-style: none; 
+} 
+
+.arch-list li { 
+  font-size: 13px; 
+  color: var(--ink-3); 
+  padding: 5px 0; 
+  border-top: 1px solid var(--rule); 
+  display: flex; 
+  gap: 10px; 
+} 
+
+.arch-list li::before { 
+  content: '→'; 
+  color: var(--ink-4); 
+  flex-shrink: 0; 
+} 
+
+.arch-connector { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  background: var(--surface); 
+  border-left: 1px solid var(--rule); 
+  border-right: 1px solid var(--rule); 
+  padding: 20px 12px; 
+} 
+
+.arch-connector-line { 
+  flex: 1; 
+  width: 1px; 
+  background: var(--rule); 
+} 
+
+.arch-connector-label { 
+  font-size: 9px; 
+  font-weight: 700; 
+  letter-spacing: 0.08em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  text-align: center; 
+  padding: 10px 0; 
+  line-height: 1.7; 
+} 
+
+/* ============================================================ 
+   MODULE GRID (5-col) 
+   ============================================================ */ 
+.module-grid { 
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.mod-card { 
+  padding: 18px 15px; 
+  background: var(--white); 
+} 
+
+.mod-num { 
+  font-size: 9px; 
+  font-weight: 700; 
+  letter-spacing: 0.1em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 6px; 
+} 
+
+.mod-name { 
+  font-size: 13px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  margin-bottom: 8px; 
+  line-height: 1.3; 
+} 
+
+.mod-desc { 
+  font-size: 12px; 
+  color: var(--ink-3); 
+  line-height: 1.5; 
+  max-width: none; 
+  margin-bottom: 0; 
+} 
+
+/* ============================================================ 
+   BEFORE / AFTER 
+   ============================================================ */ 
+.ba-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.ba-col { padding: 24px; background: var(--white); } 
+.ba-col.tinted { background: var(--surface); } 
+
+.ba-label { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 16px; 
+} 
+
+.ba-list { list-style: none; } 
+
+.ba-list li { 
+  font-size: 13px; 
+  color: var(--ink-3); 
+  padding: 7px 0; 
+  border-bottom: 1px solid var(--rule); 
+  display: flex; 
+  gap: 10px; 
+  line-height: 1.4; 
+} 
+
+.ba-list li:last-child { border-bottom: none; } 
+.ba-list li.after-item { color: var(--ink-2); } 
+
+.ba-marker { color: var(--ink-4); flex-shrink: 0; } 
+
+/* ============================================================ 
+   ROLE STATEMENT 
+   ============================================================ */ 
+.role-statement { 
+  border-left: 3px solid var(--ink); 
+  padding: 2px 0 2px 24px; 
+  margin-bottom: 32px; 
+} 
+
+.role-statement p { 
+  font-size: 17px; 
+  font-weight: 600; 
+  color: var(--ink); 
+  line-height: 1.5; 
+  margin-bottom: 8px; 
+  max-width: 600px; 
+} 
+
+.role-statement p.sub { 
+  font-size: 14px; 
+  font-weight: 400; 
+  color: var(--ink-3); 
+  margin-bottom: 0; 
+} 
+
+/* ============================================================ 
+   PROCESS PHASES 
+   ============================================================ */ 
+.phase-grid { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.phase-card { 
+  padding: 28px 24px; 
+  background: var(--white); 
+} 
+
+.phase-num { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 8px; 
+} 
+
+.phase-title { 
+  font-size: 18px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  letter-spacing: -0.01em; 
+  margin-bottom: 10px; 
+} 
+
+.phase-body { 
+  font-size: 14px; 
+  color: var(--ink-3); 
+  line-height: 1.65; 
+  max-width: none; 
+  margin-bottom: 14px; 
+} 
+
+.tags { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 6px; 
+  margin-top: 14px; 
+} 
+
+.tag { 
+  font-size: 11px; 
+  font-weight: 600; 
+  padding: 3px 10px; 
+  background: var(--surface); 
+  color: var(--ink-3); 
+  letter-spacing: 0.02em; 
+} 
+
+/* ============================================================ 
+   DETAIL VISIBILITY (global toggle) 
+   ============================================================ */ 
+.detail { display: none; } 
+body.show-detail .detail { display: block; } 
+
+/* ============================================================ 
+   RESEARCH TRACKS 
+   ============================================================ */ 
+.track-flag { 
+  display: flex; 
+  align-items: center; 
+  gap: 14px; 
+  margin-bottom: 18px; 
+} 
+
+.track-flag-label { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.14em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  white-space: nowrap; 
+} 
+
+.track-flag-rule { flex: 1; height: 1px; background: var(--rule); } 
+
+.track-flag-note { 
+  font-size: 12px; 
+  color: var(--ink-4); 
+  font-style: italic; 
+  white-space: nowrap; 
+} 
+
+.src-grid-4 { 
+  display: grid; 
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+} 
+
+.src-grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+} 
+
+.src-card { 
+  padding: 20px; 
+  background: var(--white); 
+} 
+
+.src-num { 
+  font-size: 9px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 6px; 
+} 
+
+.src-name { 
+  font-size: 14px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  margin-bottom: 8px; 
+  line-height: 1.3; 
+} 
+
+.src-body { 
+  font-size: 12px; 
+  color: var(--ink-3); 
+  line-height: 1.55; 
+  max-width: none; 
+  margin-bottom: 0; 
+} 
+
+.src-impl { 
+  font-size: 12px; 
+  color: var(--ink-2); 
+  line-height: 1.55; 
+  max-width: none; 
+  margin-top: 10px; 
+  padding-top: 10px; 
+  border-top: 1px solid var(--rule); 
+} 
+
+/* ============================================================ 
+   MISDIAGNOSIS CALLOUT 
+   ============================================================ */ 
+.callout { 
+  border: 1px solid var(--rule); 
+  background: var(--surface); 
+  padding: 26px 30px; 
+  margin: 48px 0; 
+} 
+
+.callout .eyebrow { margin-bottom: 10px; } 
+
+.callout p { 
+  font-size: 15px; 
+  font-weight: 500; 
+  color: var(--ink-2); 
+  max-width: none; 
+  margin-bottom: 0; 
+  line-height: 1.65; 
+} 
+
+/* ============================================================ 
+   SIGNAL → FINDING → DECISION 
+   ============================================================ */ 
+.chain-wrap { 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.chain-head { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  background: var(--surface); 
+  border-bottom: 1px solid var(--rule); 
+} 
+
+.chain-hcell { 
+  padding: 10px 18px; 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+} 
+
+.chain-hcell + .chain-hcell { border-left: 1px solid var(--rule); } 
+
+.chain-row { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  border-bottom: 1px solid var(--rule); 
+} 
+
+.chain-row:last-child { border-bottom: none; } 
+
+.chain-cell { 
+  padding: 15px 18px; 
+  font-size: 13px; 
+  color: var(--ink-3); 
+  line-height: 1.55; 
+  vertical-align: top; 
+} 
+
+.chain-cell + .chain-cell { border-left: 1px solid var(--rule); } 
+
+.chain-cell:first-child { font-weight: 600; color: var(--ink-2); } 
+
+/* ============================================================ 
+   CONCEPTUAL UNLOCKS 
+   ============================================================ */ 
+.unlock-wrap { 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.unlock-item { 
+  display: grid; 
+  grid-template-columns: 24px 1fr; 
+  gap: 16px; 
+  padding: 18px 20px; 
+  border-bottom: 1px solid var(--rule); 
+  background: var(--white); 
+} 
+
+.unlock-item:last-child { border-bottom: none; } 
+
+.unlock-n { 
+  font-size: 11px; 
+  font-weight: 700; 
+  color: var(--ink-4); 
+  padding-top: 2px; 
+} 
+
+.unlock-title { 
+  font-size: 14px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  margin-bottom: 4px; 
+} 
+
+.unlock-sum { 
+  font-size: 13px; 
+  color: var(--ink-3); 
+  max-width: none; 
+  margin-bottom: 0; 
+  line-height: 1.55; 
+} 
+
+.unlock-exp { 
+  font-size: 13px; 
+  color: var(--ink-2); 
+  max-width: none; 
+  margin-top: 10px; 
+  padding-top: 10px; 
+  border-top: 1px solid var(--rule); 
+  line-height: 1.55; 
+} 
+
+/* ============================================================ 
+   JOURNEY MAP BRIEF 
+   ============================================================ */ 
+.jm-row { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.jm-card { 
+  padding: 24px; 
+  background: var(--white); 
+} 
+
+.jm-num { 
+  font-size: 9px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 6px; 
+} 
+
+.jm-title { 
+  font-size: 15px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  margin-bottom: 4px; 
+} 
+
+.jm-scope { 
+  font-size: 12px; 
+  font-style: italic; 
+  color: var(--ink-4); 
+  margin-bottom: 12px; 
+} 
+
+.jm-desc { 
+  font-size: 13px; 
+  color: var(--ink-3); 
+  line-height: 1.55; 
+  max-width: none; 
+  margin-bottom: 0; 
+} 
+
+.pill { 
+  display: inline-block; 
+  margin-top: 14px; 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.06em; 
+  text-transform: uppercase; 
+  padding: 4px 10px; 
+  background: var(--surface); 
+  color: var(--ink-4); 
+} 
+
+.pill.highlight { 
+  background: var(--ink); 
+  color: var(--white); 
+} 
+
+/* ============================================================ 
+   AFFINITY THEMES 
+   ============================================================ */ 
+.theme-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.theme-card { 
+  padding: 22px; 
+  background: var(--white); 
+} 
+
+.theme-num { 
+  font-size: 9px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 6px; 
+} 
+
+.theme-name { 
+  font-size: 14px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  line-height: 1.3; 
+  margin-bottom: 8px; 
+} 
+
+.theme-root { 
+  font-size: 12px; 
+  color: var(--ink-3); 
+  line-height: 1.5; 
+  max-width: none; 
+  margin-bottom: 0; 
+} 
+
+.theme-impl { 
+  font-size: 12px; 
+  color: var(--ink-2); 
+  margin-top: 10px; 
+  padding-top: 10px; 
+  border-top: 1px solid var(--rule); 
+  line-height: 1.5; 
+  max-width: none; 
+} 
+
+/* ============================================================ 
+   PERSONAS 
+   ============================================================ */ 
+.persona-grid { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.persona-card { 
+  padding: 24px; 
+  background: var(--white); 
+} 
+
+.persona-role-label { 
+  font-size: 9px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 6px; 
+} 
+
+.persona-name { 
+  font-size: 18px; 
+  font-weight: 800; 
+  color: var(--ink); 
+  letter-spacing: -0.01em; 
+  margin-bottom: 3px; 
+} 
+
+.persona-model { 
+  font-size: 12px; 
+  font-style: italic; 
+  color: var(--ink-4); 
+  margin-bottom: 16px; 
+} 
+
+.persona-field-label { 
+  font-size: 9px; 
+  font-weight: 700; 
+  letter-spacing: 0.1em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 5px; 
+} 
+
+.persona-goal { 
+  font-size: 13px; 
+  color: var(--ink-2); 
+  font-weight: 500; 
+  max-width: none; 
+  line-height: 1.5; 
+  margin-bottom: 14px; 
+} 
+
+.persona-list { 
+  list-style: none; 
+  border-top: 1px solid var(--rule); 
+  padding-top: 12px; 
+} 
+
+.persona-list li { 
+  font-size: 12px; 
+  color: var(--ink-3); 
+  padding: 4px 0; 
+  line-height: 1.45; 
+  display: flex; 
+  gap: 8px; 
+} 
+
+.persona-list li::before { 
+  content: '—'; 
+  color: var(--ink-4); 
+  flex-shrink: 0; 
+} 
+
+/* ============================================================ 
+   IA TABLE 
+   ============================================================ */ 
+.ia-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.ia-table thead th { 
+  padding: 11px 18px; 
+  background: var(--surface); 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  text-align: left; 
+  border-bottom: 1px solid var(--rule); 
+} 
+
+.ia-table thead th + th { border-left: 1px solid var(--rule); } 
+
+.ia-table tbody td { 
+  padding: 15px 18px; 
+  font-size: 13px; 
+  vertical-align: top; 
+  border-bottom: 1px solid var(--rule); 
+  line-height: 1.55; 
+} 
+
+.ia-table tbody tr:last-child td { border-bottom: none; } 
+.ia-table tbody td + td { border-left: 1px solid var(--rule); } 
+
+.ia-table tbody td:first-child { 
+  font-weight: 700; 
+  color: var(--ink); 
+  width: 22%; 
+} 
+
+.ia-table tbody td:nth-child(2) { 
+  color: var(--ink-3); 
+  width: 38%; 
+} 
+
+.ia-table tbody td:nth-child(3) { 
+  color: var(--ink-2); 
+  width: 40%; 
+} 
+
+/* ============================================================ 
+   ARTIFACT PLACEHOLDER 
+   ============================================================ */ 
+.artifact { 
+  border: 1px dashed var(--rule); 
+  background: var(--surface); 
+  padding: 44px 32px; 
+  text-align: center; 
+  margin: 24px 0; 
+} 
+
+.artifact-tag { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 6px; 
+} 
+
+.artifact-name { 
+  font-size: 14px; 
+  font-weight: 600; 
+  color: var(--ink-4); 
+} 
+
+/* ============================================================ 
+   PLANNING GRID 
+   ============================================================ */ 
+.plan-duo { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1px; 
+  background: var(--rule); 
+  border: 1px solid var(--rule); 
+  margin-top: 24px; 
+} 
+
+.plan-card { 
+  padding: 28px 24px; 
+  background: var(--white); 
+} 
+
+.plan-label { 
+  font-size: 10px; 
+  font-weight: 700; 
+  letter-spacing: 0.12em; 
+  text-transform: uppercase; 
+  color: var(--ink-4); 
+  margin-bottom: 8px; 
+} 
+
+.plan-title { 
+  font-size: 17px; 
+  font-weight: 700; 
+  color: var(--ink); 
+  margin-bottom: 10px; 
+  letter-spacing: -0.01em; 
+} 
+
+.plan-body { 
+  font-size: 13px; 
+  color: var(--ink-3); 
+  line-height: 1.6; 
+  max-width: none; 
+  margin-bottom: 0; 
+} 
+
+/* ============================================================ 
+   GLOBAL DETAIL TOGGLE (fixed) 
+   ============================================================ */ 
+.global-toggle { 
+  position: fixed; 
+  bottom: 28px; 
+  right: 28px; 
+  z-index: 100; 
+} 
+
+#g-toggle { 
+  padding: 10px 20px; 
+  background: var(--ink); 
+  color: var(--white); 
+  border: none; 
+  font-family: var(--f); 
+  font-size: 11px; 
+  font-weight: 700; 
+  letter-spacing: 0.08em; 
+  text-transform: uppercase; 
+  cursor: pointer; 
+  transition: opacity 0.15s; 
+} 
+
+#g-toggle:hover { opacity: 0.8; } 
+
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     STICKY NAV
+     ============================================================ -->
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <a href="#introduction" class="active">Introduction</a>
+    <a href="#discovery">Discovery</a>
+    <a href="#planning">Planning</a>
+    <a href="#deep-dive">Deep Dive</a>
+    <a href="#system">System</a>
+    <a href="#impact">Impact</a>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     CHAPTER 01 — INTRODUCTION
+     ============================================================ -->
+<section class="chapter" id="introduction">
+  <div class="wrap">
+
+<div class="chapter-flag">
+  <span class="chapter-flag-label">Chapter 01 — Introduction</span>
+  <div class="chapter-flag-line"></div>
+</div>
+
+<!-- OPENING -->
+<span class="eyebrow">Enterprise CIAM &nbsp;·&nbsp; B2B2B Identity Platform &nbsp;·&nbsp; Global</span>
+<h1>Rebuilding the Identity Layer for a Global B2B2B Ecosystem</h1>
+<p class="lede">Topcon's legacy access platform, built for hardware-tied licenses, could not support a cloud subscription portfolio serving 37,600 organizations worldwide. This project was the architectural replacement.</p>
+
+<!-- META STRIP -->
+<div class="meta-strip">
+  <div>
+    <span class="meta-item-label">My Role</span>
+    <span class="meta-item-value">Sole Designer</span>
+  </div>
+  <div>
+    <span class="meta-item-label">Duration</span>
+    <span class="meta-item-value">1.5 Years</span>
+  </div>
+  <div>
+    <span class="meta-item-label">Platform</span>
+    <span class="meta-item-value">Web / Enterprise CIAM</span>
+  </div>
+  <div>
+    <span class="meta-item-label">Scope</span>
+    <span class="meta-item-value">5 Modules</span>
+  </div>
+  <div>
+    <span class="meta-item-label">User Population</span>
+    <span class="meta-item-value">Dealers · Admins · Field Workers</span>
+  </div>
+</div>
+
+<!-- EVIDENCE ROW -->
+<div class="evidence-row">
+  <div class="ev-cell">
+    <span class="ev-num">94,800</span>
+    <span class="ev-label">Registered Users</span>
+  </div>
+  <div class="ev-cell">
+    <span class="ev-num">37,600</span>
+    <span class="ev-label">Organizations
+      <span class="ev-sub">46% were single-member</span>
+    </span>
+  </div>
+  <div class="ev-cell">
+    <span class="ev-num">14,800</span>
+    <span class="ev-label">Zero-Activity Organizations</span>
+  </div>
+  <div class="ev-cell">
+    <span class="ev-num">310</span>
+    <span class="ev-label">Orphaned Software Licenses</span>
+  </div>
+</div>
+
+
+<!-- ── THE PROBLEM ───────────────────────────────────── -->
+<div class="section-head">
+  <span class="eyebrow">The Problem</span>
+  <h2>Compounding Failures on Two Fronts</h2>
+  <p>Architectural limitations generated simultaneous pressure — operational costs for the business, and workflow failures for the people using the system daily.</p>
+</div>
+
+<div class="problem-grid">
+  <div class="pgrid-header"><span class="pgrid-header-label">Business Problems</span></div>
+  <div class="pgrid-header"><span class="pgrid-header-label">User Problems</span></div>
+
+  <div class="pgrid-cell">
+    <h3>Architectural Mismatch</h3>
+    <p>Authentication (myTopcon) and authorization (individual app databases) operated as disconnected systems. Deleting a user identity did not cascade to application licenses, <strong>permanently trapping paid software seats</strong> until engineering intervened manually.</p>
+  </div>
+  <div class="pgrid-cell">
+    <h3>Onboarding Dead Ends</h3>
+    <p>Users registering without an invitation were placed in an isolated empty organization by default. No discovery path, no request mechanism, <strong>no route to their employer's actual environment</strong> without admin action.</p>
+  </div>
+
+  <div class="pgrid-cell">
+    <h3>No Digital Dealer Relationship</h3>
+    <p>Topcon's commercial model relies on dealers as the primary customer interface. No formal digital structure existed for this relationship — <strong>no consent record, no audit trail, no scoped access, no revocation mechanism.</strong></p>
+  </div>
+  <div class="pgrid-cell">
+    <h3>Dealer Credential Workarounds</h3>
+    <p>The only available path for dealers to establish client access was a <strong>17-step manual sequence</strong> involving creating accounts under the customer's own identity and self-assigning administrative rights. No formal alternative existed.</p>
+  </div>
+
+  <div class="pgrid-cell">
+    <h3>Enterprise Adoption Blocked</h3>
+    <p>The platform had no federation capability. Enterprise IT departments require SSO integration with their own identity providers <strong>as a procurement condition</strong>, not a preference. Every enterprise contract stalling at this requirement was a blocked deal.</p>
+  </div>
+  <div class="pgrid-cell">
+    <h3>No Self-Service Controls</h3>
+    <p>Users could not edit their own profiles, view active sessions, or remotely revoke device access. The organizational owner role was permanently tied to the original account creator — if they left, <strong>control was inaccessible without engineering intervention.</strong></p>
+  </div>
+
+  <div class="pgrid-cell">
+    <h3>Database Fragmentation</h3>
+    <p>Unverified free-text registration generated a new tenant for every company name variation typed. <strong>14,800 zero-activity organizations</strong> accumulated, blocking automated billing infrastructure and requiring continuous engineering cleanup.</p>
+  </div>
+  <div class="pgrid-cell">
+    <h3>Flat Structure at Enterprise Scale</h3>
+    <p>800 organizations each managing <strong>200+ users</strong> were forced into a single undifferentiated list with no hierarchy, no divisions, and no structural separation between regions or business units.</p>
+  </div>
+</div>
+
+
+<!-- ── THE SOLUTION ──────────────────────────────────── -->
+<div class="sep"></div>
+
+<div class="section-head">
+  <span class="eyebrow">The Solution</span>
+  <h2>Separating "Me" from "We"</h2>
+  <p>The legacy system collapsed personal identity management and organizational administration into a single undifferentiated interface. The new architecture makes a structural separation that resolves the core navigation and conceptual confusion for every user type.</p>
+</div>
+
+<div class="arch-concept">
+  <div class="arch-space">
+    <div class="arch-space-tag">Identity Space</div>
+    <div class="arch-space-name">Personal Context</div>
+    <ul class="arch-list">
+      <li>Credentials &amp; Security Settings</li>
+      <li>Organization Memberships</li>
+      <li>Pending Invitations &amp; Requests</li>
+      <li>Active Session Management</li>
+    </ul>
+  </div>
+  <div class="arch-connector">
+    <div class="arch-connector-line"></div>
+    <div class="arch-connector-label">Persistent<br>Global<br>Header</div>
+    <div class="arch-connector-line"></div>
+  </div>
+  <div class="arch-space">
+    <div class="arch-space-tag">Organization Space</div>
+    <div class="arch-space-name">Administrative Context</div>
+    <ul class="arch-list">
+      <li>Workforce &amp; Permission Profiles</li>
+      <li>Divisions &amp; Hierarchy</li>
+      <li>Service Agreements</li>
+      <li>Technical Configuration</li>
+    </ul>
+  </div>
+</div>
+
+<div class="artifact">
+  <div class="artifact-tag">Artifact A1.1</div>
+  <div class="artifact-name">System Architecture Diagram</div>
+</div>
+
+<div class="module-grid">
+  <div class="mod-card">
+    <div class="mod-num">Module 01</div>
+    <div class="mod-name">User Management</div>
+    <p class="mod-desc">Workforce lifecycle — invitations, permission profiles, bulk onboarding, and full user lifecycle management.</p>
+  </div>
+  <div class="mod-card">
+    <div class="mod-num">Module 02</div>
+    <div class="mod-name">Identity &amp; Auth</div>
+    <p class="mod-desc">Authentication flows, SSO routing, self-service account management, and session security.</p>
+  </div>
+  <div class="mod-card">
+    <div class="mod-num">Module 03</div>
+    <div class="mod-name">Partnership Management</div>
+    <p class="mod-desc">Org creation, divisional hierarchy, domain-based user discovery, and application catalog.</p>
+  </div>
+  <div class="mod-card">
+    <div class="mod-num">Module 04</div>
+    <div class="mod-name">Service Agreements</div>
+    <p class="mod-desc">Formal bidirectional dealer-customer relationships — tiered access, mutual consent, and instant revocation.</p>
+  </div>
+  <div class="mod-card">
+    <div class="mod-num">Module 05</div>
+    <div class="mod-name">Org Settings</div>
+    <p class="mod-desc">Domain verification, identity provider integration, ownership transfer, and governance configuration.</p>
+  </div>
+</div>
+
+<!-- BEFORE / AFTER -->
+<div class="section-head" style="margin-top:52px;">
+  <span class="eyebrow">Transformation Example — Module 04</span>
+  <h2>From Credential Workaround to Formal Service Agreement</h2>
+  <p>One workflow replaced entirely. The sharpest single illustration of what was built and why.</p>
+</div>
+
+<div class="ba-grid">
+  <div class="ba-col">
+    <div class="ba-label">Before — Legacy Workaround</div>
+    <ul class="ba-list">
+      <li><span class="ba-marker">·</span> Dealer creates account using the customer's own email address</li>
+      <li><span class="ba-marker">·</span> Dealer sets a placeholder password; customer notified by phone call</li>
+      <li><span class="ba-marker">·</span> Dealer invites own account as Admin; accepts from own inbox</li>
+      <li><span class="ba-marker">·</span> No consent record, no scope boundary, no expiry date</li>
+      <li><span class="ba-marker">·</span> Manual search-and-delete required to revoke each technician</li>
+    </ul>
+  </div>
+  <div class="ba-col tinted">
+    <div class="ba-label">After — Service Agreement Architecture</div>
+    <ul class="ba-list">
+      <li class="after-item"><span class="ba-marker">→</span> Dealer initiates a formal service agreement request</li>
+      <li class="after-item"><span class="ba-marker">→</span> Customer reviews tiered access scope and provides bilateral consent</li>
+      <li class="after-item"><span class="ba-marker">→</span> Scoped OAuth token grants delegated, audited access</li>
+      <li class="after-item"><span class="ba-marker">→</span> Bilateral record — tier, scope, and consent timestamp</li>
+      <li class="after-item"><span class="ba-marker">→</span> Single-action org-level revocation terminates all dealer access</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ── MY ROLE ────────────────────────────────────────── -->
+<div class="sep"></div>
+
+<div class="section-head">
+  <span class="eyebrow">My Role</span>
+  <h2>Translation Over Invention</h2>
+</div>
+
+<div class="role-statement">
+  <p>In enterprise B2B design, UX does not invent the business logic.</p>
+  <p class="sub">Business rules, legal requirements, and technical mandates arrived pre-defined by Sales, Legal, Engineering, and Product Management. The core design responsibility was translating strict, often complex constraints into interfaces navigable by non-technical users — office managers, service coordinators, and field workers who interact with the platform infrequently and without IT backgrounds.</p>
+</div>
+
+<div class="artifact">
+  <div class="artifact-tag">Artifact A1.2</div>
+  <div class="artifact-name">End-to-End Design Process Diagram</div>
+</div>
+
+<div class="phase-grid">
+  <div class="phase-card">
+    <div class="phase-num">Phase 01</div>
+    <div class="phase-title">Discovery &amp; Ingestion</div>
+    <p class="phase-body">Absorbing four stakeholder research documents while simultaneously running three independent UX investigations — building the conceptual foundation and uncovering behavioral realities not captured in the pre-existing data.</p>
+    <div class="tags">
+      <span class="tag">4 Stakeholder Sources</span>
+      <span class="tag">3 UX Investigations</span>
+      <span class="tag">Proxy Research</span>
+    </div>
+    <div class="detail" style="margin-top:14px; padding-top:14px; border-top:1px solid var(--rule);">
+      <p style="font-size:13px; color:var(--ink-3); max-width:none; margin:0;">Stakeholder research defined <em>what</em> needed to be built — the mandates, requirements, and commercial pressures. The independent UX research built the domain knowledge to execute those mandates correctly, without misdiagnosing structural failures as surface-level UI problems.</p>
+    </div>
+  </div>
+
+  <div class="phase-card">
+    <div class="phase-num">Phase 02</div>
+    <div class="phase-title">Synthesis</div>
+    <p class="phase-body">Aggregating 500+ observations from all research streams into an affinity map organized by structural root cause, then translating six identified themes into behavioral personas and three documented journey maps.</p>
+    <div class="tags">
+      <span class="tag">500+ Observations</span>
+      <span class="tag">6 Affinity Themes</span>
+      <span class="tag">3 Journey Maps</span>
+    </div>
+    <div class="detail" style="margin-top:14px; padding-top:14px; border-top:1px solid var(--rule);">
+      <p style="font-size:13px; color:var(--ink-3); max-width:none; margin:0;">A strict 3-layer filtering discipline separated raw behavioral observations from stakeholder interpretations and premature solution framing. Single-source observations remained provisional until independently confirmed by a second source.</p>
+    </div>
+  </div>
+
+  <div class="phase-card">
+    <div class="phase-num">Phase 03</div>
+    <div class="phase-title">Definition &amp; Planning</div>
+    <p class="phase-body">Designing the information architecture that resolved conflicting user mental models, authoring user stories across all five modules, and participating in a cross-functional prioritization workshop to establish the phased build sequence.</p>
+    <div class="tags">
+      <span class="tag">Information Architecture</span>
+      <span class="tag">All User Stories</span>
+      <span class="tag">2×2 Prioritization</span>
+    </div>
+    <div class="detail" style="margin-top:14px; padding-top:14px; border-top:1px solid var(--rule);">
+      <p style="font-size:13px; color:var(--ink-3); max-width:none; margin:0;">The central IA decision — separating the Identity Space from the Organization Space — structured every navigation and interaction decision across all five modules. UX User Stories served as the direct input to Engineering's Functional Requirements Document.</p>
+    </div>
+  </div>
+
+  <div class="phase-card">
+    <div class="phase-num">Phase 04</div>
+    <div class="phase-title">Execution &amp; Delivery</div>
+    <p class="phase-body">Building an application-specific component library first to establish the visual grammar, then designing high-fidelity screens across all five modules, validated through heuristic evaluation and continuous engineering collaboration.</p>
+    <div class="tags">
+      <span class="tag">Component Library</span>
+      <span class="tag">5 Modules</span>
+      <span class="tag">Engineering Handoff</span>
+    </div>
+    <div class="detail" style="margin-top:14px; padding-top:14px; border-top:1px solid var(--rule);">
+      <p style="font-size:13px; color:var(--ink-3); max-width:none; margin:0;">Formal user testing was not available. Validation relied on heuristic evaluation against established usability principles and structured trade-off sessions with Engineering before screens were finalized for handoff.</p>
+    </div>
+  </div>
+</div>  </div>
+</section>
+
+
+<!-- ============================================================
+     CHAPTER 02 — DISCOVERY
+     ============================================================ -->
+<section class="chapter" id="discovery">
+  <div class="wrap">
+
+<div class="chapter-flag">
+  <span class="chapter-flag-label">Chapter 02 — Discovery</span>
+  <div class="chapter-flag-line"></div>
+</div>
+
+<div class="section-head">
+  <span class="eyebrow">A Two-Track Research Process</span>
+  <h2>What to Build. How to Build It Correctly.</h2>
+  <p>Research ran as two parallel streams with distinct purposes. <strong>Stakeholder-provided research established the mandates</strong> — the technical requirements, commercial pressures, and operational failures the design had to address. <strong>Independent UX research built the foundation</strong> to execute those mandates correctly — through domain knowledge, competitive interaction intelligence, and behavioral depth extracted through proxy research.</p>
+</div>
+
+
+<!-- TRACK 1 -->
+<div class="track-flag">
+  <span class="track-flag-label">Track 01 — Stakeholder Research</span>
+  <div class="track-flag-rule"></div>
+  <span class="track-flag-note">Defined what needed to be built</span>
+</div>
+
+<div class="src-grid-4">
+  <div class="src-card">
+    <div class="src-num">Source 01</div>
+    <div class="src-name">Business Context Analysis</div>
+    <p class="src-body">Established the commercial pressure driving the project: the SaaS licensing shift, dealer network revenue dependency, and the four strategic outcomes required to secure investment.</p>
+    <p class="src-impl detail">Defined that federation, centralized permissions, a formalized dealer relationship, and scalable onboarding were non-negotiable commercial outcomes — not UX proposals. These became the project's fixed requirements before design involvement began.</p>
+  </div>
+  <div class="src-card">
+    <div class="src-num">Source 02</div>
+    <div class="src-name">Quantitative Research</div>
+    <p class="src-body">Confirmed structural failures at measurable scale: <strong>46% single-member organizations</strong>, <strong>310 orphaned licenses</strong>, 4,700 near-duplicate name records, and <strong>12% of invitations never accepted.</strong></p>
+    <p class="src-impl detail">Transformed anecdotal stakeholder concerns into undeniable evidence. Each number anchored a specific design decision to a documented structural failure rather than to an assumption or preference.</p>
+  </div>
+  <div class="src-card">
+    <div class="src-num">Source 03</div>
+    <div class="src-name">Support Ticket Analysis</div>
+    <p class="src-body">Documented 5× ticket growth tracking SaaS expansion directly. Two recurring categories — trapped licenses and ownership transfer — required <strong>engineering database intervention 100% of the time, every instance.</strong></p>
+    <p class="src-impl detail">Proved that the recurring failures were architectural, not operational. No improved support workflow could resolve problems requiring direct database access by an engineer at every occurrence — automation was the only exit.</p>
+  </div>
+  <div class="src-card">
+    <div class="src-num">Source 04</div>
+    <div class="src-name">Competitive Research Report</div>
+    <p class="src-body">Trimble's 2021 migration established domain verification and centralized identity as the market baseline. Ping Identity was selected as the CIAM vendor. Competitors lacked formalized dealer access architecture.</p>
+    <p class="src-impl detail">Established the technical mandates (SAML/OIDC, domain verification) and identified the strategic gap Topcon could own: a formalized dealer-customer access model with no precedent in the industry's software platforms.</p>
+  </div>
+</div>
+
+
+<!-- TRACK 2 -->
+<div class="track-flag" style="margin-top:48px;">
+  <span class="track-flag-label">Track 02 — UX Investigation</span>
+  <div class="track-flag-rule"></div>
+  <span class="track-flag-note">Built the foundation to execute mandates correctly</span>
+</div>
+
+<div class="src-grid-3">
+  <div class="src-card">
+    <div class="src-num">Source 05</div>
+    <div class="src-name">CIAM Industry Research</div>
+    <p class="src-body">Built the domain vocabulary and conceptual framework needed to interpret stakeholder requirements accurately — and to avoid misdiagnosing structural failures as surface UI problems before synthesis began.</p>
+    <p class="src-impl detail">Produced five conceptual unlocks that reframed how the design problem was understood. Without them, each structural failure had a surface-level explanation that would have produced a wrong design response.</p>
+  </div>
+  <div class="src-card">
+    <div class="src-num">Source 06</div>
+    <div class="src-name">Competitive UX Audit</div>
+    <p class="src-body">Hands-on interaction testing across Trimble, Adobe, Atlassian, Microsoft Partner Center, Google Workspace, and AWS — evaluating provisioning flows, SSO configuration, domain verification, and partner access workflows.</p>
+    <p class="src-impl detail">Trimble's bypass-able registration warning, the hidden active-context problem observed across every tested platform, and Microsoft's unusable 100+ role consent model each produced specific UX decisions — not feature comparisons, but interaction intelligence.</p>
+  </div>
+  <div class="src-card">
+    <div class="src-num">Source 07</div>
+    <div class="src-name">Internal Proxy Research</div>
+    <p class="src-body">Extracted behavioral reality from internal stakeholders across three session formats — group sessions for mapping knowledge gaps, one-on-one sessions for operational depth, and written questions for precise sequence reconstruction.</p>
+    <p class="src-impl detail">The 17-step dealer credential workaround surfaced only in private sessions, weeks into the project, after trust built through repeated contact. Journey maps could not be built until this behavioral data arrived — the trust was a research precondition, not a side effect.</p>
+  </div>
+</div>
+
+
+<!-- MISDIAGNOSIS CALLOUT -->
+<div class="callout">
+  <span class="eyebrow">Why Domain Knowledge Was Non-Negotiable</span>
+  <p>Each structural failure in the legacy system had a surface-level explanation that would have led to a wrong design response. Ghost organizations <em>look like</em> a registration UI problem. Trapped licenses <em>look like</em> a database bug. The dealer workaround <em>looks like</em> a security incident to block. Without conceptual grounding built before synthesis began, the design would have addressed symptoms while leaving the architecture intact.</p>
+</div>
+
+
+<!-- SIGNAL → FINDING → DECISION -->
+<div class="section-head" style="margin-top:56px;">
+  <span class="eyebrow">Research to Design</span>
+  <h2>From Signal to Decision</h2>
+  <p>Three examples of how specific research findings produced specific design decisions. The chain is direct — not inferred.</p>
+</div>
+
+<div class="chain-wrap">
+  <div class="chain-head">
+    <div class="chain-hcell">Signal</div>
+    <div class="chain-hcell">Finding</div>
+    <div class="chain-hcell">Design Decision</div>
+  </div>
+  <div class="chain-row">
+    <div class="chain-cell"><strong>310 orphaned licenses</strong> — each requiring direct engineering database access, 3–5 days to resolve, no exceptions.</div>
+    <div class="chain-cell">Deleting a user in myTopcon does not cascade to application license databases. The two systems share no connection.</div>
+    <div class="chain-cell">Centralized permission profile synchronizing identity and authorization in a single record — making orphaned licenses structurally impossible rather than individually repaired.</div>
+  </div>
+  <div class="chain-row">
+    <div class="chain-cell"><strong>17-step dealer credential workaround</strong> used as standard procedure for every new customer setup — not a deviation, the only available path.</div>
+    <div class="chain-cell">No formal digital structure exists for the dealer-customer service relationship. Dealers improvised access through the only mechanism available.</div>
+    <div class="chain-cell">Bidirectional service agreement architecture with explicit consent, scoped OAuth delegation, audit-separated access, and single-action org-level revocation — Module 04.</div>
+  </div>
+  <div class="chain-row">
+    <div class="chain-cell"><strong>Microsoft Partner Center's consent model</strong> — 100+ granular IT role definitions, designed exclusively for IT architects.</div>
+    <div class="chain-cell">Enterprise consent patterns are technically correct but entirely unusable for construction office managers and SMB owners who lack IT backgrounds.</div>
+    <div class="chain-cell">Two plain-language service tiers replacing all role complexity, with illustrated access rights and a guided verification flow requiring no technical vocabulary.</div>
+  </div>
+</div>
+
+
+<!-- CONCEPTUAL UNLOCKS -->
+<div class="section-head" style="margin-top:56px;">
+  <span class="eyebrow">Conceptual Foundation</span>
+  <h2>Five Unlocks That Reframed the Problem</h2>
+  <p>The CIAM industry research produced five distinct shifts in how the design problem was understood. Each one changed what a correct design response looked like.</p>
+</div>
+
+<div class="unlock-wrap">
+  <div class="unlock-item">
+    <div class="unlock-n">01</div>
+    <div>
+      <div class="unlock-title">IAM vs. CIAM — The Wrong Architectural Model</div>
+      <p class="unlock-sum">The platform was built on enterprise IAM assumptions — bounded employee populations, organization-initiated relationships, high trust at entry. It was being exposed to CIAM behavior — self-registering external users, fluid boundaries, unverified identity. Ghost organizations were not bugs. They were the predictable output of applying the wrong model at scale.</p>
+      <p class="unlock-exp detail">Enterprise IAM manages known, contracted employees; the organization initiates every relationship. CIAM manages external users who initiate their own access with low trust at entry. Once this distinction was clear, every registration failure in the legacy system stopped looking like a UI problem and started looking like a structural certainty that needed an architectural response.</p>
+    </div>
+  </div>
+  <div class="unlock-item">
+    <div class="unlock-n">02</div>
+    <div>
+      <div class="unlock-title">Identity as the Billing Enforcement Layer</div>
+      <p class="unlock-sum">In the hardware era, licenses attached to machine serial numbers — user identity was irrelevant to authorization. In SaaS, a license is a continuous authorization attached to a verified human identity. When authentication and authorization systems are disconnected, any deletion event in one permanently orphans what was attached in the other.</p>
+      <p class="unlock-exp detail">This reframe established why the trapped license problem was structural rather than incidental. It could not be fixed by improving the deletion workflow. It required authentication and authorization to be formally connected — which is exactly what the centralized permission profile achieves.</p>
+    </div>
+  </div>
+  <div class="unlock-item">
+    <div class="unlock-n">03</div>
+    <div>
+      <div class="unlock-title">Federation as a Compliance Mandate, Not a Preference</div>
+      <p class="unlock-sum">Enterprise IT departments do not request SSO for user convenience. It is a legal compliance requirement: employee credentials must live exclusively in the corporate directory, and third-party credential storage violates the organization's own security policy. This established that federation was a non-negotiable procurement condition, not a premium feature.</p>
+      <p class="unlock-exp detail">This changed how the SSO configuration experience needed to be designed — not as an advanced settings screen, but as foundational trust infrastructure that enterprise IT requires before approving any procurement decision. The design had to treat it with that weight.</p>
+    </div>
+  </div>
+  <div class="unlock-item">
+    <div class="unlock-n">04</div>
+    <div>
+      <div class="unlock-title">B2B CIAM Has No Established Playbook</div>
+      <p class="unlock-sum">Consumer CIAM has well-documented design patterns: social login, password recovery, individual registration flows. B2B CIAM — organizational hierarchies, delegated administration, multi-tenant context switching, bilateral service agreements — does not. Personas, information architecture, and service agreement flows could not be borrowed from precedent. They required original construction from first principles.</p>
+      <p class="unlock-exp detail">This shaped the project scope directly. Phases that would be routine on a consumer product required building conceptual foundations before execution could begin. Recognizing this early prevented the research and synthesis timeline from being scoped against the wrong reference point.</p>
+    </div>
+  </div>
+  <div class="unlock-item">
+    <div class="unlock-n">05</div>
+    <div>
+      <div class="unlock-title">The MSP Pattern — Formalize, Not Block</div>
+      <p class="unlock-sum">The dealer credential workaround looked, from a security perspective, like a violation to close. The Managed Service Provider pattern in industry literature revealed it as something different: an informal version of a recognized B2B access model that the platform had never formally supported. The design response shifted from blocking the behavior to replacing it with a structured, auditable version that achieves the same commercial goal.</p>
+      <p class="unlock-exp detail">This reframe was the conceptual foundation for Module 4. Without it, the service agreement architecture would have been designed as a restriction mechanism. With it, it could be designed as a formal infrastructure that enables the same dealer-customer service relationship through a secure, consent-based, audit-separated pathway.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- JOURNEY MAPS (BRIEF) -->
+<div class="section-head" style="margin-top:56px;">
+  <span class="eyebrow">Journey Maps</span>
+  <h2>Where the System Failed in Practice</h2>
+  <p>While the affinity map identified structural root causes, journey maps traced the exact operational sequences where those failures reached users. Three workflows were documented in full across the research phase.</p>
+</div>
+
+<div class="jm-row">
+  <div class="jm-card">
+    <div class="jm-num">Journey Map 01</div>
+    <div class="jm-title">Decentralized User Lifecycle</div>
+    <div class="jm-scope">Onboarding and offboarding 15 employees</div>
+    <p class="jm-desc">Traced the multi-step manual sequence required to provision and offboard a batch of workers across disconnected application databases — three separate platform logins, a dangerous ordering dependency that could permanently trap licenses, and no bulk operations at any stage.</p>
+    <span class="pill">Foundation for Module 01 &amp; 03 requirements</span>
+  </div>
+  <div class="jm-card">
+    <div class="jm-num">Journey Map 02</div>
+    <div class="jm-title">Registration Confusion</div>
+    <div class="jm-scope">Subcontractor self-registering without an invite</div>
+    <p class="jm-desc">Traced how unverified free-text registration placed a user inside an isolated empty organization, and how accepting a legitimate corporate invitation afterwards caused the platform to route them to the wrong context by default — hiding project files with no error state displayed.</p>
+    <span class="pill">Foundation for Module 02 &amp; 03 requirements</span>
+  </div>
+  <div class="jm-card">
+    <div class="jm-num">Journey Map 03</div>
+    <div class="jm-title">Dealer Setup for a New Customer</div>
+    <div class="jm-scope">Standard dealer provisioning workflow</div>
+    <p class="jm-desc">Reconstructed from private sessions after weeks of trust-building, this map documented the 17-step credential sequence used as standard procedure — including the moment a dealer authenticated as the customer before the customer had ever accessed their own account. Not an edge case. The only available path.</p>
+    <span class="pill highlight">Full analysis in Deep Dive → Module 04</span>
+  </div>
+</div>  </div>
+</section>
+
+
+<!-- ============================================================
+     CHAPTER 03 — PLANNING
+     ============================================================ -->
+<section class="chapter" id="planning">
+  <div class="wrap">
+
+<div class="chapter-flag">
+  <span class="chapter-flag-label">Chapter 03 — Planning</span>
+  <div class="chapter-flag-line"></div>
+</div>
+
+<div class="section-head">
+  <h2>From Research to Blueprint</h2>
+  <p>The synthesis of seven research streams produced a shared problem model. The planning phase translated that model into the architectural decisions, scope boundaries, and documentation contracts that structured everything built afterwards.</p>
+</div>
+
+
+<!-- AFFINITY MAP -->
+<div class="sep"></div>
+
+<div class="section-head">
+  <span class="eyebrow">Synthesis — Affinity Map</span>
+  <h2>Six Structural Root Causes</h2>
+  <p>500+ raw observations were clustered by shared root cause, not shared symptom. Six themes emerged — each representing a distinct architectural or behavioral failure the design needed to address at a structural level.</p>
+</div>
+
+<div class="artifact">
+  <div class="artifact-tag">Artifact A2.1</div>
+  <div class="artifact-name">Affinity Map Board — Full Observation Clusters</div>
+</div>
+
+<div class="theme-grid">
+  <div class="theme-card">
+    <div class="theme-num">Theme 01</div>
+    <div class="theme-name">Identity Formation is Broken</div>
+    <p class="theme-root">Unguarded self-registration produces isolated empty organizations. No mechanism routes users to the correct container at any stage of the process.</p>
+    <p class="theme-impl detail">Drove the platform-wide registration intercept, domain-based organization discovery, and the request-to-join flow — making isolation structurally impossible rather than individually corrected.</p>
+  </div>
+  <div class="theme-card">
+    <div class="theme-num">Theme 02</div>
+    <div class="theme-name">Access Management is Architecturally Fragmented</div>
+    <p class="theme-root">Identity lived in myTopcon. Authorization lived in each app. No connecting layer. Every provisioning and offboarding event required manual navigation across disconnected systems.</p>
+    <p class="theme-impl detail">Drove the centralized permission profile system, synchronizing identity and authorization in a single record — eliminating multi-app manual provisioning and making orphaned licenses structurally impossible.</p>
+  </div>
+  <div class="theme-card">
+    <div class="theme-num">Theme 03</div>
+    <div class="theme-name">No Digital Dealer-Customer Infrastructure</div>
+    <p class="theme-root">A commercial service relationship that functions in the real world has no representation in the system. Dealers operated inside customer environments using mechanisms designed for internal employees.</p>
+    <p class="theme-impl detail">Drove the entire Module 04 architecture — bidirectional service agreements, scoped OAuth delegation, bilateral consent, tiered access levels, and instant org-level revocation.</p>
+  </div>
+  <div class="theme-card">
+    <div class="theme-num">Theme 04</div>
+    <div class="theme-name">Enterprise Scale is Unsupported</div>
+    <p class="theme-root">A single flat user list with no hierarchy cannot represent organizational structures enterprises actually use. Federation, domain verification, and divisional management were architecturally absent.</p>
+    <p class="theme-impl detail">Drove divisional hierarchy in Module 03 and the domain verification and SSO configuration flows in Module 05 — the foundational infrastructure that makes enterprise IT procurement approval possible.</p>
+  </div>
+  <div class="theme-card">
+    <div class="theme-num">Theme 05</div>
+    <div class="theme-name">Self-Service Gaps Create Cascading Dependencies</div>
+    <p class="theme-root">Users cannot manage their own identity. Admins cannot transfer ownership. Every basic maintenance action creates a dependency on admin or engineering intervention downstream.</p>
+    <p class="theme-impl detail">Drove the self-service account management panel in Module 02, the ownership transfer workflow in Module 05, and remote session management controls for field workers.</p>
+  </div>
+  <div class="theme-card">
+    <div class="theme-num">Theme 06</div>
+    <div class="theme-name">Operational Debt is Compounding</div>
+    <p class="theme-root">Each structural failure above generates recurring operational cost. Ticket volume grew 5× over five years, tracking SaaS expansion exactly. Engineering maintenance had no resolution state.</p>
+    <p class="theme-impl detail">Provided the business case for treating Themes 01–05 as architectural requirements — the operational cost data established the urgency and scope that secured stakeholder alignment for full platform replacement.</p>
+  </div>
+</div>
+
+
+<!-- PERSONAS -->
+<div class="sep"></div>
+
+<div class="section-head">
+  <span class="eyebrow">Synthesis — Behavioral Personas</span>
+  <h2>Three Mental Models, Not Demographic Profiles</h2>
+  <p>Personas were defined by operational goal and mental model — the internal logic users apply when the platform gives them an ambiguous signal. When platform structure matches mental model, it feels intuitive. When they conflict, every step requires deliberate effort.</p>
+</div>
+
+<div class="persona-grid">
+  <div class="persona-card">
+    <div class="persona-role-label">Persona 01</div>
+    <div class="persona-name">Dealer Admin</div>
+    <div class="persona-model">Mental model: Portfolio Management</div>
+    <div class="persona-field-label">Core Goal</div>
+    <p class="persona-goal">Verify client license → Fix issue → Move to next client. The unit of work is the customer organization, not the individual user.</p>
+    <div class="persona-field-label">Key Frictions</div>
+    <ul class="persona-list">
+      <li>No centralized view of client onboarding status or license health</li>
+      <li>Context-switching errors from hidden active-organization indicators</li>
+      <li>Credential workarounds as the only path to establish client access</li>
+    </ul>
+  </div>
+
+  <div class="persona-card">
+    <div class="persona-role-label">Persona 02</div>
+    <div class="persona-name">Customer Admin</div>
+    <div class="persona-model">Mental model: Infrastructure Control (Enterprise) · Total Delegation (SMB)</div>
+    <div class="persona-field-label">Core Goal</div>
+    <p class="persona-goal">Maintain a secure, accurate software environment for the workforce — through self-management or full dealer delegation, depending on organizational size and maturity.</p>
+    <div class="persona-field-label">Key Frictions</div>
+    <ul class="persona-list">
+      <li>Managing 200+ users across multiple regions in a single flat list</li>
+      <li>Binary choice — block dealers entirely or grant full Admin equivalence</li>
+      <li>Manual permission tracking across disconnected application databases</li>
+    </ul>
+  </div>
+
+  <div class="persona-card">
+    <div class="persona-role-label">Persona 03</div>
+    <div class="persona-name">End User</div>
+    <div class="persona-model">Mental model: Task Execution</div>
+    <div class="persona-field-label">Core Goal</div>
+    <p class="persona-goal">Login → Application → Work. The platform is a gate, not a destination. Every step between authentication and the first application launch is friction to be eliminated.</p>
+    <div class="persona-field-label">Key Frictions</div>
+    <ul class="persona-list">
+      <li>Routed to an empty isolated organization by default after self-registration</li>
+      <li>No self-service path to correct profile errors or manage active sessions</li>
+      <li>Blocked from apps by concurrent session limits with no explanation</li>
+    </ul>
+  </div>
+</div>
+
+<div class="artifact" style="margin-top:24px;">
+  <div class="artifact-tag">Artifact A2.2</div>
+  <div class="artifact-name">Full Persona &amp; Sub-Persona Tables</div>
+</div>
+
+
+<!-- INFORMATION ARCHITECTURE -->
+<div class="sep"></div>
+
+<div class="section-head">
+  <span class="eyebrow">Planning — Information Architecture</span>
+  <h2>The Central Architectural Decision</h2>
+  <p>The most consequential design decision in the project was made before any screen was designed: separating the personal Identity Space from the organizational Administration Space, connected by a persistent global context header. Every navigation and interaction decision in the five modules followed from this structural separation.</p>
+</div>
+
+<table class="ia-table">
+  <thead>
+    <tr>
+      <th>Decision</th>
+      <th>Problem It Solved</th>
+      <th>Rationale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Identity Space / Organization Space separation</td>
+      <td>The legacy system mixed personal credentials with administrative controls in one interface, creating role-based confusion for every user type simultaneously.</td>
+      <td>Matches the distinct mental models of personal identity ("what am I") versus organizational administration ("what do I manage"). Each space maintains a consistent experience regardless of the user's role in the other.</td>
+    </tr>
+    <tr>
+      <td>Customers in the dealer sidebar. Dealers in customer Settings.</td>
+      <td>Dealers and customers have an inverse relationship to the same subject. Treating both symmetrically in navigation misrepresents actual usage frequency for both sides.</td>
+      <td>For a Dealer Admin, managing customers is a daily operational task — primary navigation. For a Customer Admin, managing their dealer is an infrequent configuration task — Settings. Navigation placement reflects frequency, not structural symmetry.</td>
+    </tr>
+    <tr>
+      <td>Requests separated from the active user directory</td>
+      <td>Mixing unverified access applicants with active organization members created conflicting interface actions and risked accidental license consumption before review.</td>
+      <td>Requests function as a gated staging area — reviewed and approved before anyone enters the directory or consumes a license. Reduces cognitive load and prevents premature resource allocation at any scale.</td>
+    </tr>
+    <tr>
+      <td>Divisions elevated to primary navigation</td>
+      <td>Treating organizational divisions as a Settings item buried a feature that enterprise admins interact with repeatedly as an operational target, not a one-time configuration.</td>
+      <td>Admins assign users and applications to divisions regularly. Operational targets belong in operational navigation. Settings is reserved for infrequent configuration that does not require daily or weekly access.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="artifact">
+  <div class="artifact-tag">Artifact A2.3</div>
+  <div class="artifact-name">Card Sorting Results &amp; IA Diagram</div>
+</div>
+
+
+<!-- PRIORITIZATION & DOCS -->
+<div class="sep"></div>
+
+<div class="section-head">
+  <span class="eyebrow">Planning — Scope &amp; Documentation</span>
+  <h2>Two Outputs That Structured the Build</h2>
+</div>
+
+<div class="plan-duo">
+  <div class="plan-card">
+    <div class="plan-label">Scope Prioritization</div>
+    <div class="plan-title">2×2 Impact / Effort Matrix</div>
+    <p class="plan-body">A cross-functional workshop facilitated by Product Management evaluated the full feature scope against engineering effort. High-impact, lower-effort features formed the Release One core. High-impact, high-effort features entered a phased rollout. The output was a strict 5-module build sequence with clear delineation between foundational CIAM architecture and deferred platform enhancements.</p>
+    <div class="artifact" style="margin-top:20px; padding:22px;">
+      <div class="artifact-tag">Artifact A2.4</div>
+      <div class="artifact-name">2×2 Priority Matrix</div>
+    </div>
+  </div>
+
+  <div class="plan-card">
+    <div class="plan-label">Documentation Contract</div>
+    <div class="plan-title">User Stories &amp; Functional Requirements</div>
+    <p class="plan-body">UX authored behavioral user stories across all five modules — persona, action, outcome, edge cases, and error states from the user's perspective. Engineering produced the Functional Requirements Document directly from those stories. Design defined what the feature needed to do for the user. Engineering defined how the system would do it. Neither owned the other's document.</p>
+    <div class="artifact" style="margin-top:20px; padding:22px;">
+      <div class="artifact-tag">Artifact A2.5</div>
+      <div class="artifact-name">User Stories &amp; Requirements Board</div>
+    </div>
+  </div>
+</div>  </div>
+</section>
+
+
+<!-- ============================================================
+     FIXED DETAIL TOGGLE
+     ============================================================ -->
+<div class="global-toggle">
+  <button id="g-toggle">Show Details</button>
+</div>
+
+<script>
+  const btn = document.getElementById('g-toggle');
+  btn.addEventListener('click', function () {
+    document.body.classList.toggle('show-detail');
+    this.textContent = document.body.classList.contains('show-detail')
+      ? 'Hide Details'
+      : 'Show Details';
+  });
+</script>
+
+</body>
+</html>
