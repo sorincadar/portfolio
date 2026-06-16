@@ -1,505 +1,402 @@
-<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
-<!--  Last Published: Wed Aug 03 2022 18:30:04 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="627c1d23a85eccf2876d2d0b" data-wf-site="5f901fa1b69b7d676e97f088" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Project - Court Documents Monitor | Sorin Cadar</title>
-  <meta content="Giving attorneys the means of organizing their court documents as well as getting notified about updates" name="description">
-  <meta content="Project - Court Documents Monitor | Sorin Cadar" property="og:title">
-  <meta content="Giving attorneys the means of organizing their court documents as well as getting notified about updates" property="og:description">
-  <meta content="Project - Court Documents Monitor | Sorin Cadar" property="twitter:title">
-  <meta content="Giving attorneys the means of organizing their court documents as well as getting notified about updates" property="twitter:description">
-  <meta property="og:type" content="website">
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/base.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed74"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed8f"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="8a350d88-428b-3144-4b65-41cab38b5f47"] {opacity:0;display:none;-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed84"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed74"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed8f"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed84"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed74"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed8f"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed84"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed74"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed8f"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed84"] {-webkit-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-moz-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-ms-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);opacity:0;}}</style>
-  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.jpg" rel="apple-touch-icon">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Project - Court Documents Monitor | Sorin Cadar</title>
+ <meta name="description" content="Giving attorneys the means of organizing their court documents as well as getting notified about updates">
+ <link href="css/style.css" rel="stylesheet">
+ <script src="js/animations.js"></script>
 </head>
-<body class="body">
-  <div class="project-intro-css w-embed">
-    <style>
-  @media screen and (max-width: 991px) and (orientation: landscape) {
-    .header {
-      height: 4rem;
-    }
-    .container-2.is--nav {
-      height: 4rem;
-    }
-    .intro_wrapper.project {
-  	min-height: 50vw;
-  	}
-    .container.project-intro {
-      height: auto;
-      min-height: 38vw;
-      padding-top: 3.5vw;
-      padding-bottom: 3.5vw;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-direction: initial;
-      -webkit-flex-direction: initial;
-      -ms-flex-direction: initial;
-      flex-direction: initial;
-    }
-    .project-image.project-intro {
-      width: 50%;
-      height: 100%;
-    }
-    .background-video-2.project-intro {
-      width: 65%;
-      height: 100%;
-    }
-    .project-details.project-intro {
-      width: 50%;
-      height: auto;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding-bottom: 0;
-    }
-    .project-details-top {
-      height: 50%;
-    }
-   .title-l.project-intro {
-  		font-size: 7.5vw;
-  		line-height: 7vw;
-      letter-spacing: -0.375vw;
-		}
-    .paragraph-m.project-intro {
-    	font-size: 1rem;
-      line-height: 1.3rem;
-      width: 20rem;
-      height: auto;
-    }
-    .arrow.project-intro {
-      display: block;
-      width: 18%;
-      height: auto;
-      max-width: none;
-    }
-    .project-presentation {
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    }
-  }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
-  .container-2.is--nav {
-  	height: 3rem;
-  }
-}
-	@media screen and (max-width: 767px) and (orientation: landscape) {
-      .header {
-        height: 3rem;
-      }
-      .title-xl.project-intro {
-        margin-top: 0;
-        line-height: 6.2vw;
-         letter-spacing: -0.12vw;
-      }
-   }
-</style>
+<body>
+
+ <!-- Header & Navigation -->
+ <header class="c-header">
+  <div class="l-container c-header__container">
+    
+   <!-- Logo -->
+   <a href="/" class="c-header__logo-link" aria-label="Home">
+    <img src="images/logo-Sorin-cadar.svg" alt="Sorin Cadar Logo" class="c-header__logo">
+   </a>
+
+   <!-- Desktop Navigation -->
+   <nav class="c-header__nav-desktop" aria-label="Main Navigation">
+    <a href="/" class="c-header__nav-link t-ui-base" aria-current="page">Work</a>
+    <a href="/profile" class="c-header__nav-link t-ui-base">Profile</a>
+    <a href="/contact" class="c-header__nav-link t-ui-base">Get in Touch</a>
+    <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="c-button--outline">Download My CV</a>
+   </nav>
+
+   <!-- Mobile Menu Toggle -->
+   <button class="c-header__menu-toggle" aria-label="Open Menu" aria-expanded="false">
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+   </button>
+
   </div>
-  <div class="contact-circle-css w-embed">
-    <style>
-	.Cursor_Area {
-		pointer-events:none;
-  	}
-  @media (max-width: 1024px) {
-    #contact-circle-mobile-show {display: flex;}
-    #contact-cta-1 {display: none;}
-		#contact-cta-2 {display: block;}
-   }
-   @media (min-width: 1025px) {
-    #contact-cta-1 {display: block;}
-		#contact-cta-2 {display: none;}
-   }
-</style>
-  </div>
-  <div class="cursor_area">
-    <div data-w-id="8a350d88-428b-3144-4b65-41cab38b5f47" class="contact-circle">
-      <p class="contact-circle-text">Go to<br>Contact<br>Details</p>
+
+  <!-- Mobile Navigation Overlay -->
+  <nav class="c-nav-mobile" aria-label="Mobile Navigation">
+   <div class="c-nav-mobile__container">
+    <div class="c-nav-mobile__links">
+     <a href="/" class="c-nav-mobile__link t-ui-base" aria-current="page">
+      <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> Work
+     </a>
+     <a href="/profile" class="c-nav-mobile__link t-ui-base">
+      <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> Profile
+     </a>
+     <a href="/contact" class="c-nav-mobile__link t-ui-base">
+      <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> Get in touch
+     </a>
     </div>
-  </div>
-  <div id="luxy" class="smooth-wrapper">
-    <div class="intro_wrapper project">
-      <div class="header wf-section">
-        <div class="container header">
-          <div class="logo-area _50">
-            <a href="/" class="link logo-link w-inline-block"><img src="images/logo-Sorin-cadar.svg" loading="lazy" alt="" class="logo"></a>
-          </div>
-          <div class="navigation _50">
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bb7" href="/" class="link nav">Work</a>
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bb9" href="profile" class="link nav">Profile</a>
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bbb" href="contact" class="link nav">Get in Touch</a>
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bbd" href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="button white header-button w-inline-block">
-              <div class="button-contain">
-                <p class="button-text">Download My CV</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <nav class="section is--nav">
-          <div fs-scrolldisable-element="when-visible" class="menu">
-            <div class="menu-css w-embed">
-              <style>
-  .menu {
-    height: calc(var(--vh, 1vh) * 100);
-    touch-action: none;
-  }
- </style>
-            </div>
-            <div class="background">
-              <div class="background__fill"></div>
-              <div data-is-ix2-target="1" class="background__lottie" data-w-id="75d87ef5-1026-a220-e8d3-0a64b359c0d8" data-animation-type="lottie" data-src="documents/menu-animation.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.5666666666666667" data-duration="0" data-ix2-initial-state="0"></div>
-            </div>
-            <div class="container-2 is--menu">
-              <div class="menu__contain">
-                <div class="menu-nav">
-                  <a href="/" class="link nav-mob w-inline-block">
-                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
-                      <p class="nav-link__text">Work</p>
-                    </div>
-                  </a>
-                  <a href="profile" class="link nav-mob w-inline-block">
-                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
-                      <p class="nav-link__text">Profile</p>
-                    </div>
-                  </a>
-                  <a href="contact" class="link nav-mob w-inline-block">
-                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
-                      <p class="nav-link__text">Get in touch</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="menu-sublinks">
-                  <div class="sublinks">
-                    <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="button mobile-menu w-inline-block">
-                      <div class="button-contain">
-                        <p class="button-text">Download My CV</p>
-                      </div>
-                    </a>
-                    <div class="sublink">
-                      <div class="sublink__contain">
-                        <p class="sublink__text">Anytime at <a href="mailto:hello@sorincadar.com" class="sublink email"><span class="underline-text">contact@sorincadar.com</span></a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-2 is--nav">
-            <a href="#" class="trigger w-inline-block">
-              <div class="trigger__line is--1"></div>
-              <div class="trigger__line is--2"></div>
-            </a>
-          </div>
-        </nav>
-      </div>
-      <div class="project-intro-css w-embed">
-        <style>
-	@media screen and (max-width: 767px) {
-    .project_intro {
-      height: calc(100% - 3rem);
-    }
-	}
-  @media screen and (min-width: 768px) and (max-width: 1919px) {
-    .project_intro {
-      height: calc(100% - 5rem);
-    }
-  }
-  @media screen and (min-width: 1920px) {
-    .project_intro {
-      height: calc(100% - 6rem);
-    }
-	}
-</style>
-      </div>
-      <div class="project_intro wf-section">
-        <div class="container project-intro">
-          <div class="project-image project-intro">
-            <div style="width:100%;height:100%" class="filling-2"></div>
-            <div class="background-video-2 project-intro w-background-video w-background-video-atom" data-autoplay="true" data-loop="true" data-beta-bgvideo-upgrade="false" data-wf-ignore="true" style="-webkit-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" data-poster-url="images/Project-Monitor-Dosare-p-2000.jpeg" data-w-id="e186fc7d-9812-e120-91a1-01e1c03da61b"><video id="e186fc7d-9812-e120-91a1-01e1c03da61b-video" autoplay="" loop="" style="background-image:url(&quot;images/Project-Monitor-Dosare-p-2000.jpeg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                <source src="https://sorincadar.mo.cloudinary.net/cover-project4.mp4?cld-content-marker=jit" data-wf-ignore="true">
-              </video></div>
-          </div>
-          <div class="project-details project-intro">
-            <div class="project-details-top">
-              <div style="width:100%;height:100%" class="filling-2"></div>
-              <h1 style="-webkit-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="title-l project-intro">Court<br>Documents <br>Monitor</h1>
-            </div>
-            <div class="project-details-bottom">
-              <div style="width:100%;height:100%" class="filling-2"></div>
-              <p style="-webkit-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph-m project-intro">Giving attorneys the means of organizing their court documents as well as getting notified about updates</p><img src="images/arrow-see-more.svg" loading="lazy" style="-webkit-transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow project-intro">
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="c-nav-mobile__footer">
+     <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="c-button--outline">Download My CV</a>
+     <p class="c-nav-mobile__contact-text t-body-lead">Anytime at <a href="mailto:hello@sorincadar.com" class="u-text-underline">hello@sorincadar.com</a></p>
     </div>
-        <div class="project-presentation wf-section">
-      <div class="big-and-small-paragraph-2">
-        <p data-w-id="be5768de-0d13-f046-5c24-be559fd77a2c" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph-xxl big-and-small-paragraph">Advocatus is a company that helps law firms and attorneys from Romania by offering them digital solutions to manage their work. Their platform contains an advanced CRM application, a tool for legal files monitoring, and a monitor for company insolvency.</p>
-        <div data-w-id="be5768de-0d13-f046-5c24-be559fd77a2e" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="small-paragraphs">
-          <div class="first-paragraph">
-            <p class="paragraph-s big-and-small-paragraph-2">In Romania, court documents, as well as dates and details about hearings and appeals, are posted on a public online portal. Attorneys could use the public portal to monitor court documents, but Advocatus wanted to make this task easier.<br>‍<br>We created the “Monitor Dosare” app, which provides a more user friendly solution to monitoring court documents and additional functionalities to help attorneys organize them.</p>
-          </div>
-          <div class="second-paragraph">
-            <p class="paragraph-s big-and-small-paragraph-2 second">I had the responsibility of giving a visual form to the vision of the product owner, with whom I closely collaborated. His expertise on the needs, the goals, and the work process of attorneys guided me throughout the project.<br>‍<br>I managed to create a simple and friendly interface using an iterative design process based on constant feedback. The interface supports the mental model of attorneys, and empowers them to organize their court documents in a smart way.</p>
-          </div>
-        </div>
-      </div>
-      <div data-w-id="5b15dd06-916f-3e44-c7e9-5876790018e1" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-details-table">
-        <div class="empty-half"></div>
-        <div class="details-table">
-          <div class="label---details-table">
-            <div class="label-row">
-              <p class="paragraph-s details-table-label">Client</p>
-            </div>
-            <div class="label-row">
-              <p class="paragraph-s details-table-label">Year</p>
-            </div>
-            <div class="label-row">
-              <p class="paragraph-s details-table-label">Scope</p>
-            </div>
-            <div class="label-row last">
-              <p class="paragraph-s details-table-label">Made at</p>
-            </div>
-          </div>
-          <div class="values---details-table">
-            <div class="value-row">
-              <p class="paragraph-s details-table-value">Advocatus</p>
-            </div>
-            <div class="value-row">
-              <p class="paragraph-s details-table-value">2020</p>
-            </div>
-            <div class="value-row">
-              <p class="paragraph-s details-table-value">Wireframe, UI Design</p>
-            </div>
-            <div class="value-row last">
-              <p class="paragraph-s details-table-value">Redouble Agency</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-w-id="113d6daf-d853-b717-3bfa-bb435694be78" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-one-contained-description"><img loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 1919px) 300px, 64vw" srcset="images/Pres_User-Flow_Monitor-Dosare-p-500.png 500w, images/Pres_User-Flow_Monitor-Dosare-p-800.png 800w, images/Pres_User-Flow_Monitor-Dosare-p-1080.png 1080w, images/Pres_User-Flow_Monitor-Dosare-p-1600.png 1600w, images/Pres_User-Flow_Monitor-Dosare-p-2000.png 2000w" src="images/Pres_User-Flow_Monitor-Dosare.png" alt="" class="image-2">
-          <p class="paragraph-s pres-img">Some bumps in the road will always occur throughout a project, but keeping them at a minimum rate is a goal that matters to me. What always helped was creating a user flow, which is the most basic visualization of what needs to be built. By creating it, me and my colleagues managed to get on the same page early on.</p>
-        </div>
-      </div>
-      <div data-w-id="002b17b8-eb2e-9809-3656-691236f30368" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div data-w-id="31d9d630-de7f-740a-184d-15de2266d1e4" class="pres-img-one-full-width"><img src="images/Pres_Wireframe_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, 96vw" srcset="images/Pres_Wireframe_Monitor-Dosare-p-500.png 500w, images/Pres_Wireframe_Monitor-Dosare-p-800.png 800w, images/Pres_Wireframe_Monitor-Dosare-p-1080.png 1080w, images/Pres_Wireframe_Monitor-Dosare-p-1600.png 1600w, images/Pres_Wireframe_Monitor-Dosare-p-2000.png 2000w, images/Pres_Wireframe_Monitor-Dosare.png 4098w" class="image"></div>
-      </div>
-      <div data-w-id="79fdf6b0-ce1e-db85-d639-d91fad1c42b8" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
-        <div class="pres-img-one-contained"><img src="images/Pres_Typography_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_Typography_Monitor-Dosare-p-500.png 500w, images/Pres_Typography_Monitor-Dosare-p-800.png 800w, images/Pres_Typography_Monitor-Dosare-p-1080.png 1080w, images/Pres_Typography_Monitor-Dosare.png 3543w" class="image-2"></div>
-      </div>
-      <div data-w-id="4e677053-c642-d29d-2a79-95640736dcbc" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xs">
-        <div class="pres-img-one-contained-description"><img src="images/Pres_Colors_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Colors_Monitor-Dosare-p-500.png 500w, images/Pres_Colors_Monitor-Dosare-p-800.png 800w, images/Pres_Colors_Monitor-Dosare-p-1080.png 1080w, images/Pres_Colors_Monitor-Dosare-p-1600.png 1600w, images/Pres_Colors_Monitor-Dosare.png 3546w">
-          <p class="paragraph-s pres-img">Building an initial set of typography styles and colors was an essential first step of the visual design phase. This ensured a balanced and consistent result. </p>
-        </div>
-      </div>
-      <div data-w-id="a5785a22-8597-90a7-407a-dd062a79fd55" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-one-contained"><img src="images/Pres_LogIn_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 3854px) 92vw, 3546px" srcset="images/Pres_LogIn_Monitor-Dosare-p-500.png 500w, images/Pres_LogIn_Monitor-Dosare-p-800.png 800w, images/Pres_LogIn_Monitor-Dosare-p-1080.png 1080w, images/Pres_LogIn_Monitor-Dosare-p-1600.png 1600w, images/Pres_LogIn_Monitor-Dosare-p-2000.png 2000w, images/Pres_LogIn_Monitor-Dosare.png 3546w" class="image-2"></div>
-      </div>
-      <div data-w-id="3dbe014c-1248-f439-4060-6d2d43884d82" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xxl">
-        <div class="just-paragraph">
-          <p class="paragraph-xxl just-paragraph">The app helps attorneys organize their court documents by saving them into projects dedicated to each court case.</p>
-        </div>
-      </div>
-      <div data-w-id="2e0d37cf-1577-4056-4ef4-cbe357df9317" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
-        <div class="pres-img-one-contained-description"><img src="images/Pres_Add-Project_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Add-Project_Monitor-Dosare-p-500.png 500w, images/Pres_Add-Project_Monitor-Dosare-p-800.png 800w, images/Pres_Add-Project_Monitor-Dosare-p-1080.png 1080w, images/Pres_Add-Project_Monitor-Dosare-p-1600.png 1600w, images/Pres_Add-Project_Monitor-Dosare-p-2000.png 2000w, images/Pres_Add-Project_Monitor-Dosare.png 3546w">
-          <p class="paragraph-s pres-img">To create a project, they must complete a form divided into steps. Firstly, they give the project a name, then input details about the desired documents. In the final step, they save the relevant documents from a list of results. With the goal of reducing user’s cognitive load and effort in mind, I grouped related elements in the most efficient way. I placed the process details at the top and the form at the bottom. </p>
-        </div>
-      </div>
-      <div data-w-id="1bda60d4-9eb3-5d9f-3f17-32b91063198a" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-two-offset">
-          <div class="press-img-two">
-            <div class="press-img-two-left-container"><img src="images/Pres_Projects-Empty_Monitor-Dosare.png" loading="lazy" alt="" sizes="45vw" srcset="images/Pres_Projects-Empty_Monitor-Dosare-p-500.png 500w, images/Pres_Projects-Empty_Monitor-Dosare.png 1144w" class="pres-img-half left">
-              <p class="paragraph-s pres-img two-offset">The list of projects was designed to be easily browsed. The project card contains the most relevant details that help identify them. Clarity and ease of scanning were achieved through proper hierarchy and highlighting the essential information.</p>
-            </div><img src="images/Pres_Projects_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" srcset="images/Pres_Projects_Monitor-Dosare-p-500.png 500w, images/Pres_Projects_Monitor-Dosare.png 1144w" class="pres-img-half right">
-          </div>
-        </div>
-      </div>
-      <div data-w-id="f149dd7e-2947-fdf7-2107-627bc077a6af" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xxl">
-        <div class="big-and-small-paragraph">
-          <p class="paragraph-xxl big-and-small-paragraph">Browsing the details of a project is possible through a tab navigator. This solution ensures effortless navigation, with minimal taps needed from the user.</p>
-          <p class="paragraph-s big-and-small-paragraph">The tabs reflect the main structure of a court document. It is comprised of the parties involved in the trial, appeals and decisions of the court. The project is managed on the &quot;Info&quot; tab. Here, the user can rename or archive the project, and add more court documents and notified clients.</p>
-        </div>
-      </div>
-      <div data-w-id="d1acd0f0-857c-0a6b-bbaf-69f96d5788ba" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-m">
-        <div data-w-id="31d9d630-de7f-740a-184d-15de2266d1e4" class="pres-img-one-full-width"><img src="images/Pres_Project-Details_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, 96vw" srcset="images/Pres_Project-Details_Monitor-Dosare-p-500.png 500w, images/Pres_Project-Details_Monitor-Dosare-p-800.png 800w, images/Pres_Project-Details_Monitor-Dosare-p-1080.png 1080w, images/Pres_Project-Details_Monitor-Dosare-p-1600.png 1600w, images/Pres_Project-Details_Monitor-Dosare-p-2000.png 2000w, images/Pres_Project-Details_Monitor-Dosare.png 4098w" class="image"></div>
-      </div>
-      <div data-w-id="df906159-62f5-0456-1696-c6a9cac16c06" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-l">
-        <div class="pres-img-one-contained-description"><img src="images/Pres_Notifications_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Notifications_Monitor-Dosare-p-500.png 500w, images/Pres_Notifications_Monitor-Dosare-p-800.png 800w, images/Pres_Notifications_Monitor-Dosare-p-1080.png 1080w, images/Pres_Notifications_Monitor-Dosare-p-1600.png 1600w, images/Pres_Notifications_Monitor-Dosare-p-2000.png 2000w, images/Pres_Notifications_Monitor-Dosare.png 3546w">
-          <p class="paragraph-s pres-img">The app also helps attorneys keep up with all their court updates. For each update, they receive a notification. I was careful to create a great contrast ratio between the unread and read notifications. </p>
-        </div>
-      </div>
-      <div data-w-id="ca53ee36-8da7-b91c-450a-27a04fb0e0f5" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="just-paragraph">
-          <p class="paragraph-xxl just-paragraph">Settings that allow users to customize their experience are indispensable in an application. To avoid overwhelming them, I designed a simple menu for the main categories, and I made the entire section distinctive by using a dark color palette.</p>
-        </div>
-      </div>
-      <div data-w-id="a233b4eb-6a59-f782-a69e-146c14ae0f6a" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
-        <div class="pres-img-one-contained"><img src="images/Pres_Settings_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_Settings_Monitor-Dosare-p-500.png 500w, images/Pres_Settings_Monitor-Dosare-p-800.png 800w, images/Pres_Settings_Monitor-Dosare-p-1080.png 1080w, images/Pres_Settings_Monitor-Dosare-p-1600.png 1600w, images/Pres_Settings_Monitor-Dosare.png 3546w" class="image-2"></div>
-      </div>
-      <div data-w-id="67c7d212-a17c-dca9-ae52-b2c68ef88453" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xs">
-        <div class="pres-img-one-contained-description"><img src="images/Pres_Subscription_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Pres_Subscription_Monitor-Dosare-p-500.png 500w, images/Pres_Subscription_Monitor-Dosare-p-800.png 800w, images/Pres_Subscription_Monitor-Dosare-p-1080.png 1080w, images/Pres_Subscription_Monitor-Dosare-p-1600.png 1600w, images/Pres_Subscription_Monitor-Dosare.png 3546w">
-          <p class="paragraph-s pres-img">Creating the app was possible because of the monetization plan. For us, it was important to create a frictionless experience when upgrading or downgrading the premium plan. Clear details and no hidden information were the goals that guided my work.</p>
-        </div>
-      </div>
-      <div data-w-id="ff559b67-a109-d3f6-33a4-886d67e3bbd2" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="just-paragraph">
-          <p class="paragraph-xxl just-paragraph">After we validated the design of the mobile app, I worked on extending it on desktop screens. </p>
-        </div>
-      </div>
-      <div data-w-id="50baa812-f768-b3f0-113f-6472dc69bacf" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
-        <div class="pres-img-one-contained"><img src="images/Pres_LogIn-Desktop_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_LogIn-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-2600.png 2600w, images/Pres_LogIn-Desktop_Monitor-Dosare.png 3549w" class="image-2"></div>
-      </div>
-      <div data-w-id="75b065bc-d383-0ad5-a6f1-275fefab3d72" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xs">
-        <div class="pres-img-one-contained"><img src="images/Pres_Projects-Empty-Desktop_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" srcset="images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare.png 3549w" class="image-2"></div>
-      </div>
-      <div data-w-id="b3725961-f9c8-b537-3680-1feac19c7249" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-l">
-        <div data-w-id="31d9d630-de7f-740a-184d-15de2266d1e4" class="pres-img-one-full-width"><img src="images/Pres_Project-Desktop_Monitor-Dosare.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, 96vw" srcset="images/Pres_Project-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_Project-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_Project-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_Project-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_Project-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_Project-Desktop_Monitor-Dosare.png 4098w" class="image"></div>
-      </div>
+   </div>
+  </nav>
+ </header>
+
+ <!-- Main Content Wrapper -->
+ <main id="main-content">
+
+  <!-- Project Hero Section -->
+  <section class="c-hero c-hero--project">
+   <div class="c-hero__container">
+     
+    <!-- Left Column: Image/Video -->
+    <div class="c-hero__col-left">
+     <video class="c-hero__video" autoplay loop muted playsinline poster="images/Project-Monitor-Dosare-p-2000.jpeg">
+      <source src="https://sorincadar.mo.cloudinary.net/cover-project4.mp4?cld-content-marker=jit" type="video/mp4">
+     </video>
     </div>
-    <div class="projects-nav">
-      <a data-w-id="74c9da55-f86a-79f8-465b-a31a430a1ec5" href="project-porters-activity-manager" class="link previous-project w-inline-block">
-        <div class="filling projects-nav"></div>
-        <div class="projects-nav-container">
-          <div style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="projects-nav-title">
-            <p class="project-nav-type">Previous Project</p>
-            <h1 class="title-m projects-nav-left">Porters <br>Activity <br>Manager</h1>
-          </div><img src="images/arrow-see-more.svg" loading="lazy" style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow projects-nav">
-        </div>
-        <div data-poster-url="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.mp4,https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-beta-bgvideo-upgrade="false" class="background-video-2 projects-nav w-background-video w-background-video-atom"><video id="b0f062b3-9d90-8c07-ccc5-e91735cd809d-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.mp4" data-wf-ignore="true">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft Services - 4K - 14s - Compressed 2-transcode.webm" data-wf-ignore="true">
-          </video></div>
-      </a>
-      <a data-w-id="74c9da55-f86a-79f8-465b-a31a430a1ed3" href="project-space-awareness-tool" class="link next-project w-inline-block">
-        <div class="filling projects-nav right"></div>
-        <div class="projects-nav-container right">
-          <div style="-webkit-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="projects-nav-title">
-            <p class="project-nav-type next">Next Project</p>
-            <h1 class="title-m projects-nav-right">Space<br>Awareness<br>Tool</h1>
-          </div><img src="images/arrow-seemore-invert.svg" loading="lazy" style="-webkit-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow projects-nav">
-        </div>
-        <div data-poster-url="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.mp4,https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-beta-bgvideo-upgrade="false" class="background-video-2 projects-nav w-background-video w-background-video-atom"><video id="b36dd17c-aacb-edec-b02f-24ebd3156771-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.mp4" data-wf-ignore="true">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export (2)-transcode.webm" data-wf-ignore="true">
-          </video></div>
-      </a>
+
+    <!-- Right Column: Details -->
+    <div class="c-hero__col-right">
+     <div class="c-hero__details-top">
+      <h1 class="c-hero__title t-display-1">Court<br>Documents<br>Monitor</h1>
+     </div>
+     <div class="c-hero__details-bottom">
+      <p class="c-hero__desc t-body-lead">Giving attorneys the means of organizing their court documents as well as getting notified about updates</p>
+      <img src="images/arrow-see-more.svg" alt="See More" class="c-hero__arrow">
+     </div>
     </div>
-    <div class="contact-cta-wrapper">
-      <a id="contact-cta-1" data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed72" href="contact" class="link contact-cta w-inline-block">
-        <div class="loop-text-outer">
-          <div data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed74" class="loop-text-inner">
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-          </div>
-        </div>
-        <div class="contact-text">
-          <div class="container contact-cta">
-            <div class="content-wrapper">
-              <div class="main-text contact-cta">
-                <p class="paragraph-xl contact-text">Feel free to hit me up, either for a chat about design, an opportunity or even a travel recommendation. </p>
-              </div>
-              <div class="secondary-text contact-cta">
-                <p class="paragraph-s contact-cta">The best way to get in touch is through my email adress. Check the contact page for a complete list of contact details.</p>
-              </div>
-              <div id="contact-circle-mobile-show" data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed84" class="contact-circle-mobile">
-                <div class="contact-circle-content">
-                  <p class="contact-circle-text mobile">View<br>My Contact<br>Details</p><img src="images/arrow-right-grey.svg" loading="lazy" width="82" alt="" class="arrow-contact">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <div id="contact-cta-2" data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed8d" class="contact-cta">
-        <div class="loop-text-outer">
-          <div data-w-id="97c130a0-22b5-204c-d569-6e82a8f2ed8f" class="loop-text-inner">
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-          </div>
-        </div>
-        <div class="contact-text">
-          <div class="container contact-cta">
-            <div class="content-wrapper">
-              <div class="main-text contact-cta">
-                <p class="paragraph-xl contact-text">Feel free to hit me up, either for a chat about design, an opportunity or even a travel recommendation. </p>
-              </div>
-              <div class="secondary-text contact-cta">
-                <p class="paragraph-s contact-cta">The best way to get in touch is through my email adress. Check the contact page for a complete list of contact details.</p>
-              </div>
-              <a id="contact-circle-mobile-show" href="contact" class="link contact-circle-mobile w-inline-block">
-                <div class="contact-circle-content">
-                  <p class="contact-circle-text mobile">View<br>My Contact<br>Details</p><img src="images/arrow-right-grey.svg" loading="lazy" width="82" alt="" class="arrow-contact">
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
+
+   </div>
+  </section>
+
+  <!-- Project Presentation Section -->
+  <section class="c-presentation" aria-label="Project Presentation">
+
+   <!-- Consolidated 94% Width Intro Container -->
+   <div class="c-presentation__intro">
+
+    <!-- Horizontal Spec Shelf -->
+    <dl class="c-spec-shelf">
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Client</dt>
+      <dd class="c-spec-shelf__value">Advocatus</dd>
+     </div>
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Year</dt>
+      <dd class="c-spec-shelf__value">2020</dd>
+     </div>
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Scope</dt>
+      <dd class="c-spec-shelf__value">Wireframe, UI Design</dd>
+     </div>
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Made at</dt>
+      <dd class="c-spec-shelf__value">Redouble Agency</dd>
+     </div>
+    </dl>
+
+    <!-- Presentation Intro: Unified Story Grid -->
+    <div class="c-story-grid">
+     <header class="c-story-grid__lead">
+      <p class="c-story-grid__lead-text t-heading-1">
+       Advocatus is a company that helps law firms and attorneys from Romania by offering them digital solutions to manage their work. Their platform contains an advanced CRM application, a tool for legal files monitoring, and a monitor for company insolvency.
+      </p>
+     </header>
+     <div class="c-story-grid__body">
+      <div class="c-story-grid__col">
+       <p class="t-body-lead">In Romania, court documents, as well as dates and details about hearings and appeals, are posted on a public online portal. Attorneys could use the public portal to monitor court documents, but Advocatus wanted to make this task easier.</p>
+       <p class="t-body-lead">We created the “Monitor Dosare” app, which provides a more user friendly solution to monitoring court documents and additional functionalities to help attorneys organize them.</p>
+      </div>
+      <div class="c-story-grid__col">
+       <p class="t-body-lead">I had the responsibility of giving a visual form to the vision of the product owner, with whom I closely collaborated. His expertise on the needs, the goals, and the work process of attorneys guided me throughout the project.</p>
+       <p class="t-body-lead">I managed to create a simple and friendly interface using an iterative design process based on constant feedback. The interface supports the mental model of attorneys, and empowers them to organize their court documents in a smart way.</p>
+      </div>
+     </div>
+    </div>
+
+   </div> <!-- End of intro -->
+
+   <!-- Block 1: User Flow (1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Pres_User-Flow_Monitor-Dosare.png" loading="lazy" alt="User flow diagram for Monitor Dosare" srcset="images/Pres_User-Flow_Monitor-Dosare-p-500.png 500w, images/Pres_User-Flow_Monitor-Dosare-p-800.png 800w, images/Pres_User-Flow_Monitor-Dosare-p-1080.png 1080w, images/Pres_User-Flow_Monitor-Dosare-p-1600.png 1600w, images/Pres_User-Flow_Monitor-Dosare-p-2000.png 2000w" sizes="(max-width: 479px) 100vw, (max-width: 1919px) 300px, 64vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Some bumps in the road will always occur throughout a project, but keeping them at a minimum rate is a goal that matters to me. What always helped was creating a user flow, which is the most basic visualization of what needs to be built. By creating it, me and my colleagues managed to get on the same page early on.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block 2: Wireframe (Full Bleed) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--full-bleed">
+     <img src="images/Pres_Wireframe_Monitor-Dosare.png" loading="lazy" alt="Wireframes for Monitor Dosare" srcset="images/Pres_Wireframe_Monitor-Dosare-p-500.png 500w, images/Pres_Wireframe_Monitor-Dosare-p-800.png 800w, images/Pres_Wireframe_Monitor-Dosare-p-1080.png 1080w, images/Pres_Wireframe_Monitor-Dosare-p-1600.png 1600w, images/Pres_Wireframe_Monitor-Dosare-p-2000.png 2000w, images/Pres_Wireframe_Monitor-Dosare.png 4098w" sizes="(max-width: 1919px) 100vw, 96vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block 3: Typography (1 Contained) -->
+   <div class="c-pres-block u-spacing-top-s">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Pres_Typography_Monitor-Dosare.png" loading="lazy" alt="Typography styles for Monitor Dosare" srcset="images/Pres_Typography_Monitor-Dosare-p-500.png 500w, images/Pres_Typography_Monitor-Dosare-p-800.png 800w, images/Pres_Typography_Monitor-Dosare-p-1080.png 1080w, images/Pres_Typography_Monitor-Dosare.png 3543w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block 4: Colors (1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xs">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Pres_Colors_Monitor-Dosare.png" loading="lazy" alt="Color palette for Monitor Dosare" srcset="images/Pres_Colors_Monitor-Dosare-p-500.png 500w, images/Pres_Colors_Monitor-Dosare-p-800.png 800w, images/Pres_Colors_Monitor-Dosare-p-1080.png 1080w, images/Pres_Colors_Monitor-Dosare-p-1600.png 1600w, images/Pres_Colors_Monitor-Dosare.png 3546w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Building an initial set of typography styles and colors was an essential first step of the visual design phase. This ensured a balanced and consistent result.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block 5: LogIn Mobile (1 Contained) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Pres_LogIn_Monitor-Dosare.png" loading="lazy" alt="Mobile login screen" srcset="images/Pres_LogIn_Monitor-Dosare-p-500.png 500w, images/Pres_LogIn_Monitor-Dosare-p-800.png 800w, images/Pres_LogIn_Monitor-Dosare-p-1080.png 1080w, images/Pres_LogIn_Monitor-Dosare-p-1600.png 1600w, images/Pres_LogIn_Monitor-Dosare-p-2000.png 2000w, images/Pres_LogIn_Monitor-Dosare.png 3546w" sizes="(max-width: 3854px) 92vw, 3546px" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block 6: Add Project Mobile (Text Above + 1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xxl">
+    <header class="c-pres-block__text-above">
+     <p class="t-heading-1">
+      The app helps attorneys organize their court documents by saving them into projects dedicated to each court case.
+     </p>
+    </header>
+    <div class="c-pres-block__media c-pres-block__media--1-contained u-spacing-top-s">
+     <img src="images/Pres_Add-Project_Monitor-Dosare.png" loading="lazy" alt="Add project mobile screens" srcset="images/Pres_Add-Project_Monitor-Dosare-p-500.png 500w, images/Pres_Add-Project_Monitor-Dosare-p-800.png 800w, images/Pres_Add-Project_Monitor-Dosare-p-1080.png 1080w, images/Pres_Add-Project_Monitor-Dosare-p-1600.png 1600w, images/Pres_Add-Project_Monitor-Dosare-p-2000.png 2000w, images/Pres_Add-Project_Monitor-Dosare.png 3546w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      To create a project, they must complete a form divided into steps. Firstly, they give the project a name, then input details about the desired documents. In the final step, they save the relevant documents from a list of results. With the goal of reducing user’s cognitive load and effort in mind, I grouped related elements in the most efficient way. I placed the process details at the top and the form at the bottom.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block 7: Projects Offset View -->
+   <div class="c-pres-block c-pres-block--type-offset u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--offset">
+     
+     <!-- Left Column: Image 1 + Text Below -->
+     <div class="c-pres-block__offset-left">
+      <img src="images/Pres_Projects-Empty_Monitor-Dosare.png" loading="lazy" alt="Empty state for projects list" srcset="images/Pres_Projects-Empty_Monitor-Dosare-p-500.png 500w, images/Pres_Projects-Empty_Monitor-Dosare.png 1144w" sizes="45vw" class="c-pres-block__img">
+      <div class="c-pres-block__text-below">
+       <p class="t-body-lead">
+        The list of projects was designed to be easily browsed. The project card contains the most relevant details that help identify them. Clarity and ease of scanning were achieved through proper hierarchy and highlighting the essential information.
+       </p>
+      </div>
+     </div>
+
+     <!-- Right Column: Image 2 -->
+     <img src="images/Pres_Projects_Monitor-Dosare.png" loading="lazy" alt="Populated projects list" srcset="images/Pres_Projects_Monitor-Dosare-p-500.png 500w, images/Pres_Projects_Monitor-Dosare.png 1144w" sizes="(max-width: 479px) 100vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" class="c-pres-block__img c-pres-block__img--offset-right">
+    
+    </div>
+   </div>
+
+   <!-- Block 8: Project Details Desktop (Text Above + Full Bleed) -->
+   <div class="c-pres-block u-spacing-top-xxl">
+    <header class="c-pres-block__text-above">
+     <p class="t-heading-1">
+      Browsing the details of a project is possible through a tab navigator. This solution ensures effortless navigation, with minimal taps needed from the user.
+     </p>
+     <p class="t-body-lead">
+      The tabs reflect the main structure of a court document. It is comprised of the parties involved in the trial, appeals and decisions of the court. The project is managed on the "Info" tab. Here, the user can rename or archive the project, and add more court documents and notified clients.
+     </p>
+    </header>
+    <div class="c-pres-block__media c-pres-block__media--full-bleed u-spacing-top-m">
+     <img src="images/Pres_Project-Details_Monitor-Dosare.png" loading="lazy" alt="Project details interface" srcset="images/Pres_Project-Details_Monitor-Dosare-p-500.png 500w, images/Pres_Project-Details_Monitor-Dosare-p-800.png 800w, images/Pres_Project-Details_Monitor-Dosare-p-1080.png 1080w, images/Pres_Project-Details_Monitor-Dosare-p-1600.png 1600w, images/Pres_Project-Details_Monitor-Dosare-p-2000.png 2000w, images/Pres_Project-Details_Monitor-Dosare.png 4098w" sizes="(max-width: 1919px) 100vw, 96vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block 9: Notifications (1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-l">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Pres_Notifications_Monitor-Dosare.png" loading="lazy" alt="Notifications screen" srcset="images/Pres_Notifications_Monitor-Dosare-p-500.png 500w, images/Pres_Notifications_Monitor-Dosare-p-800.png 800w, images/Pres_Notifications_Monitor-Dosare-p-1080.png 1080w, images/Pres_Notifications_Monitor-Dosare-p-1600.png 1600w, images/Pres_Notifications_Monitor-Dosare-p-2000.png 2000w, images/Pres_Notifications_Monitor-Dosare.png 3546w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      The app also helps attorneys keep up with all their court updates. For each update, they receive a notification. I was careful to create a great contrast ratio between the unread and read notifications.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block 10: Settings (Text Above + 1 Contained) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <header class="c-pres-block__text-above">
+     <p class="t-heading-1">
+      Settings that allow users to customize their experience are indispensable in an application. To avoid overwhelming them, I designed a simple menu for the main categories, and I made the entire section distinctive by using a dark color palette.
+     </p>
+    </header>
+    <div class="c-pres-block__media c-pres-block__media--1-contained u-spacing-top-s">
+     <img src="images/Pres_Settings_Monitor-Dosare.png" loading="lazy" alt="Settings menu interface" srcset="images/Pres_Settings_Monitor-Dosare-p-500.png 500w, images/Pres_Settings_Monitor-Dosare-p-800.png 800w, images/Pres_Settings_Monitor-Dosare-p-1080.png 1080w, images/Pres_Settings_Monitor-Dosare-p-1600.png 1600w, images/Pres_Settings_Monitor-Dosare.png 3546w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block 11: Subscription (1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xs">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Pres_Subscription_Monitor-Dosare.png" loading="lazy" alt="Subscription and billing interface" srcset="images/Pres_Subscription_Monitor-Dosare-p-500.png 500w, images/Pres_Subscription_Monitor-Dosare-p-800.png 800w, images/Pres_Subscription_Monitor-Dosare-p-1080.png 1080w, images/Pres_Subscription_Monitor-Dosare-p-1600.png 1600w, images/Pres_Subscription_Monitor-Dosare.png 3546w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Creating the app was possible because of the monetization plan. For us, it was important to create a frictionless experience when upgrading or downgrading the premium plan. Clear details and no hidden information were the goals that guided my work.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block 12: Desktop Adaptation Lead-in (Text Above + 1 Contained) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <header class="c-pres-block__text-above">
+     <p class="t-heading-1">
+      After we validated the design of the mobile app, I worked on extending it on desktop screens.
+     </p>
+    </header>
+    <div class="c-pres-block__media c-pres-block__media--1-contained u-spacing-top-s">
+     <img src="images/Pres_LogIn-Desktop_Monitor-Dosare.png" loading="lazy" alt="Desktop login screen" srcset="images/Pres_LogIn-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_LogIn-Desktop_Monitor-Dosare-p-2600.png 2600w, images/Pres_LogIn-Desktop_Monitor-Dosare.png 3549w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block 13: Projects Desktop (1 Contained) -->
+   <div class="c-pres-block u-spacing-top-xs">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Pres_Projects-Empty-Desktop_Monitor-Dosare.png" loading="lazy" alt="Desktop empty projects state" srcset="images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_Projects-Empty-Desktop_Monitor-Dosare.png 3549w" sizes="(max-width: 479px) 100vw, (max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block 14: Project Inner Desktop (Full Bleed) -->
+   <div class="c-pres-block u-spacing-top-l">
+    <div class="c-pres-block__media c-pres-block__media--full-bleed">
+     <img src="images/Pres_Project-Desktop_Monitor-Dosare.png" loading="lazy" alt="Desktop project details interface" srcset="images/Pres_Project-Desktop_Monitor-Dosare-p-500.png 500w, images/Pres_Project-Desktop_Monitor-Dosare-p-800.png 800w, images/Pres_Project-Desktop_Monitor-Dosare-p-1080.png 1080w, images/Pres_Project-Desktop_Monitor-Dosare-p-1600.png 1600w, images/Pres_Project-Desktop_Monitor-Dosare-p-2000.png 2000w, images/Pres_Project-Desktop_Monitor-Dosare.png 4098w" sizes="(max-width: 1919px) 100vw, 96vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+  </section>
+
+  <!-- Previous/Next Project Navigation Footer -->
+  <nav class="c-project-nav" aria-label="Project Navigation">
+    
+   <!-- Previous Project Link -->
+   <a href="project-porters-activity-manager" class="c-project-nav__link c-project-nav__link--prev">
+    <div class="c-project-nav__content">
+     <div>
+      <p class="c-project-nav__label">Previous Project</p>
+      <h2 class="c-project-nav__title t-display-2">Porters<br>Activity<br>Manager</h2>
+     </div>
+     <img src="images/arrow-see-more.svg" alt="" class="c-project-nav__arrow" loading="lazy">
+    </div>
+    <div class="c-project-nav__bg">
+     <video class="c-project-nav__video" autoplay loop muted playsinline poster="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft%20Services%20-%204K%20-%2014s%20-%20Compressed%202-poster-00001.jpg">
+      <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/62ae1595cd95dfa2bb1dd5f0_Soft%20Services%20-%204K%20-%2014s%20-%20Compressed%202-transcode.mp4" type="video/mp4">
+     </video>
+    </div>
+   </a>
+
+   <!-- Next Project Link -->
+   <a href="project-space-awareness-tool" class="c-project-nav__link c-project-nav__link--next">
+    <div class="c-project-nav__content c-project-nav__content--right">
+     <div>
+      <p class="c-project-nav__label c-project-nav__label--next">Next Project</p>
+      <h2 class="c-project-nav__title c-project-nav__title--right t-display-2">Space<br>Awareness<br>Tool</h2>
+     </div>
+     <img src="images/arrow-seemore-invert.svg" alt="" class="c-project-nav__arrow" loading="lazy">
+    </div>
+    <div class="c-project-nav__bg">
+     <video class="c-project-nav__video" autoplay loop muted playsinline poster="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export%20(2)-poster-00001.jpg">
+      <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6249e63d61cd0e327ed33de4_mockrocket-export%20(2)-transcode.mp4" type="video/mp4">
+     </video>
+    </div>
+   </a>
+
+  </nav>
+
+  <!-- Contact CTA Section -->
+  <section class="c-contact-cta" aria-label="Get in touch" id="contact-cta-section">
+    
+    <!-- Marquee -->
+    <div class="c-contact-cta__marquee" aria-hidden="true">
+      <div class="c-contact-cta__marquee-inner">
+        <h2 class="c-contact-cta__marquee-text t-marquee">Get in touch / Get in touch / Get in touch /&nbsp;</h2>
+        <h2 class="c-contact-cta__marquee-text t-marquee">Get in touch / Get in touch / Get in touch /&nbsp;</h2>
       </div>
     </div>
-    <div class="footer">
-      <div class="container footer">
-        <div class="copyright footer">
-          <p class="footer-text mobile-hidden">
-            <a href="/" data-w-id="4a550c0f-bb7f-94bf-fc50-66374d374eb2" class="link footer-text">Sorin Cadar</a><br>©  Copyright 2025
-          </p>
-          <p class="footer-text copyright-mobile-2">
-            <a href="/" class="link footer-text copyright">Sorin Cadar</a> © Copyright 2025
+
+    <!-- Contact Content -->
+    <div class="l-container c-contact-cta__container">
+      <div class="c-contact-cta__content">
+        
+        <div class="c-contact-cta__main">
+          <p class="c-contact-cta__heading t-heading-2">
+            Feel free to hit me up, either for a chat about design, an opportunity or even a travel recommendation.
           </p>
         </div>
-        <div class="details footer">
-          <p class="footer-text copyright-mobile">
-            <a href="/" class="link footer-text">Sorin Cadar</a><br>©  Copyright 2025
-          </p>
-          <p class="footer-text">UX/UI & Design System<br>Specialist</p>
-          <p class="footer-text">Anytime at<br>
-            <a href="mailto:hello@sorincadar.com" data-w-id="4a550c0f-bb7f-94bf-fc50-66374d374ec7" class="footer-text">hello@sorincadar.com</a><br>
+        
+        <div class="c-contact-cta__secondary">
+          <p class="c-contact-cta__description t-body-lead">
+            The best way to get in touch is through my email adress. Check the contact page for a complete list of contact details.
           </p>
         </div>
+
+        <!-- Circle Button / Custom Cursor -->
+        <a href="/contact" class="c-button-circle" id="contact-cursor-btn" aria-label="View Contact Details">
+          <div class="c-button-circle__content">
+            <span class="c-button-circle__text">View<br>Contact<br>Details</span>
+            <img src="images/arrow-right-grey.svg" alt="" class="c-button-circle__arrow">
+          </div>
+        </a>
+
       </div>
     </div>
+  </section>
+
+ </main>
+
+ <!-- Footer Section -->
+ <footer class="c-footer">
+  <div class="l-container c-footer__container">
+   <div class="c-footer__left">
+    <p class="c-footer__text t-body-lead">
+     <a href="/" class="c-footer__link">Sorin Cadar</a><br>
+     © Copyright 2025
+    </p>
+   </div>
+   <div class="c-footer__right">
+    <p class="c-footer__text t-body-lead">UX/UI & Design System<br>Specialist</p>
+    <p class="c-footer__text t-body-lead">Anytime at<br><a href="mailto:hello@sorincadar.com" class="c-footer__link u-text-underline">hello@sorincadar.com</a></p>
+   </div>
   </div>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f901fa1b69b7d676e97f088" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script>
-  <script charset="utf-8">
- var isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
- if (!isMobile) {
-      luxy.init({
-        wrapper: '#luxy',
-        wrapperSpeed: 0.065,
-    });
- }
+ </footer>
+
+ <script src="https://unpkg.com/lenis@latest/dist/lenis.min.js"></script>
+  
+ <script>
+   // 1. Initialize Lenis
+   const lenis = new Lenis({ lerp: 0.05, wheelMultiplier: 1, smoothWheel: true });
+   // 2. Create the animation loop
+   function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+   // 3. Start the loop
+   requestAnimationFrame(raf);
  </script>
-  <script>
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
-</script>
+
 </body>
 </html>

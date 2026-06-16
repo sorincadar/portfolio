@@ -1,514 +1,404 @@
 <!DOCTYPE html>
-<html data-wf-page="62ae1565d72a6f82cd06b188" data-wf-site="5f901fa1b69b7d676e97f088" lang="en">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Project - Porters Activity Manager | Sorin Cadar</title>
-  <meta content="Increasing the efficency of soft services management within the NHS hospitals by improving the user experience of the activity manager application used by porters and desk clerks" name="description">
-  <meta content="Project - Porters Activity Manager | Sorin Cadar" property="og:title">
-  <meta content="Increasing the efficency of soft services management within the NHS hospitals by improving the user experience of the activity manager application used by porters and desk clerks" property="og:description">
-  <meta content="Project - Porters Activity Manager | Sorin Cadar" property="twitter:title">
-  <meta content="Increasing the efficency of soft services management within the NHS hospitals by improving the user experience of the activity manager application used by porters and desk clerks" property="twitter:description">
-  <meta property="og:type" content="website">
-  <meta content="summary_large_image" name="twitter:card">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/base.css" rel="stylesheet" type="text/css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc250"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc26b"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="8d9d4c2b-c68b-d55b-f3e4-3da383c9b78c"] {opacity:0;display:none;-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc260"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:991px) and (min-width:768px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc250"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc26b"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc260"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc250"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc26b"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc260"] {-webkit-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-moz-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);-ms-transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);transform:translate3d(-24vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(-90deg) skew(0, 0);opacity:0;}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc250"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc26b"] {-webkit-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="19956c13-66ff-de49-1ffb-3b35609cc260"] {-webkit-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-moz-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);-ms-transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);transform:translate3d(42vw, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(90deg) skew(0, 0);opacity:0;}}</style>
-  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
-  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.jpg" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.jpg" rel="apple-touch-icon">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Project - Porters Activity Manager | Sorin Cadar</title>
+ <meta name="description" content="Increasing the efficency of soft services management within the NHS hospitals by improving the user experience of the activity manager application used by porters and desk clerks">
+ <link href="css/style.css" rel="stylesheet">
+ <script src="js/animations.js"></script>
 </head>
-<body class="body">
-  <div class="project-intro-css w-embed">
-    <style>
-  @media screen and (max-width: 991px) and (orientation: landscape) {
-    .header {
-      height: 4rem;
-    }
-    .container-2.is--nav {
-      height: 4rem;
-    }
-    .intro_wrapper.project {
-  	min-height: 50vw;
-  	}
-    .container.project-intro {
-      height: auto;
-      min-height: 38vw;
-      padding-top: 3.5vw;
-      padding-bottom: 3.5vw;
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-direction: initial;
-      -webkit-flex-direction: initial;
-      -ms-flex-direction: initial;
-      flex-direction: initial;
-    }
-    .project-image.project-intro {
-      width: 50%;
-      height: 100%;
-    }
-    .background-video-2.project-intro {
-      width: 65%;
-      height: 100%;
-    }
-    .project-details.project-intro {
-      width: 50%;
-      height: auto;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding-bottom: 0;
-    }
-    .project-details-top {
-      height: 50%;
-    }
-   .title-l.project-intro {
-  		font-size: 7.5vw;
-  		line-height: 7vw;
-      letter-spacing: -0.375vw;
-		}
-    .paragraph-m.project-intro {
-    	font-size: 1rem;
-      line-height: 1.3rem;
-      width: 20rem;
-      height: auto;
-    }
-    .arrow.project-intro {
-      display: block;
-      width: 18%;
-      height: auto;
-      max-width: none;
-    }
-    .project-presentation {
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    }
-  }
-  @media screen and (max-width: 767px) and (orientation: landscape) {
-  .container-2.is--nav {
-  	height: 3rem;
-  }
-}
-	@media screen and (max-width: 767px) and (orientation: landscape) {
-      .header {
-        height: 3rem;
-      }
-      .title-xl.project-intro {
-        margin-top: 0;
-        line-height: 6.2vw;
-         letter-spacing: -0.12vw;
-      }
-   }
-</style>
+<body>
+
+ <!-- Header & Navigation -->
+ <header class="c-header">
+  <div class="l-container c-header__container">
+    
+   <!-- Logo -->
+   <a href="/" class="c-header__logo-link" aria-label="Home">
+    <img src="images/logo-Sorin-cadar.svg" alt="Sorin Cadar Logo" class="c-header__logo">
+   </a>
+
+   <!-- Desktop Navigation -->
+   <nav class="c-header__nav-desktop" aria-label="Main Navigation">
+    <a href="/" class="c-header__nav-link t-ui-base" aria-current="page">Work</a>
+    <a href="/profile" class="c-header__nav-link t-ui-base">Profile</a>
+    <a href="/contact" class="c-header__nav-link t-ui-base">Get in Touch</a>
+    <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="c-button--outline">Download My CV</a>
+   </nav>
+
+   <!-- Mobile Menu Toggle -->
+   <button class="c-header__menu-toggle" aria-label="Open Menu" aria-expanded="false">
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+   </button>
+
   </div>
-  <div class="contact-circle-css w-embed">
-    <style>
-	.Cursor_Area {
-		pointer-events:none;
-  	}
-  @media (max-width: 1024px) {
-    #contact-circle-mobile-show {display: flex;}
-    #contact-cta-1 {display: none;}
-		#contact-cta-2 {display: block;}
-   }
-   @media (min-width: 1025px) {
-    #contact-cta-1 {display: block;}
-		#contact-cta-2 {display: none;}
-   }
-</style>
+
+  <!-- Mobile Navigation Overlay -->
+  <nav class="c-nav-mobile" aria-label="Mobile Navigation">
+   <div class="c-nav-mobile__container">
+    <div class="c-nav-mobile__links">
+     <a href="/" class="c-nav-mobile__link t-ui-base" aria-current="page">
+      <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> Work
+     </a>
+     <a href="/profile" class="c-nav-mobile__link t-ui-base">
+      <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> Profile
+     </a>
+     <a href="/contact" class="c-nav-mobile__link t-ui-base">
+      <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> Get in touch
+     </a>
+    </div>
+    <div class="c-nav-mobile__footer">
+     <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="c-button--outline">Download My CV</a>
+     <p class="c-nav-mobile__contact-text t-body-lead">Anytime at <a href="mailto:hello@sorincadar.com" class="u-text-underline">hello@sorincadar.com</a></p>
+    </div>
+   </div>
+  </nav>
+ </header>
+
+ <!-- Main Content Wrapper -->
+ <main id="main-content">
+
+  <!-- Project Hero Section -->
+  <section class="c-hero c-hero--project">
+   <div class="c-hero__container">
+     
+    <!-- Left Column: Image/Video -->
+    <div class="c-hero__col-left">
+     <video class="c-hero__video" autoplay loop muted playsinline poster="images/Project-Savage-Beauties-p-2000.jpeg">
+      <source src="https://sorincadar.mo.cloudinary.net/cover-project3.mp4?cld-content-marker=jit" type="video/mp4">
+     </video>
+    </div>
+
+    <!-- Right Column: Details -->
+    <div class="c-hero__col-right">
+     <div class="c-hero__details-top">
+      <h1 class="c-hero__title t-display-1">Porters<br>Activity<br>Manager</h1>
+     </div>
+     <div class="c-hero__details-bottom">
+      <p class="c-hero__desc t-body-lead">Increasing the efficency of soft services management within the NHS hospitals by improving the user experience of the activity manager application</p>
+      <img src="images/arrow-see-more.svg" alt="See More" class="c-hero__arrow">
+     </div>
+    </div>
+
+   </div>
+  </section>
+
+  <!-- Project Presentation Section -->
+  <section class="c-presentation" aria-label="Project Presentation">
+
+   <!-- Consolidated 94% Width Intro Container -->
+   <div class="c-presentation__intro">
+
+    <!-- Experimental Horizontal Spec Shelf -->
+    <dl class="c-spec-shelf">
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Client</dt>
+      <dd class="c-spec-shelf__value">Micad</dd>
+     </div>
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Year</dt>
+      <dd class="c-spec-shelf__value">2021</dd>
+     </div>
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Made at</dt>
+      <dd class="c-spec-shelf__value">Redouble Agency</dd>
+     </div>
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Project Type</dt>
+      <dd class="c-spec-shelf__value">Mobile Native App, Desktop App</dd>
+     </div>
+     <div class="c-spec-shelf__item">
+      <dt class="c-spec-shelf__label t-ui-small">Scope</dt>
+      <dd class="c-spec-shelf__value">Wireframe, UI Design</dd>
+     </div>
+    </dl>
+
+    <!-- Presentation Intro: Unified Story Grid -->
+    <div class="c-story-grid">
+     <header class="c-story-grid__lead">
+      <p class="c-story-grid__lead-text t-heading-1">
+       Micad is the number one property management software used by the NHS, with over 170 NHS Trusts nationwide using its applications.
+      </p>
+     </header>
+     <div class="c-story-grid__body">
+      <div class="c-story-grid__col">
+       <p class="t-body-lead">The efficiency of clinical care is directly impacted by the soft services management. Porters are the heartbeat of NHS hospitals, making sure crucial goods and items are delivered where they are needed most. They also ensure that patients are at the right place at the right time. Micad’s Soft Services app provides a smart way to manage daily portering tasks within a hospital.</p>
+      </div>
+      <div class="c-story-grid__col">
+       <p class="t-body-lead">The application has two components dedicated to two different categories of users. Always on the go, porters receive and process their daily tasks through a native mobile app. At the same time, the desk clerks log the tasks in the system and assign them to specific porters, using the web desktop app.</p>
+      </div>
+     </div>
+    </div>
+
+   </div> <!-- End of intro -->
+
+   <!-- Block: User Flow (1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/User-Flow.png" loading="lazy" alt="User flow diagram mapping out all possible paths" srcset="images/User-Flow-p-500.png 500w, images/User-Flow-p-800.png 800w, images/User-Flow-p-1080.png 1080w, images/User-Flow-p-1600.png 1600w, images/User-Flow-p-2000.png 2000w, images/User-Flow.png 3546w" sizes="100vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Creating a visual representation of all possible paths was an essential step in the beginning of the process. It helped us visualize the product and define the user goals. We managed to get on the same page internally and with the stakeholders. Acting as a map, the user flow also helped me organize my design process.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block: Wireframes (100vw, No Text) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--full-bleed">
+     <img src="images/Wireframe_2.png" loading="lazy" alt="High-fidelity wireframes for the mobile application" srcset="images/Wireframe_2-p-500.png 500w, images/Wireframe_2-p-800.png 800w, images/Wireframe_2-p-1080.png 1080w, images/Wireframe_2-p-1600.png 1600w, images/Wireframe_2-p-2000.png 2000w, images/Wireframe_2.png 4098w" sizes="100vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block: Sign-In Mobile (1 Contained, No Text) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Sign-In-Mobile.png" loading="lazy" alt="Mobile sign-in screen interface design" srcset="images/Sign-In-Mobile-p-500.png 500w, images/Sign-In-Mobile-p-800.png 800w, images/Sign-In-Mobile-p-1080.png 1080w, images/Sign-In-Mobile-p-1600.png 1600w, images/Sign-In-Mobile-p-2000.png 2000w, images/Sign-In-Mobile-p-2600.png 2600w, images/Sign-In-Mobile.png 3546w" sizes="(max-width: 1919px) 100vw, 64vw" class="c-pres-block__img">
+    </div>
+   </div>
+
+   <!-- Block: Request Details & List (Offset Variant) -->
+   <div class="c-pres-block c-pres-block--type-offset u-spacing-top-xxl">
+    <header class="c-pres-block__text-above">
+     <p class="t-heading-1">
+      The app provides porters with a personalized board of requests. Always on the go, they need it to be as clear as possible. Sometimes, their schedule could get busy, so they have to multitask. Our goal was to empower porters to easily scan the most important details even when that happens.
+     </p>
+     <p class="t-body-lead">
+      Through hierarchy, contrast, whitespace, alignment and grouping of elements, I was able to create the intended path that the user's eye should follow within the request card. The starting time of the request is the most important information, followed by the code identifier.
+     </p>
+    </header>
+    <div class="c-pres-block__media c-pres-block__media--offset u-spacing-top-s">
+     
+     <!-- Left Column: Image 1 + Text Below -->
+     <div class="c-pres-block__offset-left">
+      <img src="images/Request-Details.png" loading="lazy" alt="Request details screen showing actions" srcset="images/Request-Details-p-500.png 500w, images/Request-Details-p-800.png 800w, images/Request-Details.png 1716w" sizes="45vw" class="c-pres-block__img">
+      <div class="c-pres-block__text-below">
+       <p class="t-body-lead">
+        The main task of the porters within the app is to log their activity in real time. On the request screen, they are provided with the necessary details and actions. To start logging the time, they simply use the "start" button. If they have to travel to the starting location of the request, they have to use the "travel" button first.
+       </p>
+      </div>
+     </div>
+
+     <!-- Right Column: Image 2 -->
+     <img src="images/Request-List.png" loading="lazy" alt="Request list screen showing assigned tasks" srcset="images/Request-List-p-500.png 500w, images/Request-List-p-800.png 800w, images/Request-List-p-1080.png 1080w, images/Request-List.png 1716w" sizes="(max-width: 479px) 75vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" class="c-pres-block__img c-pres-block__img--offset-right">
+    
+    </div>
+   </div>
+
+   <!-- Block: Request Options (100vw + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--full-bleed">
+     <img src="images/Request-Options.png" loading="lazy" alt="Request options modals and active task timer" srcset="images/Request-Options-p-500.png 500w, images/Request-Options-p-800.png 800w, images/Request-Options-p-1080.png 1080w, images/Request-Options-p-1600.png 1600w, images/Request-Options-p-2000.png 2000w, images/Request-Options.png 4098w" sizes="100vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Unexpected events could occur during a workday. To address that, the app allows porters to pause or reject a request. They must offer a reason for these actions, choosing from a predefined list. To maintain the connection between the request and the action, we decided to display these functionalities through modals.<br><br>Keeping porters focused on their current task was also important. To achieve that, I designed a timer component that displays the task in progress along with the main actions. It stays fixed at the bottom while the porter navigates through the app.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block: Add Request (1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/Add-Request.png" loading="lazy" alt="Add request mobile flow" srcset="images/Add-Request-p-500.png 500w, images/Add-Request-p-800.png 800w, images/Add-Request-p-1080.png 1080w, images/Add-Request-p-1600.png 1600w, images/Add-Request.png 3546w" sizes="100vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Requests are mostly added through the desktop app. But sometimes, porters need to add them on the go. I designed this functionality with a focus on simplicity. To avoid overwhelming the user, I divided the process into steps and provided inputs only for the most crucial details.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block: Breaks (Offset Variant) -->
+   <div class="c-pres-block c-pres-block--type-offset u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--offset">
+     
+     <!-- Left Column: Image 1 + Text Below -->
+     <div class="c-pres-block__offset-left">
+      <img src="images/Break.png" loading="lazy" alt="Active break screen" srcset="images/Break-p-500.png 500w, images/Break-p-800.png 800w, images/Break-p-1080.png 1080w, images/Break.png 1716w" sizes="45vw" class="c-pres-block__img">
+      <div class="c-pres-block__text-below">
+       <p class="t-body-lead">
+        Breaks are the fuel of a productive workday. This screen provides porters with a simple solution to track them. Each type of break has its own dedicated card to allow starting it with a single tap. Micad requested us to disable all functionalities while a break is active. We decided to remove the bottom navigation altogether, maintaining the entire focus of the screen on what’s important.
+       </p>
+      </div>
+     </div>
+
+     <!-- Right Column: Image 2 -->
+     <img src="images/Breaks.png" loading="lazy" alt="Breaks selection screen" srcset="images/Breaks-p-500.png 500w, images/Breaks-p-800.png 800w, images/Breaks-p-1080.png 1080w, images/Breaks.png 1716w" sizes="(max-width: 479px) 75vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" class="c-pres-block__img c-pres-block__img--offset-right">
+    
+    </div>
+   </div>
+
+   <!-- Block: Desk (Text Above + 1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xxl">
+    <header class="c-pres-block__text-above">
+     <p class="t-heading-1">
+      If porters are the heart of the hospital, the desk clerks are the brain. Our goal was to offer them a frictionless experience. Understanding how they work, what they really need, and what they expect was crucial for a successful design.
+     </p>
+    </header>
+    <div class="c-pres-block__media c-pres-block__media--1-contained u-spacing-top-s">
+     <img src="images/Desk.png" loading="lazy" alt="Desktop app dashboard for desk clerks" srcset="images/Desk-p-500.png 500w, images/Desk-p-800.png 800w, images/Desk-p-1080.png 1080w, images/Desk-p-1600.png 1600w, images/Desk-p-2000.png 2000w, images/Desk-p-2600.png 2600w, images/Desk.png 3549w" sizes="100vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Through user observation, we identified that the most critical task for desk clerks is matching requests with available porters. Each request must be assigned based on specific details and the current workload. To support this process, I introduced clear visual contrast between the request and porter lists, making comparisons quicker and more intuitive.<br><br>Given the length of the request list, maximizing screen real estate was essential. I achieved this by collapsing less frequently used filters, while keeping high-use filters—like date and status—easily accessible outside the hidden section. This balance improved both clarity and efficiency.<br><br>To further reduce cognitive load, I focused on tying available actions directly to the selected request. I also explored and implemented effective visual cues to highlight the selected item, helping users stay oriented and focused during high-volume tasks.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block: More Desktop (1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xl">
+    <div class="c-pres-block__media c-pres-block__media--1-contained">
+     <img src="images/More-Desktop.png" loading="lazy" alt="Desktop app allocation modal" srcset="images/More-Desktop-p-500.png 500w, images/More-Desktop-p-800.png 800w, images/More-Desktop-p-1080.png 1080w, images/More-Desktop-p-1600.png 1600w, images/More-Desktop.png 3549w" sizes="100vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      We offered desk clerks the flexibility to use the app in a way that they feel the most productive. To allocate a request, they could use two methods. The first one is by dragging and dropping right on the Desk screen. The second one is by using the Allocate button, which opens a dedicated modal. My goal was to provide clarity. For this reason, I included a summary of the request above the porter list. I also highlighted the workload through the use of different colors for displaying the porters.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block: Components (Text Above Big+Body + 1 Contained + Text Below) -->
+   <div class="c-pres-block u-spacing-top-xxl">
+    <header class="c-pres-block__text-above">
+     <p class="t-heading-1">
+      To reduce costs, we created the means to scale the design as easy as possible. Because complexity intrigues me, my favorite task was developing the new Micad Design System.
+     </p>
+     <p class="t-body-lead">
+      The system provides a single source of truth for designers, developers and stakeholders. It helped us maintain functional and visual consistency during the design process. We also ensured that design changes were propagated between all applications.
+     </p>
+    </header>
+    <div class="c-pres-block__media c-pres-block__media--1-contained u-spacing-top-s">
+     <img src="images/Components.png" loading="lazy" alt="Design system components built using Atomic Design methodology" srcset="images/Components-p-500.png 500w, images/Components-p-800.png 800w, images/Components-p-1080.png 1080w, images/Components-p-1600.png 1600w, images/Components-p-2000.png 2000w, images/Components.png 3546w" sizes="100vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      To navigate the complexity of building a design system, I used the Atomic Design methodology. It helped me create all the components in a logical order. In addition, I was careful to build each component with the developer in mind. I took my time to organize all layers and name them accordingly.
+     </p>
+    </div>
+   </div>
+
+   <!-- Block: Design System (100vw + Text Below) -->
+   <div class="c-pres-block u-spacing-top-m">
+    <div class="c-pres-block__media c-pres-block__media--full-bleed">
+     <img src="images/Design-System.png" loading="lazy" alt="Design system documentation and component variants guide" srcset="images/Design-System-p-500.png 500w, images/Design-System-p-800.png 800w, images/Design-System-p-1080.png 1080w, images/Design-System-p-1600.png 1600w, images/Design-System-p-2000.png 2000w, images/Design-System.png 4098w" sizes="100vw" class="c-pres-block__img">
+    </div>
+    <div class="c-pres-block__text-below">
+     <p class="t-body-lead">
+      Besides researching, planning and designing the components, I also created a presentation of all component variants, complemented by a guide that describes the properties and the states.
+     </p>
+    </div>
+   </div>
+
+  </section>
+
+  <!-- Previous/Next Project Navigation Footer -->
+  <nav class="c-project-nav" aria-label="Project Navigation">
+    
+   <!-- Previous Project Link -->
+   <a href="project-high-end-beauty-online-store" class="c-project-nav__link c-project-nav__link--prev">
+    <div class="c-project-nav__content">
+     <div>
+      <p class="c-project-nav__label">Previous Project</p>
+      <h2 class="c-project-nav__title t-display-2">High End<br>Beauty<br>Online Store</h2>
+     </div>
+     <img src="images/arrow-see-more.svg" alt="" class="c-project-nav__arrow" loading="lazy">
+    </div>
+    <div class="c-project-nav__bg">
+     <video class="c-project-nav__video" autoplay loop muted playsinline poster="images/savage-beauties-poster.jpg">
+      <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6240a5a9f7abaa820001d180_Savage%20Beauties%20V3%20-%204K%20-%20Compressed%201-transcode.mp4" type="video/mp4">
+     </video>
+    </div>
+   </a>
+
+   <!-- Next Project Link -->
+   <a href="project-court-documents-monitor" class="c-project-nav__link c-project-nav__link--next">
+    <div class="c-project-nav__content c-project-nav__content--right">
+     <div>
+      <p class="c-project-nav__label c-project-nav__label--next">Next Project</p>
+      <h2 class="c-project-nav__title c-project-nav__title--right t-display-2">Court<br>Documents<br>Monitor</h2>
+     </div>
+     <img src="images/arrow-seemore-invert.svg" alt="" class="c-project-nav__arrow" loading="lazy">
+    </div>
+    <div class="c-project-nav__bg">
+     <video class="c-project-nav__video" autoplay loop muted playsinline poster="images/monitor-dosare-poster.jpg">
+      <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor%20Dosare%20-%204K%20-%20V1%20Compressed%201%20-transcode.mp4" type="video/mp4">
+     </video>
+    </div>
+   </a>
+
+  </nav>
+
+  <!-- Contact CTA Section -->
+    <section class="c-contact-cta" aria-label="Get in touch" id="contact-cta-section">
+      
+      <!-- Marquee -->
+      <div class="c-contact-cta__marquee" aria-hidden="true">
+        <div class="c-contact-cta__marquee-inner">
+          <h2 class="c-contact-cta__marquee-text t-marquee">Get in touch / Get in touch / Get in touch /&nbsp;</h2>
+          <h2 class="c-contact-cta__marquee-text t-marquee">Get in touch / Get in touch / Get in touch /&nbsp;</h2>
+        </div>
+      </div>
+
+      <!-- Contact Content -->
+      <div class="l-container c-contact-cta__container">
+        <div class="c-contact-cta__content">
+          
+          <div class="c-contact-cta__main">
+            <p class="c-contact-cta__heading t-heading-2">
+              Feel free to hit me up, either for a chat about design, an opportunity or even a travel recommendation.
+            </p>
+          </div>
+          
+          <div class="c-contact-cta__secondary">
+            <p class="c-contact-cta__description t-body-lead">
+              The best way to get in touch is through my email adress. Check the contact page for a complete list of contact details.
+            </p>
+          </div>
+
+          <!-- Circle Button / Custom Cursor -->
+          <a href="/contact" class="c-button-circle" id="contact-cursor-btn" aria-label="View Contact Details">
+            <div class="c-button-circle__content">
+              <span class="c-button-circle__text">View<br>Contact<br>Details</span>
+              <img src="images/arrow-right-grey.svg" alt="" class="c-button-circle__arrow">
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+ </main>
+
+ <!-- Footer Section -->
+ <footer class="c-footer">
+  <div class="l-container c-footer__container">
+   <div class="c-footer__left">
+    <p class="c-footer__text t-body-lead">
+     <a href="/" class="c-footer__link">Sorin Cadar</a><br>
+     © Copyright 2025
+    </p>
+   </div>
+   <div class="c-footer__right">
+    <p class="c-footer__text t-body-lead">UX/UI & Design System<br>Specialist</p>
+    <p class="c-footer__text t-body-lead">Anytime at<br><a href="mailto:hello@sorincadar.com" class="c-footer__link u-text-underline">hello@sorincadar.com</a></p>
+   </div>
   </div>
-  <div class="cursor_area">
-    <div data-w-id="8d9d4c2b-c68b-d55b-f3e4-3da383c9b78c" class="contact-circle">
-      <p class="contact-circle-text">Go to<br>Contact<br>Details</p>
-    </div>
-  </div>
-  <div id="luxy" class="smooth-wrapper">
-    <div class="intro_wrapper project">
-      <div class="header wf-section">
-        <div class="container header">
-          <div class="logo-area _50">
-            <a href="/" class="link logo-link w-inline-block"><img src="images/logo-Sorin-cadar.svg" loading="lazy" alt="" class="logo"></a>
-          </div>
-          <div class="navigation _50">
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bb7" href="/" class="link nav">Work</a>
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bb9" href="profile" class="link nav">Profile</a>
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bbb" href="contact" class="link nav">Get in Touch</a>
-            <a data-w-id="b2682f66-73f9-e191-4386-946983e41bbd" href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="button white header-button w-inline-block">
-              <div class="button-contain">
-                <p class="button-text">Download My CV</p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <nav class="section is--nav">
-          <div fs-scrolldisable-element="when-visible" class="menu">
-            <div class="menu-css w-embed">
-              <style>
-  .menu {
-    height: calc(var(--vh, 1vh) * 100);
-    touch-action: none;
-  }
- </style>
-            </div>
-            <div class="background">
-              <div class="background__fill"></div>
-              <div data-is-ix2-target="1" class="background__lottie" data-w-id="75d87ef5-1026-a220-e8d3-0a64b359c0d8" data-animation-type="lottie" data-src="documents/menu-animation.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="1.5666666666666667" data-duration="0" data-ix2-initial-state="0"></div>
-            </div>
-            <div class="container-2 is--menu">
-              <div class="menu__contain">
-                <div class="menu-nav">
-                  <a href="/" class="link nav-mob w-inline-block">
-                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
-                      <p class="nav-link__text">Work</p>
-                    </div>
-                  </a>
-                  <a href="profile" class="link nav-mob w-inline-block">
-                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
-                      <p class="nav-link__text">Profile</p>
-                    </div>
-                  </a>
-                  <a href="contact" class="link nav-mob w-inline-block">
-                    <div class="nav-link__contain"><img src="images/arrow-right-grey.svg" loading="lazy" alt="" class="arrow mobile-menu">
-                      <p class="nav-link__text">Get in touch</p>
-                    </div>
-                  </a>
-                </div>
-                <div class="menu-sublinks">
-                  <div class="sublinks">
-                    <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="button mobile-menu w-inline-block">
-                      <div class="button-contain">
-                        <p class="button-text">Download My CV</p>
-                      </div>
-                    </a>
-                    <div class="sublink">
-                      <div class="sublink__contain">
-                        <p class="sublink__text">Anytime at <a href="mailto:hello@sorincadar.com" class="sublink email"><span class="underline-text">contact@sorincadar.com</span></a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="container-2 is--nav">
-            <a href="#" class="trigger w-inline-block">
-              <div class="trigger__line is--1"></div>
-              <div class="trigger__line is--2"></div>
-            </a>
-          </div>
-        </nav>
-      </div>
-      <div class="project-intro-css w-embed">
-        <style>
-	@media screen and (max-width: 767px) {
-    .project_intro {
-      height: calc(100% - 3rem);
-    }
-	}
-  @media screen and (min-width: 768px) and (max-width: 1919px) {
-    .project_intro {
-      height: calc(100% - 5rem);
-    }
-  }
-  @media screen and (min-width: 1920px) {
-    .project_intro {
-      height: calc(100% - 6rem);
-    }
-	}
-</style>
-      </div>
-      <div class="project_intro wf-section">
-        <div class="container project-intro">
-          <div class="project-image project-intro">
-            <div style="width:100%;height:100%" class="filling-2"></div>
-            <div class="background-video-2 project-intro w-background-video w-background-video-atom" data-autoplay="true" data-loop="true" data-beta-bgvideo-upgrade="false" data-wf-ignore="true" style="-webkit-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" data-poster-url="images/Project-Savage-Beauties-p-2000.jpeg" data-w-id="2a284e1a-8fe0-17fe-4521-39843bb4f363"><video id="2a284e1a-8fe0-17fe-4521-39843bb4f363-video" autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-                <source src="https://sorincadar.mo.cloudinary.net/cover-project3.mp4?cld-content-marker=jit" data-wf-ignore="true">
-              </video></div>
-          </div>
-          <div class="project-details project-intro">
-            <div class="project-details-top">
-              <div style="width:100%;height:100%" class="filling-2"></div>
-              <h1 style="-webkit-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="title-l project-intro">Porters <br>Activity <br>Manager</h1>
-            </div>
-            <div class="project-details-bottom">
-              <div style="width:100%;height:100%" class="filling-2"></div>
-              <p style="-webkit-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(7.5rem, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="paragraph-m project-intro">Increasing the efficency of soft services management within the NHS hospitals by improving the user experience of the activity manager application</p><img src="images/arrow-see-more.svg" loading="lazy" style="-webkit-transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-4rem, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow project-intro">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="project-presentation wf-section">
-      <div class="big-and-small-paragraph-2">
-        <p data-w-id="3b9c7530-f99a-45ac-09a6-af0c410b89bb" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="paragraph-xxl big-and-small-paragraph">Micad is the number one property management software used by the NHS, with over 170 NHS Trusts nationwide using its applications.</p>
-        <div data-w-id="f0ec7d31-3dbb-46ca-4659-5dbf9088dc59" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="small-paragraphs">
-          <div class="first-paragraph">
-            <p class="paragraph-s big-and-small-paragraph-2">The efficiency of clinical care is directly impacted by the soft services management. Porters are the heartbeat of NHS hospitals, making sure crucial goods and items are delivered where they are needed most. They also ensure that patients are at the right place at the right time. Micad’s Soft Services app provides a smart way to manage daily portering tasks within a hospital.<br></p>
-          </div>
-          <div class="second-paragraph">
-            <p class="paragraph-s big-and-small-paragraph-2 second">The application has two components dedicated to two different categories of users. Always on the go, porters receive and process their daily tasks through a native mobile app. At the same time, the desk clerks log the tasks in the system and assign them to specific porters, using the web desktop app.</p>
-          </div>
-        </div>
-      </div>
-      <div data-w-id="5b15dd06-916f-3e44-c7e9-5876790018e1" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="project-details-table">
-        <div class="empty-half"></div>
-        <div class="details-table">
-          <div class="label---details-table">
-            <div class="label-row">
-              <p class="paragraph-s details-table-label">Client</p>
-            </div>
-            <div class="label-row">
-              <p class="paragraph-s details-table-label">Year</p>
-            </div>
-            <div class="label-row">
-              <p class="paragraph-s details-table-label">Project Type</p>
-            </div>
-            <div class="label-row">
-              <p class="paragraph-s details-table-label">Scope</p>
-            </div>
-            <div class="label-row last">
-              <p class="paragraph-s details-table-label">Made at</p>
-            </div>
-          </div>
-          <div class="values---details-table">
-            <div class="value-row">
-              <p class="paragraph-s details-table-value">Micad</p>
-            </div>
-            <div class="value-row">
-              <p class="paragraph-s details-table-value">2021</p>
-            </div>
-            <div class="value-row">
-              <p class="paragraph-s details-table-value">Mobile Native App, Desktop App</p>
-            </div>
-            <div class="value-row">
-              <p class="paragraph-s details-table-value">Wireframe,, UI Design</p>
-            </div>
-            <div class="value-row last">
-              <p class="paragraph-s details-table-value">Redouble Agency</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div data-w-id="113d6daf-d853-b717-3bfa-bb435694be78" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-one-contained-description"><img src="images/User-Flow.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/User-Flow-p-500.png 500w, images/User-Flow-p-800.png 800w, images/User-Flow-p-1080.png 1080w, images/User-Flow-p-1600.png 1600w, images/User-Flow-p-2000.png 2000w, images/User-Flow.png 3546w">
-          <p class="paragraph-s pres-img">Creating a visual representation of all possible paths was an essential step in the beginning of the process. It helped us visualize the product and define the user goals. We managed to get on the same page internally and with the stakeholders. Acting as a map, the user flow also helped me organize my design process.</p>
-        </div>
-      </div>
-      <div data-w-id="413fa8af-99e0-816c-1ff9-fc8bfdc0c15d" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div data-w-id="31d9d630-de7f-740a-184d-15de2266d1e4" class="pres-img-one-full-width"><img src="images/Wireframe_2.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, 96vw" srcset="images/Wireframe_2-p-500.png 500w, images/Wireframe_2-p-800.png 800w, images/Wireframe_2-p-1080.png 1080w, images/Wireframe_2-p-1600.png 1600w, images/Wireframe_2-p-2000.png 2000w, images/Wireframe_2.png 4098w" class="image"></div>
-      </div>
-      <div data-w-id="651c16ca-1bcf-c6b2-3fc2-5704405b58d3" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-one-contained"><img loading="lazy" srcset="images/Sign-In-Mobile-p-500.png 500w, images/Sign-In-Mobile-p-800.png 800w, images/Sign-In-Mobile-p-1080.png 1080w, images/Sign-In-Mobile-p-1600.png 1600w, images/Sign-In-Mobile-p-2000.png 2000w, images/Sign-In-Mobile-p-2600.png 2600w, images/Sign-In-Mobile.png 3546w" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, 64vw" src="images/Sign-In-Mobile.png" alt="" class="image-2"></div>
-      </div>
-      <div data-w-id="814d8cd3-56c3-1759-4048-7cf2eafecaa4" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xxl">
-        <div class="big-and-small-paragraph">
-          <p class="paragraph-xxl big-and-small-paragraph">The app provides porters with a personalized board of requests. Always on the go, they need it to be as clear as possible. Sometimes, their schedule could get busy, so they have to multitask. Our goal was to empower porters to easily scan the most important details even when that happens.</p>
-          <p class="paragraph-s big-and-small-paragraph">Through hierarchy, contrast, whitespace, alignment and grouping of elements, I was able to create the intended path that the user&#x27;s eye should follow within the request card. The starting time of the request is the most important information, followed by the code identifier.</p>
-        </div>
-      </div>
-      <div data-w-id="0b11e0a2-c34f-96a4-223b-5e8c2e6f263c" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
-        <div class="pres-img-two-offset">
-          <div class="press-img-two down reverse">
-            <div class="press-img-two-left-container"><img loading="lazy" srcset="images/Request-Details-p-500.png 500w, images/Request-Details-p-800.png 800w, images/Request-Details.png 1716w" src="images/Request-Details.png" sizes="(max-width: 479px) 75vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" alt="" class="pres-img-half left">
-              <p class="paragraph-s pres-img two-offset _100">The main task of the porters within the app is to log their activity in real time. On the request screen, they are provided with the necessary details and actions. To start logging the time, they simply use the &quot;start&quot; button. If they have to travel to the starting location of the request, they have to use the &quot;travel&quot; button first.</p>
-            </div><img loading="lazy" srcset="images/Request-List-p-500.png 500w, images/Request-List-p-800.png 800w, images/Request-List-p-1080.png 1080w, images/Request-List.png 1716w" src="images/Request-List.png" sizes="(max-width: 479px) 75vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" alt="" class="pres-img-half right">
-          </div>
-        </div>
-      </div>
-      <div data-w-id="aad2b304-a9b0-17e6-2611-f191bd0b0491" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-one-full-width-description"><img src="images/Request-Options.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, (max-width: 4268px) 96vw, 4098px" srcset="images/Request-Options-p-500.png 500w, images/Request-Options-p-800.png 800w, images/Request-Options-p-1080.png 1080w, images/Request-Options-p-1600.png 1600w, images/Request-Options-p-2000.png 2000w, images/Request-Options.png 4098w">
-          <div class="container _92">
-            <p class="paragraph-s pres-img">Unexpected events could occur during a workday. To address that, the app allows porters to pause or reject a request. They must offer a reason for these actions, choosing from a predefined list. To maintain the connection between the request and the action, we decided to display these functionalities through modals. <br><br>Keeping porters focused on their current task was also important. To achieve that, I designed a timer component that displays the task in progress along with the main actions. It stays fixed at the bottom while the porter navigates through the app. </p>
-          </div>
-        </div>
-      </div>
-      <div data-w-id="ff661edc-8428-f147-706f-6ac7e7cb65a2" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-one-contained-description"><img src="images/Add-Request.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Add-Request-p-500.png 500w, images/Add-Request-p-800.png 800w, images/Add-Request-p-1080.png 1080w, images/Add-Request-p-1600.png 1600w, images/Add-Request.png 3546w">
-          <p class="paragraph-s pres-img">Requests are mostly added through the desktop app. But sometimes, porters need to add them on the go. I designed this functionality with a focus on simplicity. To avoid overwhelming the user, I divided the process into steps and provided inputs only for the most crucial details. </p>
-        </div>
-      </div>
-      <div data-w-id="3063b571-535a-cf73-c44a-030738c7d0e5" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-two-offset">
-          <div class="press-img-two down reverse">
-            <div class="press-img-two-left-container"><img loading="lazy" srcset="images/Break-p-500.png 500w, images/Break-p-800.png 800w, images/Break-p-1080.png 1080w, images/Break.png 1716w" src="images/Break.png" sizes="(max-width: 479px) 75vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" alt="" class="pres-img-half left">
-              <p class="paragraph-s pres-img two-offset _100">Breaks are the fuel of a productive workday. This screen provides porters with a simple solution to track them. Each type of break has its own dedicated card to allow starting it with a single tap. Micad requested us to disable all functionalities while a break is active. We decided to remove the bottom navigation altogether, maintaining the entire focus of the screen on what’s important.</p>
-            </div><img loading="lazy" srcset="images/Breaks-p-500.png 500w, images/Breaks-p-800.png 800w, images/Breaks-p-1080.png 1080w, images/Breaks.png 1716w" src="images/Breaks.png" sizes="(max-width: 479px) 75vw, (max-width: 767px) 46vw, (max-width: 991px) 45vw, (max-width: 1919px) 42vw, 31vw" alt="" class="pres-img-half right">
-          </div>
-        </div>
-      </div>
-      <div data-w-id="5026abea-ccd5-7b39-423e-f8dcfd975f29" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xxl">
-        <div class="just-paragraph">
-          <p class="paragraph-xxl just-paragraph">If porters are the heart of the hospital, the desk clerks are the brain. Our goal was to offer them a frictionless experience. Understanding how they work, what they really need, and what they expect was crucial for a successful design.</p>
-        </div>
-      </div>
-      <div data-w-id="8944ca06-fd57-cfd1-f50b-e203f4050466" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
-        <div class="pres-img-one-contained-description"><img src="images/Desk.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5545px) 64vw, 3549px" srcset="images/Desk-p-500.png 500w, images/Desk-p-800.png 800w, images/Desk-p-1080.png 1080w, images/Desk-p-1600.png 1600w, images/Desk-p-2000.png 2000w, images/Desk-p-2600.png 2600w, images/Desk.png 3549w">
-          <p class="paragraph-s pres-img">
-            Through user observation, we identified that the most critical task for desk clerks is matching requests with
-            available porters. Each request must be assigned based on specific details and the current workload. To support this process, I introduced clear visual contrast between the request and porter lists, making comparisons quicker and more intuitive. <br><br> Given the length of the request list, maximizing screen real estate was essential. I achieved this by collapsing less frequently used filters, while keeping high-use filters—like date and status—easily accessible outside the hidden section. This balance improved both clarity and efficiency. <br><br> To further reduce cognitive load, I focused on tying available actions directly to the selected request. I also explored and implemented effective visual cues to highlight the selected item, helping users stay oriented and focused during high-volume tasks.
-          </p>
-        </div>
-      </div>
-      <div data-w-id="3e7ae368-9654-ce0c-802b-0772ad1d9523" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xl">
-        <div class="pres-img-one-contained-description"><img src="images/More-Desktop.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5545px) 64vw, 3549px" srcset="images/More-Desktop-p-500.png 500w, images/More-Desktop-p-800.png 800w, images/More-Desktop-p-1080.png 1080w, images/More-Desktop-p-1600.png 1600w, images/More-Desktop.png 3549w">
-          <p class="paragraph-s pres-img">We offered desk clerks the flexibility to use the app in a way that they feel the most productive. To allocate a request, they could use two methods. The first one is by dragging and dropping right on the Desk screen. The second one is by using the Allocate button, which opens a dedicated modal. My goal was to provide clarity. For this reason, I included a summary of the request above the porter list. I also highlighted the workload through the use of different colors for displaying the porters. </p>
-        </div>
-      </div>
-      <div data-w-id="69c8891d-c03b-8286-48d5-51314b7c114b" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-xxl">
-        <div class="big-and-small-paragraph">
-          <p class="paragraph-xxl big-and-small-paragraph">To reduce costs, we created the means to scale the design as easy as possible. Because complexity intrigues me, my favorite task was developing the new Micad Design System.</p>
-          <p class="paragraph-s big-and-small-paragraph">The system provides a single source of truth for designers, developers and stakeholders. It helped us maintain functional and visual consistency during the design process. We also ensured that design changes were propagated between all applications.</p>
-        </div>
-      </div>
-      <div data-w-id="f4481c4b-586c-36d2-84a3-dc5eee88f4b9" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-s">
-        <div class="pres-img-one-contained-description"><img src="images/Components.png" loading="lazy" alt="" sizes="(max-width: 991px) 94vw, (max-width: 1919px) 86vw, (max-width: 5540px) 64vw, 3546px" srcset="images/Components-p-500.png 500w, images/Components-p-800.png 800w, images/Components-p-1080.png 1080w, images/Components-p-1600.png 1600w, images/Components-p-2000.png 2000w, images/Components.png 3546w">
-          <p class="paragraph-s pres-img">To navigate the complexity of building a design system, I used the Atomic Design methodology. It helped me create all the components in a logical order. In addition, I was careful to build each component with the developer in mind. I took my time to organize all layers and name them accordingly.</p>
-        </div>
-      </div>
-      <div data-w-id="8ec97322-aade-f1ab-e595-af15c8729515" style="-webkit-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 7.5rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="presentation-element margin-top-m last">
-        <div class="pres-img-one-full-width-description"><img src="images/Design-System.png" loading="lazy" alt="" sizes="(max-width: 1919px) 100vw, (max-width: 4268px) 96vw, 4098px" srcset="images/Design-System-p-500.png 500w, images/Design-System-p-800.png 800w, images/Design-System-p-1080.png 1080w, images/Design-System-p-1600.png 1600w, images/Design-System-p-2000.png 2000w, images/Design-System.png 4098w">
-          <div class="container _92">
-            <p class="paragraph-s pres-img">Besides researching, planning and designing the components, I also created a presentation of all component variants, complemented by a guide that describes the properties and the states.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="projects-nav">
-      <a data-w-id="1df47ff5-76a3-1119-c44f-987db3270cf2" href="project-high-end-beauty-online-store" class="link previous-project w-inline-block">
-        <div class="filling projects-nav"></div>
-        <div class="projects-nav-container">
-          <div style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="projects-nav-title">
-            <p class="project-nav-type">Previous Project</p>
-            <h1 class="title-m projects-nav-left">High End<br>Beauty<br>Online Store</h1>
-          </div><img src="images/arrow-see-more.svg" loading="lazy" style="-webkit-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow projects-nav">
-        </div>
-        <div data-poster-url="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6240a5a9f7abaa820001d180_Savage Beauties V3 - 4K - Compressed 1-poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6240a5a9f7abaa820001d180_Savage Beauties V3 - 4K - Compressed 1-transcode.mp4,https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6240a5a9f7abaa820001d180_Savage Beauties V3 - 4K - Compressed 1-transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-beta-bgvideo-upgrade="false" class="background-video-2 projects-nav w-background-video w-background-video-atom"><video id="1df47ff5-76a3-1119-c44f-987db3270cff-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6240a5a9f7abaa820001d180_Savage Beauties V3 - 4K - Compressed 1-poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6240a5a9f7abaa820001d180_Savage Beauties V3 - 4K - Compressed 1-transcode.mp4" data-wf-ignore="true">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6240a5a9f7abaa820001d180_Savage Beauties V3 - 4K - Compressed 1-transcode.webm" data-wf-ignore="true">
-          </video></div>
-      </a>
-      <a data-w-id="1df47ff5-76a3-1119-c44f-987db3270d00" href="project-court-documents-monitor" class="link next-project w-inline-block">
-        <div class="filling projects-nav right"></div>
-        <div class="projects-nav-container right">
-          <div style="-webkit-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="projects-nav-title">
-            <p class="project-nav-type next">Next Project</p>
-            <h1 class="title-m projects-nav-right">Court<br>Documents<br>Monitor</h1>
-          </div><img src="images/arrow-seemore-invert.svg" loading="lazy" style="-webkit-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-50px, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" alt="" class="arrow projects-nav">
-        </div>
-        <div data-poster-url="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -poster-00001.jpg" data-video-urls="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.mp4,https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" data-beta-bgvideo-upgrade="false" class="background-video-2 projects-nav w-background-video w-background-video-atom"><video id="1df47ff5-76a3-1119-c44f-987db3270d0d-video" autoplay="" loop="" style="background-image:url(&quot;https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -poster-00001.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.mp4" data-wf-ignore="true">
-            <source src="https://uploads-ssl.webflow.com/5f901fa1b69b7d676e97f088/6242b4d20bf24e7cb32caca7_Monitor Dosare - 4K - V1 Compressed 1 -transcode.webm" data-wf-ignore="true">
-          </video></div>
-      </a>
-    </div>
-    <div class="contact-cta-wrapper">
-      <a id="contact-cta-1" data-w-id="19956c13-66ff-de49-1ffb-3b35609cc24e" href="contact" class="link contact-cta w-inline-block">
-        <div class="loop-text-outer">
-          <div data-w-id="19956c13-66ff-de49-1ffb-3b35609cc250" class="loop-text-inner">
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-          </div>
-        </div>
-        <div class="contact-text">
-          <div class="container contact-cta">
-            <div class="content-wrapper">
-              <div class="main-text contact-cta">
-                <p class="paragraph-xl contact-text">Feel free to hit me up, either for a chat about design, an opportunity or even a travel recommendation. </p>
-              </div>
-              <div class="secondary-text contact-cta">
-                <p class="paragraph-s contact-cta">The best way to get in touch is through my email adress. Check the contact page for a complete list of contact details.</p>
-              </div>
-              <div id="contact-circle-mobile-show" data-w-id="19956c13-66ff-de49-1ffb-3b35609cc260" class="contact-circle-mobile">
-                <div class="contact-circle-content">
-                  <p class="contact-circle-text mobile">View<br>My Contact<br>Details</p><img src="images/arrow-right-grey.svg" loading="lazy" width="82" alt="" class="arrow-contact">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <div id="contact-cta-2" data-w-id="19956c13-66ff-de49-1ffb-3b35609cc269" class="contact-cta">
-        <div class="loop-text-outer">
-          <div data-w-id="19956c13-66ff-de49-1ffb-3b35609cc26b" class="loop-text-inner">
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-            <h1 class="title-full">Get in touch /</h1>
-          </div>
-        </div>
-        <div class="contact-text">
-          <div class="container contact-cta">
-            <div class="content-wrapper">
-              <div class="main-text contact-cta">
-                <p class="paragraph-xl contact-text">Feel free to hit me up, either for a chat about design, an opportunity or even a travel recommendation. </p>
-              </div>
-              <div class="secondary-text contact-cta">
-                <p class="paragraph-s contact-cta">The best way to get in touch is through my email adress. Check the contact page for a complete list of contact details.</p>
-              </div>
-              <a id="contact-circle-mobile-show" href="contact" class="link contact-circle-mobile w-inline-block">
-                <div class="contact-circle-content">
-                  <p class="contact-circle-text mobile">View<br>My Contact<br>Details</p><img src="images/arrow-right-grey.svg" loading="lazy" width="82" alt="" class="arrow-contact">
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container footer">
-        <div class="copyright footer">
-          <p class="footer-text mobile-hidden">
-            <a href="/" data-w-id="3f6fcfc3-a7b2-191f-58ff-9187808b04f9" class="link footer-text">Sorin Cadar</a><br>©  Copyright 2025
-          </p>
-          <p class="footer-text copyright-mobile-2">
-            <a href="/" class="link footer-text copyright">Sorin Cadar</a> © Copyright 2025
-          </p>
-        </div>
-        <div class="details footer">
-          <p class="footer-text copyright-mobile">
-            <a href="/" class="link footer-text">Sorin Cadar</a><br>©  Copyright 2025
-          </p>
-          <p class="footer-text">UX/UI & Design System<br>Specialist</p>
-          <p class="footer-text">Anytime at<br>
-            <a href="mailto:hello@sorincadar.com" data-w-id="3f6fcfc3-a7b2-191f-58ff-9187808b050e" class="footer-text">hello@sorincadar.com</a><br>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f901fa1b69b7d676e97f088" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
-  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
-  <script src="https://min30327.github.io/luxy.js/dist/js/luxy.js"></script>
-  <script charset="utf-8">
- var isMobile = /iPhone|iPad|Android/i.test(navigator.userAgent);
- if (!isMobile) {
-      luxy.init({
-        wrapper: '#luxy',
-        wrapperSpeed: 0.065,
-    });
- }
- </script>
+ </footer>
+
+   <script src="https://unpkg.com/lenis@latest/dist/lenis.min.js"></script>
+  
   <script>
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
-</script>
+    // 1. Initialize Lenis
+    const lenis = new Lenis({ lerp: 0.05, wheelMultiplier: 1, smoothWheel: true });
+    // 2. Create the animation loop
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    // 3. Start the loop
+    requestAnimationFrame(raf);
+  </script>
+
 </body>
 </html>
