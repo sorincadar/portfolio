@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sorin Cadar | UX/UI & Design System Specialist</title>
+  <meta name="description" content="Full-spectrum UX/UI Designer with 9 years of experience transforming complex workflows into intuitive interfaces across B2B enterprise systems and B2C products">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="js/animations.js"></script>
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="c-header">
+    <div class="l-container c-header__container">
+      
+      <!-- Logo -->
+      <a href="/" class="c-header__logo-link" aria-label="Home">
+        <img src="images/logo-Sorin-cadar.svg" alt="Sorin Cadar Logo" class="c-header__logo">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="c-header__nav-desktop" aria-label="Main Navigation">
+        <a href="/" class="c-header__nav-link t-ui-base" aria-current="page">Work</a>
+        <a href="/profile" class="c-header__nav-link t-ui-base">Profile</a>
+        <a href="/contact" class="c-header__nav-link t-ui-base">Get in Touch</a>
+        <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="c-button--outline">Download My CV</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="c-header__menu-toggle" aria-label="Open Menu" aria-expanded="false">
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <nav class="c-nav-mobile" aria-label="Mobile Navigation">
+      
+      <div class="c-nav-mobile__curtain">
+        <div class="c-nav-mobile__bg-top"></div>
+        <div class="c-nav-mobile__lottie" id="menu-lottie"></div>
+      </div>
+
+      <div class="c-nav-mobile__inner">
+        <div class="l-container c-nav-mobile__container">
+          
+          <div class="c-nav-mobile__bottom-content">
+            
+            <div class="c-nav-mobile__links">
+              <a href="/" class="c-nav-mobile__link" aria-current="page">
+                <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> WORK
+              </a>
+              <a href="/profile" class="c-nav-mobile__link">
+                <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> PROFILE
+              </a>
+              <a href="/contact" class="c-nav-mobile__link">
+                <img src="images/arrow-right-grey.svg" alt="" class="c-nav-mobile__arrow"> GET IN TOUCH
+              </a>
+            </div>
+
+            <div class="c-nav-mobile__footer">
+              <a href="documents/CV-Sorin-Cadar-2025.pdf" target="_blank" class="c-button--cv-mobile">Download My CV</a>
+              <p class="c-nav-mobile__contact-text t-body-lead">Anytime at <a href="mailto:hello@sorincadar.com" class="u-text-underline">hello@sorincadar.com</a></p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero Section -->
+    <section class="c-hero c-hero--home">
+      <div class="c-hero__container">
+        
+        <!-- Hero Text Content -->
+        <div class="c-hero__col-left">
+          <h1 class="c-hero__title t-display-2">
+            <span class="u-text-highlight">UX/UI</span> & <span class="u-text-highlight">Design<br>System</span> specialist with<br>experience in<br>complex, regulated<br>environments
+          </h1>
+          <p class="c-hero__desc t-body-lead">
+            Full-spectrum UX/UI Designer with 9 years of experience transforming complex workflows into intuitive interfaces across B2B enterprise systems and B2C products.
+          </p>
+        </div>
+
+        <!-- Hero Visuals -->
+        <div class="c-hero__col-right">
+          <div class="c-hero__image"></div>
+          <div class="c-hero__status">
+            <p class="c-hero__status-text t-ui-small">
+              <strong>Open for work</strong><br>
+              Seeking a full-time<br>
+              position in<br>
+              Netherlands
+            </p>
+            <img src="images/arrow-see-more.svg" alt="Scroll down arrow" class="c-hero__arrow">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Project List Section -->
+    <section class="c-project-list" aria-label="Selected Projects">
+      
+      <!-- Project 1 -->
+      <article class="c-project-card">
+        <div class="c-project-card__details">
+          <div class="c-project-card__title-wrapper">
+            <p class="c-project-card__category t-body-lead">Micad</p>
+            <a href="/project-space-awareness-tool" class="c-project-card__link">
+              <h2 class="c-project-card__heading t-display-2">Space<br>Awareness<br>Tool</h2>
+            </a>
+          </div>
+        </div>
+        <a href="/project-space-awareness-tool" class="c-project-card__visual" aria-label="View Space Awareness Tool project">
+          <video autoplay loop muted playsinline class="c-project-card__video" poster="images/Project-Portals-p-2600.jpeg">
+            <source src="https://sorincadar.mo.cloudinary.net/cover-project1.mp4?cld-content-marker=jit" type="video/mp4">
+          </video>
+        </a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="c-project-card">
+        <div class="c-project-card__details">
+          <div class="c-project-card__title-wrapper">
+            <p class="c-project-card__category t-body-lead">Micad</p>
+            <a href="/project-porters-activity-manager" class="c-project-card__link">
+              <h2 class="c-project-card__heading t-display-2">Porters<br>Activity<br>Manager</h2>
+            </a>
+          </div>
+        </div>
+        <a href="/project-porters-activity-manager" class="c-project-card__visual" aria-label="View Porters Activity Manager project">
+          <video autoplay loop muted playsinline class="c-project-card__video" poster="images/Project-Soft-Services-p-2000.jpeg">
+            <source src="https://sorincadar.mo.cloudinary.net/cover-project3.mp4?cld-content-marker=jit" type="video/mp4">
+          </video>
+        </a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="c-project-card">
+        <div class="c-project-card__details">
+          <div class="c-project-card__title-wrapper">
+            <p class="c-project-card__category t-body-lead">Advocatus</p>
+            <a href="/project-court-documents-monitor" class="c-project-card__link">
+              <h2 class="c-project-card__heading t-display-2">Court<br>Documents<br>Monitor</h2>
+            </a>
+          </div>
+        </div>
+        <a href="/project-court-documents-monitor" class="c-project-card__visual" aria-label="View Court Documents Monitor project">
+          <video autoplay loop muted playsinline class="c-project-card__video" poster="images/Project-Monitor-Dosare-p-2000.jpeg">
+            <source src="https://sorincadar.mo.cloudinary.net/cover-project4.mp4?cld-content-marker=jit" type="video/mp4">
+          </video>
+        </a>
+      </article>
+
+      <!-- Project 4 -->
+
+      <article class="c-project-card c-project-card--last">
+        <div class="c-project-card__details">
+          <div class="c-project-card__title-wrapper">
+            <p class="c-project-card__category t-body-lead">Savage Beauties</p>
+            <a href="/project-high-end-beauty-online-store" class="c-project-card__link">
+              <h2 class="c-project-card__heading t-display-2">High End<br>Beauty<br>Online Store</h2>
+            </a>
+          </div>
+        </div>
+        <a href="/project-high-end-beauty-online-store" class="c-project-card__visual" aria-label="View High End Beauty Online Store project">
+          <video autoplay loop muted playsinline class="c-project-card__video" poster="images/Project-Savage-Beauties-p-2000.jpeg">
+            <source src="https://sorincadar.mo.cloudinary.net/cover-project2.mp4?cld-content-marker=jit" type="video/mp4">
+          </video>
+        </a>
+      </article>
+
+    </section>
+
+  <!-- Contact CTA Section -->
+    <section class="c-contact-cta" aria-label="Get in touch" id="contact-cta-section">
+      
+      <!-- Marquee -->
+      <div class="c-contact-cta__marquee" aria-hidden="true">
+        <div class="c-contact-cta__marquee-inner">
+          <h2 class="c-contact-cta__marquee-text t-marquee">Get in touch / Get in touch / Get in touch /&nbsp;</h2>
+          <h2 class="c-contact-cta__marquee-text t-marquee">Get in touch / Get in touch / Get in touch /&nbsp;</h2>
+        </div>
+      </div>
+
+      <!-- Contact Content -->
+      <div class="l-container c-contact-cta__container">
+        <div class="c-contact-cta__content">
+          
+          <div class="c-contact-cta__main">
+            <p class="c-contact-cta__heading t-heading-2">
+              Feel free to hit me up, either for a chat about design, an opportunity or even a travel recommendation.
+            </p>
+          </div>
+          
+          <div class="c-contact-cta__secondary">
+            <p class="c-contact-cta__description t-body-lead">
+              The best way to get in touch is through my email adress. Check the contact page for a complete list of contact details.
+            </p>
+          </div>
+
+          <!-- Circle Button / Custom Cursor -->
+          <a href="/contact" class="c-button-circle" id="contact-cursor-btn" aria-label="View Contact Details">
+            <div class="c-button-circle__content">
+              <span class="c-button-circle__text">View<br>Contact<br>Details</span>
+              <img src="images/arrow-right-grey.svg" alt="" class="c-button-circle__arrow">
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="c-footer">
+    <div class="l-container c-footer__container">
+      
+      <div class="c-footer__left">
+        <p class="c-footer__text t-body-lead">
+          <a href="/" class="c-footer__link">Sorin Cadar</a><br>
+          © Copyright 2025
+        </p>
+      </div>
+      
+      <div class="c-footer__right">
+        <p class="c-footer__text t-body-lead">
+          UX/UI & Design System<br>
+          Specialist
+        </p>
+        <p class="c-footer__text t-body-lead">
+          Anytime at<br>
+          <a href="mailto:hello@sorincadar.com" class="c-footer__link u-text-underline">hello@sorincadar.com</a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lenis@latest/dist/lenis.min.js"></script>
+  
+  <script>
+    // 1. Initialize Lenis
+    const lenis = new Lenis({
+      lerp: 0.05, // The time it takes to glide to a stop. Tweak this!
+      wheelMultiplier: 1,
+      smoothWheel: true
+    });
+
+    // 2. Create the animation loop
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    // 3. Start the loop
+    requestAnimationFrame(raf);
+  </script>
+
+
+</body>
+</html>
