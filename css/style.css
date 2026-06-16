@@ -96,7 +96,49 @@ strong {
 /* ==========================================
   3. Typography System (.t-*)
   ========================================== */
-.t-display-1 {
+
+/* --- FONTS --- */
+
+/* Light (300) */
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular (400) */
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium (500) */
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold (700) */
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* --- STYLES --- */
+
+  .t-display-1 {
  font-family: var(--font-family-base);
  font-size: 7.5vw;
  line-height: 7vw;
@@ -278,6 +320,7 @@ strong {
   letter-spacing: -0.8vw;
  }
 }
+
 
 
 /* ==========================================
