@@ -1,6 +1,6 @@
 /* ==========================================
   1. Design Tokens (:root)
-  ========================================== */
+========================================== */
 :root {
  /* Colors */
  --color-bg-primary: #5d6067;
@@ -52,7 +52,7 @@
 
 /* Make the header height variable responsive */
 @media screen and (min-width: 1920px) { :root { --layout-header-height: 6rem; } }
-@media screen and (max-width: 991px) and (orientation: landscape) { :root { --layout-header-height: 4rem; } }
+@media screen and (max-width: 991px) and (orientation: landscape) { :root { --layout-header-height: 3.5rem; } }
 @media screen and (max-width: 767px) { :root { --layout-header-height: 4rem; } }
 @media screen and (max-width: 767px) and (orientation: landscape) { :root { --layout-header-height: 3rem; } }
 @media screen and (max-width: 479px) { :root { --layout-header-height: 3rem; } }
@@ -60,7 +60,7 @@
 
 /* ==========================================
   2. Global Resets & Base Styles
-  ========================================== */
+ ========================================== */
 *, *::before, *::after {
  box-sizing: border-box;
 }
@@ -93,83 +93,37 @@ strong {
  font-weight: var(--font-weight-bold);
 }
 
+
 /* ==========================================
   3. Typography System (.t-*)
-  ========================================== */
+========================================== */
 
-/* --- FONTS --- */
+.t-display-0 {
+ font-family: var(--font-family-base);
+ font-size: 6vw;
+ line-height: 6vw;
+ letter-spacing: -0.28vw;
+ font-weight: var(--font-weight-medium);
 
-/* Light (300) */
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+ @media screen and (min-width: 1440px) {  }
+ @media screen and (max-width: 991px) { font-size: 9vw; line-height: 9vw; letter-spacing: -0.45vw; }
+ @media screen and (max-width: 991px) and (orientation: landscape) { font-size: 6vw; line-height: 6vw; letter-spacing: -0.25vw; }
+ @media screen and (max-width: 479px) { font-size: 12vw; line-height: 11.5vw; letter-spacing: -0.55vw; }
+ @media screen and (max-width: 479px) and (orientation: landscape) { font-size: 6vw; line-height: 6vw; letter-spacing: -0.375vw; }
 }
 
-/* Regular (400) */
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Medium (500) */
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Bold (700) */
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-/* --- STYLES --- */
-
-  .t-display-1 {
+.t-display-1 {
  font-family: var(--font-family-base);
  font-size: 7.5vw;
  line-height: 7vw;
  letter-spacing: -0.375vw;
  font-weight: var(--font-weight-medium);
 
- @media screen and (min-width: 1440px) {
-  font-size: 7vw;
-  line-height: 6.5vw;
-  letter-spacing: -0.35vw;
- }
- @media screen and (max-width: 991px) {
-  font-size: 9vw;
-  line-height: 9vw;
-  letter-spacing: -0.45vw;
- }
- @media screen and (max-width: 991px) and (orientation: landscape) {
-  font-size: 7vw;
-  line-height: 6.5vw;
-  letter-spacing: -0.375vw;
- }
- @media screen and (max-width: 479px) {
-  font-size: 12vw;
-  line-height: 11.5vw;
-  letter-spacing: -0.55vw;
- }
- @media screen and (max-width: 479px) and (orientation: landscape) {
-  font-size: 7.5vw;
-  line-height: 7vw;
-  letter-spacing: -0.375vw;
- }
+ @media screen and (min-width: 1440px) { font-size: 7vw; line-height: 6.5vw; letter-spacing: -0.35vw; }
+ @media screen and (max-width: 991px) { font-size: 9vw; line-height: 9vw; letter-spacing: -0.45vw; }
+ @media screen and (max-width: 991px) and (orientation: landscape) { font-size: 7vw; line-height: 6.5vw; letter-spacing: -0.375vw; }
+ @media screen and (max-width: 479px) { font-size: 12vw; line-height: 11.5vw; letter-spacing: -0.55vw; }
+ @media screen and (max-width: 479px) and (orientation: landscape) { font-size: 7.5vw; line-height: 7vw; letter-spacing: -0.375vw; }
 }
 
 .t-display-2 {
@@ -179,26 +133,10 @@ strong {
  letter-spacing: -0.225vw;
  font-weight: var(--font-weight-medium);
 
- @media screen and (min-width: 1440px) {
-  font-size: 4vw;
-  line-height: 4vw;
-  letter-spacing: -0.2vw;
- }
- @media screen and (max-width: 991px) {
-  font-size: 8vw;
-  line-height: 8vw;
-  letter-spacing: -0.4vw;
- }
- @media screen and (max-width: 991px) and (orientation: landscape) {
-  font-size: 5vw;
-  line-height: 5vw;
-  letter-spacing: -0.25vw;
- }
- @media screen and (max-width: 479px) {
-  font-size: 9vw;
-  line-height: 9vw;
-  letter-spacing: -0.45vw;
- }
+ @media screen and (min-width: 1440px) { font-size: 4vw; line-height: 4vw; letter-spacing: -0.2vw; }
+ @media screen and (max-width: 991px) { font-size: 8vw; line-height: 8vw; letter-spacing: -0.4vw; }
+ @media screen and (max-width: 991px) and (orientation: landscape) { font-size: 5vw; line-height: 5vw; letter-spacing: -0.25vw; }
+ @media screen and (max-width: 479px) { font-size: 9vw; line-height: 9vw; letter-spacing: -0.45vw; }
 }
 
 .t-display-3 {
@@ -208,36 +146,20 @@ strong {
  letter-spacing: -0.15vw;
  font-weight: var(--font-weight-medium);
 
- @media screen and (max-width: 991px) {
-  font-size: 4.5vw;
-  line-height: 5vw;
-  letter-spacing: -0.225vw;
- }
-
- @media screen and (max-width: 479px) {
-  font-size: 7vw;
-  line-height: 7vw;
-  letter-spacing: -0.3vw;
- }
+ @media screen and (max-width: 991px) { font-size: 4.5vw; line-height: 5vw; letter-spacing: -0.225vw; }
+ @media screen and (max-width: 479px) { font-size: 7vw; line-height: 7vw; letter-spacing: -0.3vw; }
 }
 
 .t-heading-1 {
  font-family: var(--font-family-base);
- font-size: 3.25rem;
- line-height: 3.75rem;
+ font-size: 3rem;
+ line-height: 3.5rem;
  letter-spacing: -0.08rem;
  font-weight: var(--font-weight-light);
 
- @media screen and (min-width: 1920px) {
-  font-size: 4rem;
-  line-height: 4.25rem;
-  letter-spacing: -0.14rem;
- }
- @media screen and (max-width: 991px) {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  letter-spacing: -0.04rem;
- }
+ @media screen and (min-width: 1920px) { font-size: 4rem; line-height: 4.25rem; letter-spacing: -0.14rem; }
+ @media screen and (max-width: 991px) { font-size: 2rem; line-height: 2.5rem; letter-spacing: -0.04rem; }
+ @media screen and (max-width: 479px) { font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -0.035rem; }
 }
 
 .t-heading-2 {
@@ -247,21 +169,8 @@ strong {
  letter-spacing: -0.04rem;
  font-weight: var(--font-weight-light);
 
- @media screen and (min-width: 1920px) {
-  font-size: 2.875rem;
-  line-height: 3.375rem;
-  letter-spacing: -0.06rem;
- }
- @media screen and (max-width: 767px) {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: -0.02rem;
- }
- @media screen and (max-width: 479px) {
-  font-size: 2rem;
-  line-height: 2.5rem;
-  letter-spacing: -0.04rem;
- }
+ @media screen and (min-width: 1920px) { font-size: 3rem; line-height: 3.5rem; letter-spacing: -0.08rem; }
+ @media screen and (max-width: 991px) { font-size: 1.75rem; line-height: 2.25rem; letter-spacing: -0.035rem; }
 }
 
 .t-body-lead {
@@ -271,11 +180,7 @@ strong {
  letter-spacing: -0.01rem;
  font-weight: var(--font-weight-light);
 
- @media screen and (min-width: 1920px) {
-  font-size: 1.3125rem;
-  line-height: 1.875rem;
-  letter-spacing: -0.007rem;
- }
+ @media screen and (min-width: 1920px) { font-size: 1.3125rem; line-height: 1.875rem; letter-spacing: -0.007rem; }
 }
 
 .t-ui-base {
@@ -284,10 +189,7 @@ strong {
  font-weight: var(--font-weight-light);
  text-transform: uppercase;
 
- @media screen and (min-width: 1920px) {
-  font-size: 1.188rem;
-  line-height: 1.25rem;
- }
+ @media screen and (min-width: 1920px) { font-size: 1.188rem; line-height: 1.25rem; }
 }
 
 .t-ui-small {
@@ -296,9 +198,7 @@ strong {
  line-height: 1rem;
  font-weight: var(--font-weight-light);
 
- @media screen and (max-width: 479px) {
-  font-size: 0.875rem;
- }
+ @media screen and (max-width: 479px) { font-size: 0.875rem; }
 }
 
 .t-marquee {
@@ -309,23 +209,15 @@ strong {
  font-weight: var(--font-weight-light);
  white-space: nowrap;
 
- @media screen and (max-width: 767px) {
-  font-size: 12vw;
-  line-height: 12vw;
-  letter-spacing: -0.6vw;
- }
- @media screen and (max-width: 479px) {
-  font-size: 22vw;
-  line-height: 22vw;
-  letter-spacing: -0.8vw;
- }
+ @media screen and (max-width: 767px) { font-size: 12vw; line-height: 12vw; letter-spacing: -0.6vw; }
+ @media screen and (max-width: 479px) { font-size: 22vw; line-height: 22vw; letter-spacing: -0.8vw; }
 }
-
 
 
 /* ==========================================
   4. Layout & Utilities
-  ========================================== */
+========================================== */
+
 .l-container {
  width: var(--layout-container-width);
  margin: 0 auto;
@@ -336,11 +228,19 @@ strong {
 .u-text-underline { text-decoration: underline; }
 .u-img-fluid { width: 100%; height: auto; object-fit: cover; display: block; }
 
+/* --- Hiding Classes --- */
+
 @media screen and (max-width: 767px) {
  .u-hide-mobile-sm { display: none; }
 }
 
+@media screen and (max-width: 479px) {
+ .u-hide-mobile-xs { display: none; }
+}
+
+
 /* --- Spacing Modifiers --- */
+
 .u-spacing-top-xs {
  margin-top: var(--space-40);
  @media screen and (max-width: 991px) { margin-top: var(--space-32); }
@@ -350,40 +250,52 @@ strong {
 .u-spacing-top-s {
  margin-top: var(--space-72);
  @media screen and (max-width: 991px) { margin-top: var(--space-64); }
+ @media screen and (max-width: 991px) and (orientation: landscape) { margin-top: var(--space-40); }
  @media screen and (max-width: 767px) { margin-top: var(--space-48); }
+ @media screen and (max-width: 767px) and (orientation: landscape) { margin-top: var(--space-40); }
 }
 
 .u-spacing-top-m {
  margin-top: var(--space-96);
  @media screen and (max-width: 991px) { margin-top: var(--space-80); }
+ @media screen and (max-width: 991px) and (orientation: landscape) { margin-top: var(--space-48); }
  @media screen and (max-width: 767px) { margin-top: var(--space-64); }
+ @media screen and (max-width: 767px) and (orientation: landscape) { margin-top: var(--space-48); }
 }
 
 .u-spacing-top-l {
  margin-top: var(--space-128);
  @media screen and (max-width: 991px) { margin-top: var(--space-96); }
+ @media screen and (max-width: 991px) and (orientation: landscape) { margin-top: var(--space-56); }
  @media screen and (max-width: 767px) { margin-top: var(--space-80); }
+ @media screen and (max-width: 767px) and (orientation: landscape) { margin-top: var(--space-56); }
 }
 
 .u-spacing-top-xl {
  margin-top: var(--space-144);
  @media screen and (min-width: 1920px) { margin-top: var(--space-192); }
  @media screen and (max-width: 991px) { margin-top: var(--space-128); }
+ @media screen and (max-width: 991px) and (orientation: landscape) { margin-top: var(--space-72); }
  @media screen and (max-width: 767px) { margin-top: var(--space-96); }
+ @media screen and (max-width: 767px) and (orientation: landscape) { margin-top: var(--space-72); }
 }
 
 .u-spacing-top-xxl {
  margin-top: var(--space-224);
  @media screen and (max-width: 991px) { margin-top: var(--space-160); }
+ @media screen and (max-width: 991px) and (orientation: landscape) { margin-top: var(--space-96); }
  @media screen and (max-width: 767px) { margin-top: var(--space-128); }
+ @media screen and (max-width: 767px) and (orientation: landscape) { margin-top: var(--space-96); }
 }
 
 
 /* ==========================================
-  5. Global Animation Keyframes
-  ========================================== */
+5. Global Animation Keyframes
+========================================== */ 
+
 
 /* --- Fade in and slide up --- */
+
 @keyframes slideUp {
  0% { transform: translateY(4rem); }
  100% { transform: translateY(0); }
@@ -399,15 +311,24 @@ strong {
  100% { opacity: 1; }
 }
 
+
 /* --- Reveal Cover --- */
+
 @keyframes scaleCover {
  0% { transform: scaleX(1); }
  100% { transform: scaleX(0); }
 }
 
+
 /* --- Sliding --- */
+
 @keyframes slideFromRight {
  0% { transform: translateX(6rem); }
+ 100% { transform: translateX(0); }
+}
+
+@keyframes slideFromRightLarge {
+ 0% { transform: translateX(20vw); } 
  100% { transform: translateX(0); }
 }
 
@@ -421,7 +342,14 @@ strong {
  100% { transform: translateX(6rem); }
 }
 
+@keyframes slideToRightLarge {
+ 0% { transform: translateX(0); }
+ 100% { transform: translateX(20vw); }
+}
+
+
 /* --- Scaling --- */
+
 @keyframes scaleFromLeft {
  0% { transform: scale(0); }
  100% { transform: scale(1); }
@@ -437,13 +365,16 @@ strong {
  100% { scale: 1; }
 }
 
+
 /* --- Rotation --- */
+
 @keyframes spinClockwise {
  0% { rotate: 0deg; }
  100% { rotate: 360deg; }
 }
 
 /* --- Marquee --- */
+
 @keyframes marqueeScroll {
  0% { transform: translate3d(0, 0, 0); }
  100% { transform: translate3d(-50%, 0, 0); }
@@ -451,10 +382,12 @@ strong {
 
 
 /* ==========================================
-  6. Animations & States
-  ========================================== */
+6. Animations & States
+========================================== */
+
 
 /* --- Header --- */
+
 .c-header {
  opacity: 0; 
  transform: translateY(4rem);
@@ -462,7 +395,9 @@ strong {
  @media (prefers-reduced-motion: reduce) { animation: none; opacity: 1; transform: none; }
 }
 
+
 /* --- Button Circle --- */
+
 .c-button-circle {
  @media screen and (min-width: 1025px) { opacity: 0; }
  @media screen and (max-width: 1024px) {
@@ -480,15 +415,19 @@ strong {
  }
 }
 
+
 /* --- Contact CTA Marquee --- */
+
 .c-contact-cta__marquee-inner {
  animation: marqueeScroll 25s linear infinite; 
 }
 
+
 /* --- Hero Home (0.4s delay) --- */
+
 .c-hero--home .c-hero__col-left {
- transform: translateX(6rem); 
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+ transform: translateX(20vw); 
+ animation: slideFromRightLarge 3.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
@@ -498,10 +437,12 @@ strong {
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
+
 /* --- Hero Home (0.6s delay) --- */
+
 .c-hero--home .c-hero__image {
  transform: translateX(6rem);
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+ animation: slideFromRight 3.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
@@ -523,11 +464,13 @@ strong {
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
+
 /* --- Hero Profile (0.4s delay) --- */
+
 .c-hero--profile .c-hero__title,
 .c-hero--profile .c-hero__text {
- transform: translateX(6rem);
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+ transform: translateX(20vw);
+ animation: slideFromRightLarge 3.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
@@ -538,68 +481,91 @@ strong {
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
-/* --- Hero Profile (0.6s delay) --- */
+
+/* --- Hero Profile (1.0s delay) --- */
+
 .c-hero--profile .c-hero__col-left,
 .c-hero--profile .c-hero__visual-secondary {
  transform: translateX(6rem);
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+ animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
 .c-hero--profile .c-hero__arrow {
  transform: scale(0);
- transform-origin: left center;
- animation: scaleFromLeft 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+ transform-origin: top right;
+ animation: scaleFromLeft 1.6s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
 .c-hero--profile .c-hero__col-left::after,
 .c-hero--profile .c-hero__visual-secondary::after {
  transform-origin: left;
- animation: scaleCover 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+ animation: scaleCover 2.6s cubic-bezier(0.16, 1, 0.3, 1) 1.0s forwards;
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
-/* --- Hero Project (0.4s delay) --- */
-.c-hero--project .c-hero__col-left {
- transform: translateX(6rem);
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+
+/* --- Hero Project --- */
+
+/* Project Title*/
+
+.c-hero--project .c-hero__details-top {
+ transform: translateX(20vw);
+ animation: slideFromRightLarge 3.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
-.c-hero--project .c-hero__col-left::after,
 .c-hero--project .c-hero__details-top::after {
  transform-origin: left;
- animation: scaleCover 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+ animation: scaleCover 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
-/* --- Hero Project (0.8s delay) --- */
-.c-hero--project .c-hero__details-top,
-.c-hero--project .c-hero__desc {
- transform: translateX(6rem);
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
- @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
-}
+/* Project Description*/
 
-.c-hero--project .c-hero__arrow {
- transform: scale(0);
- transform-origin: left center;
- animation: scaleFromLeft 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+.c-hero--project .c-hero__desc {
+ transform: translateX(20vw);
+ animation: slideFromRightLarge 3.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
 .c-hero--project .c-hero__desc::after {
  transform-origin: left;
+ animation: scaleCover 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+ @media (prefers-reduced-motion: reduce) { display: none; }
+}
+
+/* Project Left Column Image*/
+
+.c-hero--project .c-hero__col-left {
+ transform: translateX(6rem);
+ animation: slideFromRight 3.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+ @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
+}
+
+.c-hero--project .c-hero__col-left::after {
+ transform-origin: left;
  animation: scaleCover 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
-/* --- Hero Contact (0.4s delay) --- */
+/* Project Arrow */
+
+.c-hero--project .c-hero__arrow {
+ transform: scale(0);
+ transform-origin: top right;
+ animation: scaleFromLeft 2.6s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+ @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
+}
+
+
+/* --- Hero Contact --- */
+
 .c-hero--contact .c-hero__title,
 .c-hero--contact .c-hero__desc {
- transform: translateX(6rem);
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+ transform: translateX(20vw);
+ animation: slideFromRightLarge 3.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
  @media (prefers-reduced-motion: reduce) { animation: none; transform: none; }
 }
 
@@ -610,9 +576,13 @@ strong {
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
+
 /* --- Project Card (Initial States) --- */
+
+/* Initial States */
+
 .c-project-card__title-wrapper {
- transform: translateX(6rem);
+ transform: translateX(20vw);
  backface-visibility: hidden;
  -webkit-backface-visibility: hidden;
  will-change: transform;
@@ -630,17 +600,17 @@ strong {
  @media (prefers-reduced-motion: reduce) { display: none; }
 }
 
-/* --- Project Card (Triggered Animations) --- */
+/* Aniamtions*/
 .c-project-card.is-in-view .c-project-card__title-wrapper {
- animation: slideFromRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+ animation: slideFromRightLarge 3.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .c-project-card.is-in-view .c-project-card__title-wrapper::after {
- animation: scaleCover 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+ animation: scaleCover 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .c-project-card.is-out-of-view .c-project-card__title-wrapper {
- animation: slideToRight 4.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+ animation: slideToRightLarge 3.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .c-project-card.is-out-of-view .c-project-card__title-wrapper::after {
@@ -663,7 +633,9 @@ strong {
  animation: scaleCoverReverse 3.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+
 /* --- Contact Layout Photo --- */
+
 .c-contact-layout__photo {
  scale: 0;
  translate: var(--move-x, 0px) var(--move-y, 0px);
@@ -671,7 +643,9 @@ strong {
  @media (prefers-reduced-motion: reduce) { animation: none; scale: 1; }
 }
 
+
 /* --- Contact Grid --- */
+
 .c-contact-grid {
  opacity: 0;
  transform: translateY(3rem);
@@ -679,7 +653,9 @@ strong {
  @media (prefers-reduced-motion: reduce) { animation: none; opacity: 1; transform: none; }
 }
 
+
 /* --- Shared Scroll Reveal Animations --- */
+
 .c-story-grid__lead,
 .c-story-grid__body,
 .c-divider,
@@ -712,7 +688,7 @@ strong {
 
 /* ==========================================
   7. Lenis Smooth Scrolling
-  ========================================== */
+========================================== */
 
 html.lenis, html.lenis body {
  height: auto;
@@ -737,9 +713,11 @@ html.lenis, html.lenis body {
 
 /* ==========================================
   8. Global Components
-  ========================================== */
+========================================== */
+
 
 /* --- Header --- */
+
 .c-header {
  height: var(--layout-header-height);
  display: flex;
@@ -840,6 +818,7 @@ html.lenis, html.lenis body {
 
 
 /* --- Buttons --- */
+
 .c-button--outline {
  font-family: var(--font-family-base);
  font-size: 0.75rem;
@@ -853,16 +832,9 @@ html.lenis, html.lenis body {
  justify-content: center;
  transition: background-color var(--transition-base), color var(--transition-base);
 
- &:hover {
-  background-color: var(--color-accent);
-  color: var(--color-bg-primary);
- }
+ &:hover { background-color: var(--color-accent); color: var(--color-bg-primary); }
 
- @media screen and (min-width: 1920px) {
-  padding: 0.875rem 1.75rem;
-  font-size: 1rem;
-  line-height: 1rem;
- }
+ @media screen and (min-width: 1920px) { padding: 0.875rem 1.75rem; font-size: 1rem; line-height: 1rem; }
 }
 
 .c-button-circle {
@@ -879,16 +851,7 @@ html.lenis, html.lenis body {
  will-change: transform, opacity;
 
  @media screen and (min-width: 1025px) { position: fixed; top: 0; left: 0; width: 14vw; height: 14vw; pointer-events: none; z-index: -1; }
- @media screen and (max-width: 1024px) {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  right: 0;
-  width: 20vw;
-  height: 20vw;
-  min-width: 120px;
-  min-height: 120px;
- }
+ @media screen and (max-width: 1024px) { position: absolute; top: auto; bottom: 0; right: 0; width: 20vw; height: 20vw; min-width: 120px; min-height: 120px; }
  @media screen and (max-width: 767px) { align-items: center; text-align: left; }
  @media screen and (max-width: 479px) { position: relative; width: 44vw; height: 44vw; margin-top: var(--space-32);}
 }
@@ -917,7 +880,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 479px) { width: 6vw; }
 }
 
+
 /* --- Mobile Menu Layout --- */
+
 .c-nav-mobile {
  display: none;
 
@@ -1075,6 +1040,7 @@ html.lenis, html.lenis body {
 
 
 /* --- Footer --- */
+
 .c-footer {
  width: 100%;
 }
@@ -1117,7 +1083,9 @@ html.lenis, html.lenis body {
  &:hover { opacity: 0.7; }
 }
 
+
 /* --- Contact CTA --- */
+
 .c-contact-cta {
  padding-top: var(--space-192);
  overflow: visible;
@@ -1198,9 +1166,11 @@ html.lenis, html.lenis body {
 
 /* ==========================================
   9. Shared Components
-  ========================================== */
+========================================== */
+
 
 /* --- Universal Hero --- */
+
 .c-hero {
  display: flex;
  width: 100%;
@@ -1219,6 +1189,7 @@ html.lenis, html.lenis body {
 }
 
 /* Modifier: Home */
+
 .c-hero--home {
  flex-direction: column;
  justify-content: center;
@@ -1327,7 +1298,6 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 767px) { width: 80%; }
 }
 
-/* --- Hero Home Covers (Structure) --- */
 .c-hero--home .c-hero__col-left::after,
 .c-hero--home .c-hero__image::after,
 .c-hero--home .c-hero__status::after {
@@ -1350,7 +1320,9 @@ html.lenis, html.lenis body {
  left: -8rem;
 }
 
+
 /* Modifier: Profile */
+
 .c-hero--profile {
  overflow-x: hidden;
 }
@@ -1361,7 +1333,9 @@ html.lenis, html.lenis body {
  padding-bottom: var(--space-40);
 
  @media screen and (max-width: 991px) { padding-top: var(--space-32); padding-bottom: var(--space-32); }
+ @media screen and (max-width: 991px) and (orientation: landscape) { padding-top: var(--space-24); padding-bottom: var(--space-24); }
  @media screen and (max-width: 767px) { padding-top: var(--space-24); padding-bottom: var(--space-24); }
+ @media screen and (max-width: 767px) and (orientation: landscape) { padding-top: var(--space-16); padding-bottom: var(--space-16); }
 }
 
 .c-hero--profile .c-hero__title {
@@ -1373,9 +1347,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 991px) { width: 100%; }
  @media screen and (max-width: 991px) and (orientation: landscape) { margin-bottom: var(--space-48); width: 92%; }
  @media screen and (max-width: 767px) { margin-bottom: var(--space-128); }
- @media screen and (max-width: 767px) and (orientation: landscape) { margin-bottom: var(--space-64); }
- @media screen and (max-width: 479px) { margin-bottom: var(--space-96); }
- @media screen and (max-width: 479px) and (orientation: landscape) { margin-bottom: var(--space-48); }
+ @media screen and (max-width: 767px) and (orientation: landscape) { margin-bottom: var(--space-40); }
+ @media screen and (max-width: 479px) { margin-bottom: var(--space-72);  max-width: 100%; }
+ @media screen and (max-width: 479px) and (orientation: landscape) { margin-bottom: var(--space-32); }
 }
 
 .c-hero--profile .c-hero__content {
@@ -1390,7 +1364,11 @@ html.lenis, html.lenis body {
  position: relative;
  width: 52%;
 
- @media screen and (max-width: 479px) { width: 48%; }
+ @media screen and (max-width: 991px) { width: 48%; }
+}
+
+.c-hero--profile .c-hero__col-left > img {
+ @media screen and (max-width: 479px) { height:68%; }
 }
 
 .c-hero--profile .c-hero__col-right {
@@ -1399,7 +1377,8 @@ html.lenis, html.lenis body {
  justify-content: space-between;
  gap: var(--space-64);
 
- @media screen and (max-width: 479px) { width: 48%; gap: var(--space-32); }
+ @media screen and (max-width: 991px) { width: 48%; }
+ @media screen and (max-width: 479px) { gap: var(--space-32); }
 }
 
 .c-hero--profile .c-hero__text-row {
@@ -1432,7 +1411,6 @@ html.lenis, html.lenis body {
  display: flex;
  justify-content: flex-end;
 
- @media screen and (min-width: 1440px) { width: 24%; }
  @media screen and (max-width: 991px) { width: 18%; }
  @media screen and (max-width: 767px) { display: none; }
 }
@@ -1441,7 +1419,6 @@ html.lenis, html.lenis body {
  width: 100%;
 }
 
-/* --- Hero Profile Covers (Structure) --- */
 .c-hero--profile .c-hero__title::after,
 .c-hero--profile .c-hero__col-left::after,
 .c-hero--profile .c-hero__text::after,
@@ -1466,7 +1443,15 @@ html.lenis, html.lenis body {
  bottom: -2px;
 }
 
+.c-hero--profile .c-hero__col-left > img {
+  padding-top: var(--space-8);
+
+  @media screen and (max-width: 991px) { padding-top: var(--space-4); }
+}
+
+
 /* Modifier: Project */
+
 .c-hero--project {
  flex-direction: column;
  height: calc(100vh - var(--layout-header-height));
@@ -1566,7 +1551,6 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 991px) and (orientation: landscape) { display: block; width: 18%; }
 }
 
-/* --- Hero Project Covers (Structure) --- */
 .c-hero--project .c-hero__col-left::after,
 .c-hero--project .c-hero__details-top::after,
 .c-hero--project .c-hero__desc::after {
@@ -1599,7 +1583,9 @@ html.lenis, html.lenis body {
  right: -8rem;
 }
 
+
 /* Modifier: Contact */
+
 .c-hero--contact .c-hero__content {
  width: 60%;
  position: relative;
@@ -1631,7 +1617,6 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 479px) { max-width: 32rem; }
 }
 
-/* --- Hero Contact Covers (Structure) --- */
 .c-hero--contact .c-hero__title::after,
 .c-hero--contact .c-hero__desc::after {
  content: '';
@@ -1652,7 +1637,9 @@ html.lenis, html.lenis body {
  bottom: -2px;
 }
 
-/* --- Unified Story Grid (.c-story-grid) --- */
+
+/* --- Unified Story Grid --- */
+
 .c-story-grid {
  width: 100%;
 }
@@ -1701,11 +1688,15 @@ html.lenis, html.lenis body {
  gap: var(--space-24);
 }
 
+
 /* --- Divider --- */
+
 .c-divider {
  width: 100%;
  padding-top: var(--space-96);
  padding-bottom: var(--space-96);
+
+ @media screen and (max-width: 479px) {  padding-top: var(--space-40); padding-bottom: var(--space-40); }
 }
 
 .c-divider__line {
@@ -1716,9 +1707,11 @@ html.lenis, html.lenis body {
 
 /* ==========================================
   10. Page Specific Components
-  ========================================== */
+========================================== */
+
 
 /* --- Home: Project List --- */
+
 .c-project-list {
  display: flex;
  flex-direction: column;
@@ -1806,7 +1799,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 479px) and (orientation: landscape) { width: 100%; }
 }
 
-/* --- Project Card Covers (Structure) --- */
+
+/* --- Project Card Covers --- */
+
 .c-project-card__title-wrapper::after,
 .c-project-card__visual::after {
  content: '';
@@ -1827,14 +1822,18 @@ html.lenis, html.lenis body {
  bottom: -2px;
 }
 
+
 /* --- Profile: About Section Wrapper --- */
+
 .c-about-section {
  display: flex;
  flex-direction: column;
  width: 100%;
 }
 
+
 /* --- Profile: Case Studies --- */
+
 .c-case-studies {
  display: flex;
  flex-direction: column;
@@ -1857,7 +1856,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 767px) { padding-right: 0; gap: var(--space-12); }
 }
 
+
 /* --- Profile: Philosophy --- */
+
 .c-philosophy {
  display: flex;
  justify-content: center;
@@ -1870,12 +1871,6 @@ html.lenis, html.lenis body {
 
 .c-philosophy__container {
  flex-direction: column;
-}
-
-.c-philosophy__title {
- margin: 0;
-
- @media screen and (max-width: 479px) { width: 100%; margin-top: var(--space-16); margin-bottom: var(--space-32); }
 }
 
 .c-philosophy__list {
@@ -1901,7 +1896,7 @@ html.lenis, html.lenis body {
  width: 55%;
 
  @media screen and (max-width: 767px) { width: 38%; margin-top: 0; margin-bottom: 0; }
- @media screen and (max-width: 479px) { width: 100%; margin-top: var(--space-16); margin-bottom: var(--space-32); }
+ @media screen and (max-width: 479px) { width: 100%; margin-top: 0; margin-bottom: var(--space-24); }
 }
 
 .c-philosophy__heading {
@@ -1924,7 +1919,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 767px) { width: 100%; }
 }
 
+
 /* --- Contact: Layout & Grid --- */
+
 .c-contact-layout {
  display: flex;
  flex-direction: column;
@@ -1998,32 +1995,13 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 991px) { padding-left: 4vw; }
  @media screen and (max-width: 991px) and (orientation: landscape) { padding-left: 2vw; padding-right: 1vw; padding-top: var(--space-64); padding-bottom: 0; }
  @media screen and (max-width: 767px) { padding-left: 2vw; padding-right: 1vw; padding-top: var(--space-64); padding-bottom: 0; }
- @media screen and (max-width: 479px) {
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: var(--space-16);
-  padding-bottom: var(--space-16);
-  padding-left: 0;
-  padding-right: 0;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid var(--color-border);
- }
+ @media screen and (max-width: 479px) { flex-direction: row; align-items: center; justify-content: flex-start; padding-top: var(--space-16); padding-bottom: var(--space-16); padding-left: 0; padding-right: 0; border-left: none; border-right: none; border-bottom: 1px solid var(--color-border); }
 }
 
 .c-contact-grid__item--email {
  border-left: 1px solid var(--color-border);
 
- @media screen and (max-width: 991px) {
-  grid-column: 1 / -1;
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  padding-right: 4vw;
-  padding-bottom: var(--space-64);
-  padding-top: var(--space-32);
- }
+ @media screen and (max-width: 991px) { grid-column: 1 / -1; border-left: 1px solid var(--color-border); border-right: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding-right: 4vw; padding-bottom: var(--space-64); padding-top: var(--space-32); }
  @media screen and (max-width: 991px) and (orientation: landscape) { grid-column: auto; border-bottom: none; border-right: none; padding-bottom: 0; padding-top: var(--space-64); }
  @media screen and (max-width: 767px) { grid-column: auto; border-bottom: none; padding-bottom: 0; border-right: none; padding-top: var(--space-64); }
  @media screen and (max-width: 479px) { border-left: 0; border-top: 1px solid var(--color-border); padding-top: var(--space-16); padding-bottom: var(--space-16); }
@@ -2068,7 +2046,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 479px) { width: 66%; font-size: 5.4vw; line-height: 5.4vw; }
 }
 
+
 /* --- Project: Spec Shelf --- */
+
 .c-spec-shelf {
  width: 100%;
  display: flex;
@@ -2119,7 +2099,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 479px) { text-align: left; }
 }
 
+
 /* --- Project: Presentation Grid --- */
+
 .c-presentation {
  display: grid;
  grid-template-columns: 
@@ -2142,7 +2124,9 @@ html.lenis, html.lenis body {
  width: 100%;
 }
 
+
 /* --- Project: Master Presentation Component --- */
+
 .c-pres-block {
  grid-column: full;
  display: grid;
@@ -2159,6 +2143,7 @@ html.lenis, html.lenis body {
 }
 
 /* Slot 1: Text Above */
+
 .c-pres-block__text-above {
  grid-column: contained;
  display: flex;
@@ -2176,6 +2161,7 @@ html.lenis, html.lenis body {
 }
 
 /* Slot 2: Media Types */
+
 .c-pres-block__media {
  width: 100%;
 }
@@ -2204,12 +2190,14 @@ html.lenis, html.lenis body {
 }
 
 /* Media Elements */
+
 .c-pres-block__img {
  width: 100%;
  display: block;
 }
 
 /* Offset Specific Elements */
+
 .c-pres-block__offset-left {
  display: flex;
  flex-direction: column;
@@ -2233,6 +2221,7 @@ html.lenis, html.lenis body {
 }
 
 /* Slot 3: Text Below (Caption Style) */
+
 .c-pres-block__text-below {
  grid-column: contained;
  max-width: 80ch;
@@ -2245,6 +2234,7 @@ html.lenis, html.lenis body {
 }
 
 /* Text Below Override for Offset Variant */
+
 .c-pres-block--type-offset .c-pres-block__text-below {
  max-width: 85%;
  margin-top: var(--space-40);
@@ -2254,6 +2244,7 @@ html.lenis, html.lenis body {
 }
 
 /* Intro Wrapper (For Spec Shelf & Story Grid) */
+
 .c-presentation__intro {
  grid-column: full;
  width: var(--layout-container-width);
@@ -2263,6 +2254,7 @@ html.lenis, html.lenis body {
 
 
 /* --- Project: Spec Table --- */
+
 .c-spec-table {
  display: grid;
  grid-template-columns: 1fr 1fr;
@@ -2313,7 +2305,9 @@ html.lenis, html.lenis body {
  @media screen and (max-width: 479px) { width: 70%; }
 }
 
+
 /* --- Project: Nav Footer --- */
+
 .c-project-nav {
  display: flex;
  justify-content: space-between;
@@ -2425,4 +2419,3 @@ html.lenis, html.lenis body {
  height: 100%;
  object-fit: cover;
 }
-
